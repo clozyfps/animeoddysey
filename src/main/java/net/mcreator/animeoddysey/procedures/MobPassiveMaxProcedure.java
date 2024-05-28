@@ -37,7 +37,7 @@ public class MobPassiveMaxProcedure {
 				if (Mth.nextInt(RandomSource.create(), 1, 500) == 2) {
 					if ((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Percentage >= 100) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.EXPLOSION_OF_EMOTIONS.get(), 600, 0, false, false));
+							_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.EXPLOSION_OF_EMOTIONS.get(), 700, 0, false, false));
 					}
 				}
 			}

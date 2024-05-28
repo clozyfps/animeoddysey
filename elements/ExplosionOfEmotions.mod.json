@@ -15,6 +15,9 @@
     "renderStatusInHUD": false,
     "onActiveTick": {
       "name": "ExplosionOfEmotionsOnEffectActiveTick"
+    },
+    "onExpired": {
+      "name": "ExplosionOfEmotionsEffectExpires"
     }
   }
 }

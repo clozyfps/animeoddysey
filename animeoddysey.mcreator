@@ -2815,6 +2815,26 @@
         ]
       },
       "path": "~/Procedures/CharacterTick/Mob"
+    },
+    {
+      "name": "ExplosionOfEmotionsEffectExpires",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_of_emotions_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/ExplosionOfEmotionsEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
     }
   ],
   "variable_elements": [
@@ -3037,6 +3057,14 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "mobrage",
+      "files": [
+        "mob-psycho-100-ost-2-explosion-of-mob-feelings_a41bouwx"
+      ],
+      "category": "neutral",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -3077,6 +3105,7 @@
       "death.attack.internal.item": "%1$s was killed by %2$s using %3$s",
       "subtitles.blackflash": "",
       "gui.animeoddysey.jjk_selection.button_gojo_teen": "Gojo (Teen)",
+      "subtitles.mobrage": "",
       "effect.animeoddysey.honored_one_sky": "Honored One Sky",
       "effect.animeoddysey.explosion_of_emotions": "Explosion Of Emotions",
       "death.attack.eraser.item": "%1$s was killed by %2$s using %3$s",
