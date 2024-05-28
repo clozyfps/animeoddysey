@@ -18,6 +18,7 @@ import net.minecraft.client.KeyMapping;
 import net.mcreator.animeoddysey.network.UseSkillMessage;
 import net.mcreator.animeoddysey.network.TalentMessage;
 import net.mcreator.animeoddysey.network.SwitchSkillMessage;
+import net.mcreator.animeoddysey.network.OpenMenuMessage;
 import net.mcreator.animeoddysey.AnimeoddyseyMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -66,6 +67,19 @@ public class AnimeoddyseyModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping OPEN_MENU = new KeyMapping("key.animeoddysey.open_menu", GLFW.GLFW_KEY_M, "key.categories.animeoddysey") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				AnimeoddyseyMod.PACKET_HANDLER.sendToServer(new OpenMenuMessage(0, 0));
+				OpenMenuMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 	private static long TALENT_LASTPRESS = 0;
 
 	@SubscribeEvent
@@ -73,6 +87,7 @@ public class AnimeoddyseyModKeyMappings {
 		event.register(USE_SKILL);
 		event.register(SWITCH_SKILL);
 		event.register(TALENT);
+		event.register(OPEN_MENU);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -83,6 +98,7 @@ public class AnimeoddyseyModKeyMappings {
 				USE_SKILL.consumeClick();
 				SWITCH_SKILL.consumeClick();
 				TALENT.consumeClick();
+				OPEN_MENU.consumeClick();
 			}
 		}
 	}
