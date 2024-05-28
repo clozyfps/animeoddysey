@@ -6,6 +6,8 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.PlainTextButton;
+import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.animeoddysey.world.inventory.MainMenuMenu;
@@ -16,6 +18,8 @@ import net.mcreator.animeoddysey.procedures.LevelValueProcedure;
 import net.mcreator.animeoddysey.procedures.EnergyValueProcedure;
 import net.mcreator.animeoddysey.procedures.DefenseDisplayProcedure;
 import net.mcreator.animeoddysey.procedures.AgilityDisplayProcedure;
+import net.mcreator.animeoddysey.network.MainMenuButtonMessage;
+import net.mcreator.animeoddysey.AnimeoddyseyMod;
 
 import java.util.HashMap;
 
@@ -26,6 +30,10 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	Button button_ssl;
+	Button button_ssl1;
+	Button button_ssl2;
+	Button button_ssl3;
 
 	public MainMenuScreen(MainMenuMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -103,5 +111,37 @@ public class MainMenuScreen extends AbstractContainerScreen<MainMenuMenu> {
 	@Override
 	public void init() {
 		super.init();
+		button_ssl = new PlainTextButton(this.leftPos + -118, this.topPos + 25, 40, 20, Component.translatable("gui.animeoddysey.main_menu.button_ssl"), e -> {
+			if (true) {
+				AnimeoddyseyMod.PACKET_HANDLER.sendToServer(new MainMenuButtonMessage(0, x, y, z));
+				MainMenuButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		}, this.font);
+		guistate.put("button:button_ssl", button_ssl);
+		this.addRenderableWidget(button_ssl);
+		button_ssl1 = new PlainTextButton(this.leftPos + -118, this.topPos + 43, 40, 20, Component.translatable("gui.animeoddysey.main_menu.button_ssl1"), e -> {
+			if (true) {
+				AnimeoddyseyMod.PACKET_HANDLER.sendToServer(new MainMenuButtonMessage(1, x, y, z));
+				MainMenuButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}, this.font);
+		guistate.put("button:button_ssl1", button_ssl1);
+		this.addRenderableWidget(button_ssl1);
+		button_ssl2 = new PlainTextButton(this.leftPos + -118, this.topPos + 61, 40, 20, Component.translatable("gui.animeoddysey.main_menu.button_ssl2"), e -> {
+			if (true) {
+				AnimeoddyseyMod.PACKET_HANDLER.sendToServer(new MainMenuButtonMessage(2, x, y, z));
+				MainMenuButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}, this.font);
+		guistate.put("button:button_ssl2", button_ssl2);
+		this.addRenderableWidget(button_ssl2);
+		button_ssl3 = new PlainTextButton(this.leftPos + -118, this.topPos + 79, 40, 20, Component.translatable("gui.animeoddysey.main_menu.button_ssl3"), e -> {
+			if (true) {
+				AnimeoddyseyMod.PACKET_HANDLER.sendToServer(new MainMenuButtonMessage(3, x, y, z));
+				MainMenuButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}, this.font);
+		guistate.put("button:button_ssl3", button_ssl3);
+		this.addRenderableWidget(button_ssl3);
 	}
 }
