@@ -22,6 +22,7 @@ import net.mcreator.animeoddysey.potion.ImpactFrameMobEffect;
 import net.mcreator.animeoddysey.potion.HonoredOneSkyMobEffect;
 import net.mcreator.animeoddysey.potion.HollowPurpleActiveMobEffect;
 import net.mcreator.animeoddysey.potion.GodspeedMobEffect;
+import net.mcreator.animeoddysey.potion.ExplosionOfEmotionsMobEffect;
 import net.mcreator.animeoddysey.potion.ExplodingMobEffect;
 import net.mcreator.animeoddysey.potion.EnMobEffect;
 import net.mcreator.animeoddysey.potion.CooldownMobEffect;
@@ -46,4 +47,5 @@ public class AnimeoddyseyModMobEffects {
 	public static final RegistryObject<MobEffect> IMPACT_FRAME = REGISTRY.register("impact_frame", () -> new ImpactFrameMobEffect());
 	public static final RegistryObject<MobEffect> BLACK_OUTWARDS = REGISTRY.register("black_outwards", () -> new BlackOutwardsMobEffect());
 	public static final RegistryObject<MobEffect> EXPLODING = REGISTRY.register("exploding", () -> new ExplodingMobEffect());
+	public static final RegistryObject<MobEffect> EXPLOSION_OF_EMOTIONS = REGISTRY.register("explosion_of_emotions", () -> new ExplosionOfEmotionsMobEffect());
 }

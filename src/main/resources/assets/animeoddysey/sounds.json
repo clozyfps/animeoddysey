@@ -46,5 +46,13 @@
         "stream": false
       }
     ]
+  },
+  "beep": {
+    "sounds": [
+      {
+        "name": "animeoddysey:mob-psycho-100-percentage-beep-sound-effect_z4neetnv",
+        "stream": false
+      }
+    ]
   }
 }

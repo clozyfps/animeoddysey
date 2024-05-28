@@ -2254,6 +2254,10 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -2741,6 +2745,76 @@
         ]
       },
       "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ExplosionOfEmotions",
+      "type": "potioneffect",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_of_emotions",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/ExplosionOfEmotionsMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "ExplosionOfEmotionsOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_of_emotions_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/ExplosionOfEmotionsOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Mob"
+    },
+    {
+      "name": "MobPassiveMax",
+      "type": "procedure",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mob_passive_max",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/MobPassiveMaxProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Mob"
     }
   ],
   "variable_elements": [
@@ -2955,6 +3029,14 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "beep",
+      "files": [
+        "mob-psycho-100-percentage-beep-sound-effect_z4neetnv"
+      ],
+      "category": "neutral",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -2996,6 +3078,7 @@
       "subtitles.blackflash": "",
       "gui.animeoddysey.jjk_selection.button_gojo_teen": "Gojo (Teen)",
       "effect.animeoddysey.honored_one_sky": "Honored One Sky",
+      "effect.animeoddysey.explosion_of_emotions": "Explosion Of Emotions",
       "death.attack.eraser.item": "%1$s was killed by %2$s using %3$s",
       "key.animeoddysey.use_skill": "Use Skill",
       "effect.animeoddysey.talent_cooldown": "Talent Cooldown",
@@ -3009,6 +3092,7 @@
       "gui.animeoddysey.jjk_selection.button_itadori": "Itadori",
       "subtitles.electricity": "",
       "gui.animeoddysey.main_menu.button_ssl": "§l+",
+      "subtitles.beep": "",
       "advancements.anime_oddysey.descr": "Start In The Vast Anime Universe!",
       "key.animeoddysey.talent": "Talent",
       "subtitles.stresspercentage": "",
