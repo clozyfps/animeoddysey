@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:snout_armor_trim_smithing_template"
+    },
+    "title": {
+      "translate": "advancements.post_mortem.title"
+    },
+    "description": {
+      "translate": "advancements.post_mortem.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "post_mortem": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "animeoddysey:anime_oddysey"
+}

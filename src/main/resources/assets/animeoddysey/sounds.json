@@ -1,0 +1,50 @@
+{
+  "bloody": {
+    "sounds": [
+      {
+        "name": "animeoddysey:bloody",
+        "stream": false
+      }
+    ]
+  },
+  "heartbeat": {
+    "sounds": [
+      {
+        "name": "animeoddysey:rct_heartbeat",
+        "stream": false
+      }
+    ]
+  },
+  "electricity": {
+    "sounds": [
+      {
+        "name": "animeoddysey:audio_-_lightning_flashes_quick_electrical_bursts_3_sfx_-_creator_store",
+        "stream": false
+      }
+    ]
+  },
+  "honoredone": {
+    "sounds": [
+      {
+        "name": "animeoddysey:the-honored-one-jjk-2nd-season-osttoji-vs-gojo-theme_xqdhrmsj",
+        "stream": false
+      }
+    ]
+  },
+  "blackflash": {
+    "sounds": [
+      {
+        "name": "animeoddysey:blackflash",
+        "stream": false
+      }
+    ]
+  },
+  "stresspercentage": {
+    "sounds": [
+      {
+        "name": "animeoddysey:audio_-_mob_psycho_100_-_stress_percent_increase_-_creator_store",
+        "stream": false
+      }
+    ]
+  }
+}

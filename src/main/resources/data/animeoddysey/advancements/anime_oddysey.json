@@ -1,0 +1,23 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "animeoddysey:character_selector"
+    },
+    "title": {
+      "translate": "advancements.anime_oddysey.title"
+    },
+    "description": {
+      "translate": "advancements.anime_oddysey.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "anime_oddysey": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "_fv": 57,
+  "_type": "command",
+  "definition": {
+    "commandName": "animeoddyseyset",
+    "type": "STANDARD",
+    "permissionLevel": "1",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">stat</field><statement name=\"args\"><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"literal\"><field name=\"name\">energy</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">amountstat</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">SetEnergy</field></block></statement></block></statement></block></statement></block></statement><next><block type=\"literal\"><field name=\"name\">prestigecharacter</field><statement name=\"args\"><block type=\"entity\"><field name=\"name\">name</field><field name=\"type\">player</field><statement name=\"args\"><block type=\"literal\"><field name=\"name\">AwakenedYuji</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">AwakenedItadoriSet</field></block></statement></block></statement></block></statement></block></next></block></next></block></xml>"
+  }
+}

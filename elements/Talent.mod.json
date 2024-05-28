@@ -1,0 +1,15 @@
+{
+  "_fv": 57,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "C",
+    "keyBindingName": "Talent",
+    "keyBindingCategoryKey": "animeoddysey",
+    "onKeyPressed": {
+      "name": "TalentOnKeyPressed"
+    },
+    "onKeyReleased": {
+      "name": "TalentOnKeyReleased"
+    }
+  }
+}

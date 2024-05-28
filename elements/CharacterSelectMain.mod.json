@@ -1,0 +1,79 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 200,
+    "height": 50,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "button",
+        "data": {
+          "name": "button_hxh",
+          "text": "HxH",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OpenHxH"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 123,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_hxh1",
+          "text": "OPM",
+          "isUndecorated": false,
+          "width": 40,
+          "height": 20,
+          "x": 168,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_hxh2",
+          "text": "JJK",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "JJKPressed"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 213,
+          "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_hxh3",
+          "text": "MP100",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "ClickMP100"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 258,
+          "y": 107
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

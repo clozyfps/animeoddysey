@@ -1,0 +1,36 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"honoredonew": {
+			"loop": true,
+			"bones": {
+				"right_arm": {
+					"rotation": {
+						"vector": [-192.39638, -1.61888, -7.32417]
+					},
+					"position": {
+						"vector": [0, -1, -2]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [-77.5, 0, 0]
+					}
+				},
+				"right_leg": {
+					"rotation": {
+						"vector": [5, 0, 0]
+					}
+				},
+				"left_leg": {
+					"rotation": {
+						"vector": [37.5, 0, 0]
+					},
+					"position": {
+						"vector": [0, 0, -2]
+					}
+				}
+			}
+		}
+	}
+}
