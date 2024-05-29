@@ -16,6 +16,7 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
+import net.mcreator.animeoddysey.entity.PsychicSlashEntity;
 import net.mcreator.animeoddysey.entity.PsychicBlastEntity;
 import net.mcreator.animeoddysey.entity.KnockbackProjectileEntity;
 import net.mcreator.animeoddysey.entity.HollowPurpleWeakEntity;
@@ -35,6 +36,8 @@ public class AnimeoddyseyModEntities {
 			.setCustomClientFactory(KnockbackProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<PsychicBlastEntity>> PSYCHIC_BLAST = register("projectile_psychic_blast",
 			EntityType.Builder.<PsychicBlastEntity>of(PsychicBlastEntity::new, MobCategory.MISC).setCustomClientFactory(PsychicBlastEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<PsychicSlashEntity>> PSYCHIC_SLASH = register("projectile_psychic_slash",
+			EntityType.Builder.<PsychicSlashEntity>of(PsychicSlashEntity::new, MobCategory.MISC).setCustomClientFactory(PsychicSlashEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

@@ -12,8 +12,10 @@ import net.minecraft.world.effect.MobEffect;
 
 import net.mcreator.animeoddysey.potion.ZoneMobEffect;
 import net.mcreator.animeoddysey.potion.TalentCooldownMobEffect;
+import net.mcreator.animeoddysey.potion.SpiritualAwarenessMobEffect;
 import net.mcreator.animeoddysey.potion.SpeedEffectMobEffect;
 import net.mcreator.animeoddysey.potion.SnakeAwakensMobEffect;
+import net.mcreator.animeoddysey.potion.SlamMobEffect;
 import net.mcreator.animeoddysey.potion.ReversedCursedTechniqueMobEffect;
 import net.mcreator.animeoddysey.potion.OutwardsReversalRedMobEffect;
 import net.mcreator.animeoddysey.potion.OutwardsMobEffect;
@@ -27,6 +29,7 @@ import net.mcreator.animeoddysey.potion.ExplodingMobEffect;
 import net.mcreator.animeoddysey.potion.EnMobEffect;
 import net.mcreator.animeoddysey.potion.CooldownMobEffect;
 import net.mcreator.animeoddysey.potion.BlackOutwardsMobEffect;
+import net.mcreator.animeoddysey.potion.AuraControlMobEffect;
 import net.mcreator.animeoddysey.AnimeoddyseyMod;
 
 public class AnimeoddyseyModMobEffects {
@@ -48,4 +51,7 @@ public class AnimeoddyseyModMobEffects {
 	public static final RegistryObject<MobEffect> BLACK_OUTWARDS = REGISTRY.register("black_outwards", () -> new BlackOutwardsMobEffect());
 	public static final RegistryObject<MobEffect> EXPLODING = REGISTRY.register("exploding", () -> new ExplodingMobEffect());
 	public static final RegistryObject<MobEffect> EXPLOSION_OF_EMOTIONS = REGISTRY.register("explosion_of_emotions", () -> new ExplosionOfEmotionsMobEffect());
+	public static final RegistryObject<MobEffect> AURA_CONTROL = REGISTRY.register("aura_control", () -> new AuraControlMobEffect());
+	public static final RegistryObject<MobEffect> SPIRITUAL_AWARENESS = REGISTRY.register("spiritual_awareness", () -> new SpiritualAwarenessMobEffect());
+	public static final RegistryObject<MobEffect> SLAM = REGISTRY.register("slam", () -> new SlamMobEffect());
 }

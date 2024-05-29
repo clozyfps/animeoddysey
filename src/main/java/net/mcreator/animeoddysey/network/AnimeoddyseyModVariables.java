@@ -1,7 +1,5 @@
 package net.mcreator.animeoddysey.network;
 
-import software.bernie.shadowed.eliotlash.mclib.math.functions.classic.Exp;
-
 import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.NetworkEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -92,8 +90,8 @@ public class AnimeoddyseyModVariables {
 			clone.ZoneMod = original.ZoneMod;
 			clone.Rank = original.Rank;
 			clone.Level = original.Level;
-			clone.ExpMax = original.ExpMax;
 			clone.Exp = original.Exp;
+			clone.ExpMax = original.ExpMax;
 			clone.SP = original.SP;
 			if (!event.isWasDeath()) {
 				clone.Percentage = original.Percentage;
@@ -156,8 +154,8 @@ public class AnimeoddyseyModVariables {
 		public double Percentage = 0;
 		public String Rank = "";
 		public double Level = 1.0;
-		public double ExpMax = 20.0;
 		public double Exp = 0;
+		public double ExpMax = 20.0;
 		public double SP = 0;
 
 		public void syncPlayerVariables(Entity entity) {
@@ -191,8 +189,8 @@ public class AnimeoddyseyModVariables {
 			nbt.putDouble("Percentage", Percentage);
 			nbt.putString("Rank", Rank);
 			nbt.putDouble("Level", Level);
-			nbt.putDouble("ExpMax", ExpMax);
 			nbt.putDouble("Exp", Exp);
+			nbt.putDouble("ExpMax", ExpMax);
 			nbt.putDouble("SP", SP);
 			return nbt;
 		}
@@ -223,8 +221,8 @@ public class AnimeoddyseyModVariables {
 			Percentage = nbt.getDouble("Percentage");
 			Rank = nbt.getString("Rank");
 			Level = nbt.getDouble("Level");
-			ExpMax = nbt.getDouble("ExpMax");
 			Exp = nbt.getDouble("Exp");
+			ExpMax = nbt.getDouble("ExpMax");
 			SP = nbt.getDouble("SP");
 		}
 	}
@@ -274,8 +272,8 @@ public class AnimeoddyseyModVariables {
 					variables.Percentage = message.data.Percentage;
 					variables.Rank = message.data.Rank;
 					variables.Level = message.data.Level;
-					variables.ExpMax = message.data.ExpMax;
 					variables.Exp = message.data.Exp;
+					variables.ExpMax = message.data.ExpMax;
 					variables.SP = message.data.SP;
 				}
 			});
