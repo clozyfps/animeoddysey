@@ -29,6 +29,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.animeoddysey.init.AnimeoddyseyModTabs;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModSounds;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModParticleTypes;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModMobEffects;
@@ -57,6 +58,8 @@ public class AnimeoddyseyMod {
 
 		AnimeoddyseyModItems.REGISTRY.register(bus);
 		AnimeoddyseyModEntities.REGISTRY.register(bus);
+
+		AnimeoddyseyModTabs.REGISTRY.register(bus);
 
 		AnimeoddyseyModMobEffects.REGISTRY.register(bus);
 
