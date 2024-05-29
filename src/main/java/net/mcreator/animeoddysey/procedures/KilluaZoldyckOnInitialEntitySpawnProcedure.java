@@ -1,8 +1,8 @@
 package net.mcreator.animeoddysey.procedures;
 
-import net.minecraft.world.entity.Entity;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.mcreator.animeoddysey.entity.KilluaZoldyckEntity;
+import javax.annotation.Nullable;
 
 public class KilluaZoldyckOnInitialEntitySpawnProcedure {
 	public static void execute(Entity entity) {

@@ -123,7 +123,6 @@
     {
       "name": "MainHUD",
       "type": "overlay",
-      "sortid": 141,
       "compiles": true,
       "locked_code": false,
       "registry_name": "main_hud",
@@ -345,7 +344,6 @@
     {
       "name": "AnimeOddyseySet",
       "type": "command",
-      "sortid": 142,
       "compiles": true,
       "locked_code": false,
       "registry_name": "anime_oddysey_set",
@@ -365,9 +363,9 @@
       "registry_name": "character_select_main",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/animeoddysey/world/inventory/CharacterSelectMainMenu.java",
           "src/main/java/net/mcreator/animeoddysey/network/CharacterSelectMainButtonMessage.java",
-          "src/main/java/net/mcreator/animeoddysey/client/gui/CharacterSelectMainScreen.java",
-          "src/main/java/net/mcreator/animeoddysey/world/inventory/CharacterSelectMainMenu.java"
+          "src/main/java/net/mcreator/animeoddysey/client/gui/CharacterSelectMainScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -381,9 +379,9 @@
       "registry_name": "hx_h_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/network/HxHSelectionButtonMessage.java",
+          "src/main/java/net/mcreator/animeoddysey/client/gui/HxHSelectionScreen.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/HxHSelectionMenu.java",
-          "src/main/java/net/mcreator/animeoddysey/client/gui/HxHSelectionScreen.java"
+          "src/main/java/net/mcreator/animeoddysey/network/HxHSelectionButtonMessage.java"
         ]
       },
       "path": "~/GUI"
@@ -433,8 +431,8 @@
       "registry_name": "character_selector",
       "metadata": {
         "files": [
-          "src/main/resources/assets/animeoddysey/models/item/character_selector.json",
-          "src/main/java/net/mcreator/animeoddysey/item/CharacterSelectorItem.java"
+          "src/main/java/net/mcreator/animeoddysey/item/CharacterSelectorItem.java",
+          "src/main/resources/assets/animeoddysey/models/item/character_selector.json"
         ]
       },
       "path": "~/Items"
@@ -627,8 +625,8 @@
       "registry_name": "electricity_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/animeoddysey/particles/electricity_particle.json",
-          "src/main/java/net/mcreator/animeoddysey/client/particle/ElectricityParticleParticle.java"
+          "src/main/java/net/mcreator/animeoddysey/client/particle/ElectricityParticleParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/electricity_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -636,7 +634,6 @@
     {
       "name": "LightningPalmImpact",
       "type": "function",
-      "sortid": 143,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_palm_impact",
@@ -975,9 +972,6 @@
       "locked_code": false,
       "registry_name": "setup_animations",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/SetupAnimationsProcedure.java"
-        ],
         "dependencies": []
       },
       "path": "~/Procedures"
@@ -1523,8 +1517,8 @@
       "registry_name": "jjk_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/gui/JJKSelectionScreen.java",
           "src/main/java/net/mcreator/animeoddysey/network/JJKSelectionButtonMessage.java",
+          "src/main/java/net/mcreator/animeoddysey/client/gui/JJKSelectionScreen.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/JJKSelectionMenu.java"
         ]
       },
@@ -1910,8 +1904,8 @@
       "registry_name": "red_electricity",
       "metadata": {
         "files": [
-          "src/main/resources/assets/animeoddysey/particles/red_electricity.json",
-          "src/main/java/net/mcreator/animeoddysey/client/particle/RedElectricityParticle.java"
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedElectricityParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/red_electricity.json"
         ]
       },
       "path": "~/Particles"
@@ -2142,7 +2136,6 @@
     {
       "name": "ConstantBlackFlashes",
       "type": "gamerule",
-      "sortid": 144,
       "compiles": true,
       "locked_code": false,
       "registry_name": "constant_black_flashes",
@@ -2306,9 +2299,9 @@
       "registry_name": "mob_psycho_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/gui/MobPsychoSelectionScreen.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/MobPsychoSelectionMenu.java",
-          "src/main/java/net/mcreator/animeoddysey/network/MobPsychoSelectionButtonMessage.java"
+          "src/main/java/net/mcreator/animeoddysey/network/MobPsychoSelectionButtonMessage.java",
+          "src/main/java/net/mcreator/animeoddysey/client/gui/MobPsychoSelectionScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -2919,8 +2912,8 @@
       "registry_name": "red",
       "metadata": {
         "files": [
-          "src/main/resources/assets/animeoddysey/particles/red.json",
-          "src/main/java/net/mcreator/animeoddysey/client/particle/RedParticle.java"
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/red.json"
         ]
       },
       "path": "~/Particles"
@@ -2949,8 +2942,8 @@
       "registry_name": "small_cube_red",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/SmallCubeRedParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/small_cube_red.json"
+          "src/main/resources/assets/animeoddysey/particles/small_cube_red.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/SmallCubeRedParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -2964,8 +2957,8 @@
       "registry_name": "red_2",
       "metadata": {
         "files": [
-          "src/main/resources/assets/animeoddysey/particles/red_2.json",
-          "src/main/java/net/mcreator/animeoddysey/client/particle/Red2Particle.java"
+          "src/main/java/net/mcreator/animeoddysey/client/particle/Red2Particle.java",
+          "src/main/resources/assets/animeoddysey/particles/red_2.json"
         ]
       },
       "path": "~/Particles"
@@ -2994,8 +2987,8 @@
       "registry_name": "red_anim",
       "metadata": {
         "files": [
-          "src/main/resources/assets/animeoddysey/particles/red_anim.json",
-          "src/main/java/net/mcreator/animeoddysey/client/particle/RedAnimParticle.java"
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedAnimParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/red_anim.json"
         ]
       },
       "path": "~/Particles"
@@ -3342,6 +3335,18 @@
         ]
       },
       "path": "~/Mobs"
+    },
+    {
+      "name": "SmallCubeParticle",
+      "type": "particlemodel",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_cube_particle",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Particles/3D"
     }
   ],
   "variable_elements": [

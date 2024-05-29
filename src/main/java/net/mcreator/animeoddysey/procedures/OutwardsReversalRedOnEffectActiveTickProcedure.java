@@ -9,6 +9,8 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
+import net.mcreator.animeoddysey.AnimeoddyseyMod;
+
 public class OutwardsReversalRedOnEffectActiveTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -31,5 +33,10 @@ public class OutwardsReversalRedOnEffectActiveTickProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					("/execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.6 ~ run particle minecraft:dust_color_transition 1 0.09 0.09 0.5 1 0.44 0.44 ^-0.2 ^ ^0.5 0.03 0.03 0.03 0.01 30 normal"));
+		AnimeoddyseyMod.queueServerWork(10, () -> {
+			if (world instanceof ServerLevel _level)
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						("/execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.6 ~ run particle animeoddysey:red_anim ^-0.2 ^ ^0.5 0.03 0.03 0.03 1 1 normal"));
+		});
 	}
 }
