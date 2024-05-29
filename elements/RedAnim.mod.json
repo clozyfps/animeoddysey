@@ -4,7 +4,7 @@
   "definition": {
     "texture": "redanimreverseranim.png",
     "animate": true,
-    "frameDuration": 2,
+    "frameDuration": 1,
     "width": 0.2,
     "height": 0.2,
     "scale": 3.0,

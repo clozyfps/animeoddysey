@@ -56,7 +56,7 @@ public class RedAnimParticle extends TextureSheetParticle {
 	public void tick() {
 		super.tick();
 		if (!this.removed) {
-			this.setSprite(this.spriteSet.get((this.age / 2) % 7 + 1, 7));
+			this.setSprite(this.spriteSet.get((this.age / 1) % 7 + 1, 7));
 		}
 	}
 }
