@@ -62,5 +62,13 @@
         "stream": false
       }
     ]
+  },
+  "psychicenergy": {
+    "sounds": [
+      {
+        "name": "animeoddysey:mobenergy",
+        "stream": false
+      }
+    ]
   }
 }

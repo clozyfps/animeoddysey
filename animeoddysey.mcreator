@@ -2835,6 +2835,60 @@
         ]
       },
       "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "PsychicBlastWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "psychic_blast_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/PsychicBlastWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles/Procedures"
+    },
+    {
+      "name": "PsychicBlast",
+      "type": "projectile",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "psychic_blast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/entity/PsychicBlastEntity.java"
+        ]
+      },
+      "path": "~/Projectiles"
     }
   ],
   "variable_elements": [
@@ -3065,6 +3119,14 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "psychicenergy",
+      "files": [
+        "mobenergy"
+      ],
+      "category": "neutral",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -3101,6 +3163,7 @@
       "advancements.anime_oddysey.title": "Anime Oddysey",
       "effect.animeoddysey.en": "En",
       "effect.animeoddysey.godspeed": "Godspeed",
+      "subtitles.psychicenergy": "",
       "subtitles.bloody": "",
       "death.attack.internal.item": "%1$s was killed by %2$s using %3$s",
       "subtitles.blackflash": "",
