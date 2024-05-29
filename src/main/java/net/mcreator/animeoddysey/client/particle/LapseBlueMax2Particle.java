@@ -39,14 +39,14 @@ public class LapseBlueMax2Particle extends TextureSheetParticle {
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
 		this.quadSize *= 7f;
-		this.lifetime = 5;
+		this.lifetime = 1;
 		this.gravity = 0f;
 		this.hasPhysics = false;
 		this.xd = vx * 0;
 		this.yd = vy * 0;
 		this.zd = vz * 0;
-		this.angularVelocity = 3f;
-		this.angularAcceleration = 3f;
+		this.angularVelocity = 6f;
+		this.angularAcceleration = 7f;
 		this.pickSprite(spriteSet);
 	}
 

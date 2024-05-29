@@ -22,4 +22,8 @@ public class AnimeoddyseyModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> LAPSE_BLUE_MAX_2 = REGISTRY.register("lapse_blue_max_2", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> RED_2 = REGISTRY.register("red_2", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> RED = REGISTRY.register("red", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> BLUEFLASH = REGISTRY.register("blueflash", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> RED_ANIM = REGISTRY.register("red_anim", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> STONE_PARTICLE_PRE = REGISTRY.register("stone_particle_pre", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> SMALL_CUBE_RED = REGISTRY.register("small_cube_red", () -> new SimpleParticleType(true));
 }

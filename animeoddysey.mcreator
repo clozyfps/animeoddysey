@@ -2946,6 +2946,90 @@
         ]
       },
       "path": "~/Potions"
+    },
+    {
+      "name": "Blueflash",
+      "type": "particle",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blueflash",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/animeoddysey/particles/blueflash.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/BlueflashParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "RedAnim",
+      "type": "particle",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_anim",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedAnimParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/red_anim.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "StoneParticlePre",
+      "type": "particle",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_particle_pre",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/animeoddysey/particles/stone_particle_pre.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/StoneParticlePreParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "StoneParticle",
+      "type": "particlemodel",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "stone_particle",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Particles/3D"
+    },
+    {
+      "name": "SmallCubeRed",
+      "type": "particle",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_cube_red",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/animeoddysey/particles/small_cube_red.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/SmallCubeRedParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "SmallCubeRed3D",
+      "type": "particlemodel",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "small_cube_red_3_d",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Particles/3D"
     }
   ],
   "variable_elements": [
@@ -3327,7 +3411,12 @@
       },
       {
         "name": "Particles",
-        "children": []
+        "children": [
+          {
+            "name": "3D",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Recipes",
@@ -3396,7 +3485,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "playeranimator"
+      "geckolib"
     ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
