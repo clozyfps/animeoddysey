@@ -272,9 +272,9 @@ public class MobSetTickProcedure {
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Spiritual Awareness")) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:spiritawareness")), SoundSource.NEUTRAL, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:spiritualawareness")), SoundSource.NEUTRAL, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:spiritawareness")), SoundSource.NEUTRAL, 1, 1, false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:spiritualawareness")), SoundSource.NEUTRAL, 1, 1, false);
 					}
 				}
 				{
@@ -287,7 +287,7 @@ public class MobSetTickProcedure {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 600, 0, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.SPIRITUAL_AWARENESS.get(), 60, 0, false, false));
+					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.SPIRITUAL_AWARENESS.get(), 65, 0, false, false));
 			}
 		}
 	}

@@ -578,7 +578,7 @@
           "src/main/java/net/mcreator/animeoddysey/client/renderer/AfterImageRenderer.java"
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Mobs/Misc"
     },
     {
       "name": "HeartSteal",
@@ -3409,9 +3409,9 @@
       "subtitle": ""
     },
     {
-      "name": "spiritawareness",
+      "name": "spiritualawareness",
       "files": [
-        "shigeo_spiritual_awareness_sound_effect_japanese_mob_psycho_100"
+        "shigeo-spiritual-awareness-sound-effect-japanese-mob-psycho-100_fomwbx2c"
       ],
       "category": "neutral",
       "subtitle": ""
@@ -3458,6 +3458,7 @@
       "death.attack.internal.item": "%1$s was killed by %2$s using %3$s",
       "subtitles.blackflash": "",
       "gui.animeoddysey.jjk_selection.button_gojo_teen": "Gojo (Teen)",
+      "subtitles.spiritualawareness": "",
       "subtitles.mobrage": "",
       "effect.animeoddysey.honored_one_sky": "Honored One Sky",
       "effect.animeoddysey.spiritual_awareness": "Spiritual Awareness",
@@ -3513,6 +3514,10 @@
         "children": [
           {
             "name": "Procedures",
+            "children": []
+          },
+          {
+            "name": "Misc",
             "children": []
           }
         ]
