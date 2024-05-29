@@ -19,6 +19,7 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.animeoddysey.entity.PsychicSlashEntity;
 import net.mcreator.animeoddysey.entity.PsychicBlastEntity;
 import net.mcreator.animeoddysey.entity.KnockbackProjectileEntity;
+import net.mcreator.animeoddysey.entity.KilluaZoldyckEntity;
 import net.mcreator.animeoddysey.entity.HollowPurpleWeakEntity;
 import net.mcreator.animeoddysey.entity.AfterImageEntity;
 import net.mcreator.animeoddysey.AnimeoddyseyMod;
@@ -38,6 +39,10 @@ public class AnimeoddyseyModEntities {
 			EntityType.Builder.<PsychicBlastEntity>of(PsychicBlastEntity::new, MobCategory.MISC).setCustomClientFactory(PsychicBlastEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<PsychicSlashEntity>> PSYCHIC_SLASH = register("projectile_psychic_slash",
 			EntityType.Builder.<PsychicSlashEntity>of(PsychicSlashEntity::new, MobCategory.MISC).setCustomClientFactory(PsychicSlashEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<KilluaZoldyckEntity>> KILLUA_ZOLDYCK = register("killua_zoldyck",
+			EntityType.Builder.<KilluaZoldyckEntity>of(KilluaZoldyckEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KilluaZoldyckEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -47,11 +52,13 @@ public class AnimeoddyseyModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			AfterImageEntity.init();
+			KilluaZoldyckEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(AFTER_IMAGE.get(), AfterImageEntity.createAttributes().build());
+		event.put(KILLUA_ZOLDYCK.get(), KilluaZoldyckEntity.createAttributes().build());
 	}
 }

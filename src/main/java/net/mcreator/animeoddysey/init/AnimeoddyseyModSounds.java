@@ -24,5 +24,5 @@ public class AnimeoddyseyModSounds {
 	public static final RegistryObject<SoundEvent> BEEP = REGISTRY.register("beep", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "beep")));
 	public static final RegistryObject<SoundEvent> MOBRAGE = REGISTRY.register("mobrage", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "mobrage")));
 	public static final RegistryObject<SoundEvent> PSYCHICENERGY = REGISTRY.register("psychicenergy", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "psychicenergy")));
-	public static final RegistryObject<SoundEvent> SPIRITAWARENESS = REGISTRY.register("spiritawareness", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "spiritawareness")));
+	public static final RegistryObject<SoundEvent> SPIRITUALAWARENESS = REGISTRY.register("spiritualawareness", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "spiritualawareness")));
 }

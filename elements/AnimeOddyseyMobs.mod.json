@@ -1,0 +1,11 @@
+{
+  "_fv": 57,
+  "_type": "tab",
+  "definition": {
+    "name": "Anime Oddysey Mobs",
+    "icon": {
+      "value": "CUSTOM:CharacterSelector"
+    },
+    "showSearch": true
+  }
+}

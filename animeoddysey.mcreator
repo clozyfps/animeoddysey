@@ -2953,7 +2953,7 @@
       "type": "particlemodel",
       "sortid": 130,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "stone_particle",
       "metadata": {
         "files": []
@@ -3025,7 +3025,7 @@
       "type": "particlemodel",
       "sortid": 129,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "small_cube_red_3_d",
       "metadata": {
         "files": []
@@ -3310,6 +3310,35 @@
         ]
       },
       "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "KilluaZoldyck",
+      "type": "livingentity",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "killua_zoldyck",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/animeoddysey/forge/biome_modifier/killua_zoldyck_biome_modifier.json",
+          "src/main/java/net/mcreator/animeoddysey/client/renderer/KilluaZoldyckRenderer.java",
+          "src/main/resources/assets/animeoddysey/models/item/killua_zoldyck_spawn_egg.json",
+          "src/main/java/net/mcreator/animeoddysey/entity/KilluaZoldyckEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "AnimeOddyseyMobs",
+      "type": "tab",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anime_oddysey_mobs",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Creative Tabs"
     }
   ],
   "variable_elements": [
@@ -3550,9 +3579,9 @@
       "subtitle": ""
     },
     {
-      "name": "spiritawareness",
+      "name": "spiritualawareness",
       "files": [
-        "shigeo_spiritual_awareness_sound_effect_japanese_mob_psycho_100"
+        "shigeo-spiritual-awareness-sound-effect-japanese-mob-psycho-100_fomwbx2c"
       ],
       "category": "neutral",
       "subtitle": ""
@@ -3593,6 +3622,7 @@
       "gui.animeoddysey.main_menu.button_ssl3": "§l+",
       "advancements.anime_oddysey.title": "Anime Oddysey",
       "effect.animeoddysey.en": "En",
+      "item_group.animeoddysey.anime_oddysey_mobs": "Anime Oddysey Mobs",
       "effect.animeoddysey.godspeed": "Godspeed",
       "subtitles.psychicenergy": "",
       "subtitles.bloody": "",
@@ -3615,6 +3645,8 @@
       "gui.animeoddysey.character_select_main.button_hxh2": "JJK",
       "gui.animeoddysey.jjk_selection.button_itadori": "Itadori",
       "subtitles.electricity": "",
+      "item.animeoddysey.killua_zoldyck_spawn_egg": "Killua Zoldyck Spawn Egg",
+      "entity.animeoddysey.killua_zoldyck": "Killua Zoldyck",
       "gui.animeoddysey.main_menu.button_ssl": "§l+",
       "subtitles.beep": "",
       "advancements.anime_oddysey.descr": "Start In The Vast Anime Universe!",
@@ -3731,6 +3763,10 @@
         "children": [
           {
             "name": "Procedures",
+            "children": []
+          },
+          {
+            "name": "Misc",
             "children": []
           }
         ]

@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
+import net.mcreator.animeoddysey.client.renderer.KilluaZoldyckRenderer;
 import net.mcreator.animeoddysey.client.renderer.AfterImageRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -22,5 +23,6 @@ public class AnimeoddyseyModEntityRenderers {
 		event.registerEntityRenderer(AnimeoddyseyModEntities.KNOCKBACK_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.PSYCHIC_BLAST.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.PSYCHIC_SLASH.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(AnimeoddyseyModEntities.KILLUA_ZOLDYCK.get(), KilluaZoldyckRenderer::new);
 	}
 }
