@@ -15,6 +15,7 @@ import net.minecraft.commands.CommandSource;
 
 import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModMobEffects;
+import net.mcreator.animeoddysey.entity.KilluaZoldyckEntity;
 
 public class GodspeedOnEffectActiveTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -42,6 +43,17 @@ public class GodspeedOnEffectActiveTickProcedure {
 		if ((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Energy <= 0) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(AnimeoddyseyModMobEffects.GODSPEED.get());
+		}
+		if (entity instanceof KilluaZoldyckEntity) {
+			entity.getPersistentData().putDouble("energy", (entity.getPersistentData().getDouble("energy") - 0.1));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 5, 10, false, false));
+			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+				_entity.addEffect(new MobEffectInstance(MobEffects.JUMP, 5, 2, false, false));
+			if (entity.getPersistentData().getDouble("energy") <= 0) {
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(AnimeoddyseyModMobEffects.GODSPEED.get());
+			}
 		}
 	}
 }

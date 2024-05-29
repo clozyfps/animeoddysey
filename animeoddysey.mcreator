@@ -123,6 +123,7 @@
     {
       "name": "MainHUD",
       "type": "overlay",
+      "sortid": 147,
       "compiles": true,
       "locked_code": false,
       "registry_name": "main_hud",
@@ -344,6 +345,7 @@
     {
       "name": "AnimeOddyseySet",
       "type": "command",
+      "sortid": 148,
       "compiles": true,
       "locked_code": false,
       "registry_name": "anime_oddysey_set",
@@ -363,9 +365,9 @@
       "registry_name": "character_select_main",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/world/inventory/CharacterSelectMainMenu.java",
           "src/main/java/net/mcreator/animeoddysey/network/CharacterSelectMainButtonMessage.java",
-          "src/main/java/net/mcreator/animeoddysey/client/gui/CharacterSelectMainScreen.java"
+          "src/main/java/net/mcreator/animeoddysey/client/gui/CharacterSelectMainScreen.java",
+          "src/main/java/net/mcreator/animeoddysey/world/inventory/CharacterSelectMainMenu.java"
         ]
       },
       "path": "~/GUI"
@@ -379,9 +381,9 @@
       "registry_name": "hx_h_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/gui/HxHSelectionScreen.java",
+          "src/main/java/net/mcreator/animeoddysey/network/HxHSelectionButtonMessage.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/HxHSelectionMenu.java",
-          "src/main/java/net/mcreator/animeoddysey/network/HxHSelectionButtonMessage.java"
+          "src/main/java/net/mcreator/animeoddysey/client/gui/HxHSelectionScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -431,8 +433,8 @@
       "registry_name": "character_selector",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/item/CharacterSelectorItem.java",
-          "src/main/resources/assets/animeoddysey/models/item/character_selector.json"
+          "src/main/resources/assets/animeoddysey/models/item/character_selector.json",
+          "src/main/java/net/mcreator/animeoddysey/item/CharacterSelectorItem.java"
         ]
       },
       "path": "~/Items"
@@ -625,8 +627,8 @@
       "registry_name": "electricity_particle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/ElectricityParticleParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/electricity_particle.json"
+          "src/main/resources/assets/animeoddysey/particles/electricity_particle.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/ElectricityParticleParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -634,6 +636,7 @@
     {
       "name": "LightningPalmImpact",
       "type": "function",
+      "sortid": 149,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_palm_impact",
@@ -972,6 +975,9 @@
       "locked_code": false,
       "registry_name": "setup_animations",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/SetupAnimationsProcedure.java"
+        ],
         "dependencies": []
       },
       "path": "~/Procedures"
@@ -1517,8 +1523,8 @@
       "registry_name": "jjk_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/network/JJKSelectionButtonMessage.java",
           "src/main/java/net/mcreator/animeoddysey/client/gui/JJKSelectionScreen.java",
+          "src/main/java/net/mcreator/animeoddysey/network/JJKSelectionButtonMessage.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/JJKSelectionMenu.java"
         ]
       },
@@ -1904,8 +1910,8 @@
       "registry_name": "red_electricity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/RedElectricityParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/red_electricity.json"
+          "src/main/resources/assets/animeoddysey/particles/red_electricity.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedElectricityParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -2136,6 +2142,7 @@
     {
       "name": "ConstantBlackFlashes",
       "type": "gamerule",
+      "sortid": 150,
       "compiles": true,
       "locked_code": false,
       "registry_name": "constant_black_flashes",
@@ -2299,9 +2306,9 @@
       "registry_name": "mob_psycho_selection",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/gui/MobPsychoSelectionScreen.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/MobPsychoSelectionMenu.java",
-          "src/main/java/net/mcreator/animeoddysey/network/MobPsychoSelectionButtonMessage.java",
-          "src/main/java/net/mcreator/animeoddysey/client/gui/MobPsychoSelectionScreen.java"
+          "src/main/java/net/mcreator/animeoddysey/network/MobPsychoSelectionButtonMessage.java"
         ]
       },
       "path": "~/GUI"
@@ -2912,8 +2919,8 @@
       "registry_name": "red",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/RedParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/red.json"
+          "src/main/resources/assets/animeoddysey/particles/red.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -2942,8 +2949,8 @@
       "registry_name": "small_cube_red",
       "metadata": {
         "files": [
-          "src/main/resources/assets/animeoddysey/particles/small_cube_red.json",
-          "src/main/java/net/mcreator/animeoddysey/client/particle/SmallCubeRedParticle.java"
+          "src/main/java/net/mcreator/animeoddysey/client/particle/SmallCubeRedParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/small_cube_red.json"
         ]
       },
       "path": "~/Particles"
@@ -2957,8 +2964,8 @@
       "registry_name": "red_2",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/Red2Particle.java",
-          "src/main/resources/assets/animeoddysey/particles/red_2.json"
+          "src/main/resources/assets/animeoddysey/particles/red_2.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/Red2Particle.java"
         ]
       },
       "path": "~/Particles"
@@ -2987,8 +2994,8 @@
       "registry_name": "red_anim",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/RedAnimParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/red_anim.json"
+          "src/main/resources/assets/animeoddysey/particles/red_anim.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedAnimParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -3334,7 +3341,7 @@
           }
         ]
       },
-      "path": "~/Mobs"
+      "path": "~/Mobs/Procedures"
     },
     {
       "name": "SmallCubeParticle",
@@ -3347,6 +3354,146 @@
         "files": []
       },
       "path": "~/Particles/3D"
+    },
+    {
+      "name": "StrongDashPunch",
+      "type": "procedure",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strong_dash_punch",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/StrongDashPunchProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/MeleeAttacks"
+    },
+    {
+      "name": "KilluaZoldyckOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "killua_zoldyck_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/KilluaZoldyckOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "SetStrength",
+      "type": "procedure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_strength",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/SetStrengthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetAgility",
+      "type": "procedure",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_agility",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/SetAgilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetDefense",
+      "type": "procedure",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_defense",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/SetDefenseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "SetSP",
+      "type": "procedure",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_sp",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/SetSPProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands/Procedures"
     }
   ],
   "variable_elements": [
@@ -3690,6 +3837,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "MeleeAttacks",
+            "children": []
           }
         ]
       },

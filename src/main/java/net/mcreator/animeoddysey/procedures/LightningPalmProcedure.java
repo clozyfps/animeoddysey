@@ -64,6 +64,6 @@ public class LightningPalmProcedure {
 			}
 		}
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.OUTWARDS.get(), 15, 0, false, false));
+			_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.OUTWARDS.get(), 8, 0, false, false));
 	}
 }

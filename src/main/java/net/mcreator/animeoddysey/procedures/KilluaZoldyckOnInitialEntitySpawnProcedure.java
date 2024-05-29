@@ -1,14 +1,11 @@
 package net.mcreator.animeoddysey.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
-
-import javax.annotation.Nullable;
+import net.minecraft.world.entity.Entity;
 
 public class KilluaZoldyckOnInitialEntitySpawnProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof KilluaZoldyckEntity _datEntSetI)
-			_datEntSetI.getEntityData().set(KilluaZoldyckEntity.DATA_Energy, 600);
+		entity.getPersistentData().putDouble("energy", 750);
 	}
 }
