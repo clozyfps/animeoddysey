@@ -6,6 +6,7 @@ import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
@@ -16,20 +17,33 @@ import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.MobType;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
+import net.minecraft.nbt.CompoundTag;
 
+import net.mcreator.animeoddysey.procedures.KilluaZoldyckOnInitialEntitySpawnProcedure;
+import net.mcreator.animeoddysey.procedures.KilluaZoldyckOnEntityTickUpdateProcedure;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModEntities;
 
+import javax.annotation.Nullable;
+
 public class KilluaZoldyckEntity extends Monster {
+	public static final EntityDataAccessor<Integer> DATA_Energy = SynchedEntityData.defineId(KilluaZoldyckEntity.class, EntityDataSerializers.INT);
+
 	public KilluaZoldyckEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(AnimeoddyseyModEntities.KILLUA_ZOLDYCK.get(), world);
 	}
@@ -44,6 +58,12 @@ public class KilluaZoldyckEntity extends Monster {
 	@Override
 	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
+	}
+
+	@Override
+	protected void defineSynchedData() {
+		super.defineSynchedData();
+		this.entityData.define(DATA_Energy, 0);
 	}
 
 	@Override
@@ -86,6 +106,32 @@ public class KilluaZoldyckEntity extends Monster {
 		if (damagesource.is(DamageTypes.LIGHTNING_BOLT))
 			return false;
 		return super.hurt(damagesource, amount);
+	}
+
+	@Override
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
+		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
+		KilluaZoldyckOnInitialEntitySpawnProcedure.execute(this);
+		return retval;
+	}
+
+	@Override
+	public void addAdditionalSaveData(CompoundTag compound) {
+		super.addAdditionalSaveData(compound);
+		compound.putInt("DataEnergy", this.entityData.get(DATA_Energy));
+	}
+
+	@Override
+	public void readAdditionalSaveData(CompoundTag compound) {
+		super.readAdditionalSaveData(compound);
+		if (compound.contains("DataEnergy"))
+			this.entityData.set(DATA_Energy, compound.getInt("DataEnergy"));
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		KilluaZoldyckOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	public static void init() {

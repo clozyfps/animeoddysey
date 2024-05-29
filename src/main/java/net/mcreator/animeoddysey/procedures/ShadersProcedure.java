@@ -1,18 +1,6 @@
 package net.mcreator.animeoddysey.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.Minecraft;
-
-import net.mcreator.animeoddysey.init.AnimeoddyseyModMobEffects;
 
 import javax.annotation.Nullable;
 
