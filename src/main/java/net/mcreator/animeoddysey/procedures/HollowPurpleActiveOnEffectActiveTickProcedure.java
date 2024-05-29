@@ -30,15 +30,15 @@ public class HollowPurpleActiveOnEffectActiveTickProcedure {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands()
 							.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL,
-									new Vec3(Math.round(x - entity.getPersistentData().getDouble("hollowDistance") * Math.sin(Math.toRadians(entity.getYRot() + 90))), (y + 0.5),
+									new Vec3(Math.round(x - entity.getPersistentData().getDouble("hollowDistance") * Math.sin(Math.toRadians(entity.getYRot() + 90))), (y + 1.5),
 											Math.round(z + entity.getPersistentData().getDouble("hollowDistance") * Math.cos(Math.toRadians(entity.getYRot() + 90)))),
-									Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle minecraft:dust 0.14 0.32 0.92 2 ^0 ^0 ^0 0.1 0.1 0.1 0 1");
+									Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle minecraft:dust_color_transition 0.06 1 0.98 0.4 0.16 0.59 1 ~ ~ ~ 0.1 0.1 0.1 0 100");
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands()
 							.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL,
-									new Vec3(Math.round(x - entity.getPersistentData().getDouble("hollowDistance") * Math.sin(Math.toRadians(entity.getYRot() - 90))), (y + 0.5),
+									new Vec3(Math.round(x - entity.getPersistentData().getDouble("hollowDistance") * Math.sin(Math.toRadians(entity.getYRot() - 90))), (y + 1.5),
 											Math.round(z + entity.getPersistentData().getDouble("hollowDistance") * Math.cos(Math.toRadians(entity.getYRot() - 90)))),
-									Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle minecraft:dust 0.94 0.12 0.14 2 ^0 ^0 ^0 0.1 0.1 0.1 0 1");
+									Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle minecraft:dust_color_transition 1 0.22 0.22 0.4 0.66 0 0 ~ ~ ~ 0.1 0.1 0.1 0 100");
 				entity.getPersistentData().putDouble("hollowDistance", (entity.getPersistentData().getDouble("hollowDistance") - 0.12857143));
 			}
 			if (entity.getPersistentData().getDouble("hollowPurple") == 1) {

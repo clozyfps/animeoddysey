@@ -29,27 +29,27 @@ import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 
 @OnlyIn(Dist.CLIENT)
-public class SmallCubeRedParticle extends TextureSheetParticle {
-	public static SmallCubeRedParticleProvider provider(SpriteSet spriteSet) {
-		return new SmallCubeRedParticleProvider(spriteSet);
+public class SmallCubePurpleParticle extends TextureSheetParticle {
+	public static SmallCubePurpleParticleProvider provider(SpriteSet spriteSet) {
+		return new SmallCubePurpleParticleProvider(spriteSet);
 	}
 
-	public static class SmallCubeRedParticleProvider implements ParticleProvider<SimpleParticleType> {
+	public static class SmallCubePurpleParticleProvider implements ParticleProvider<SimpleParticleType> {
 		private final SpriteSet spriteSet;
 
-		public SmallCubeRedParticleProvider(SpriteSet spriteSet) {
+		public SmallCubePurpleParticleProvider(SpriteSet spriteSet) {
 			this.spriteSet = spriteSet;
 		}
 
 		public Particle createParticle(SimpleParticleType typeIn, ClientLevel worldIn, double x, double y, double z, double xSpeed, double ySpeed, double zSpeed) {
-			SmallCubeRedParticle particle = new SmallCubeRedParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
-			class SmallCubeRedRenderSequence {
+			SmallCubePurpleParticle particle = new SmallCubePurpleParticle(worldIn, x, y, z, xSpeed, ySpeed, zSpeed, this.spriteSet);
+			class SmallCubePurpleRenderSequence {
 				private ClientLevel world;
 
-				private class SmallCubeRedRenderer {
+				private class SmallCubePurpleRenderer {
 					public EntityModel model = new Modelsmallcube(Minecraft.getInstance().getEntityModels().bakeLayer(Modelsmallcube.LAYER_LOCATION));
 
-					public SmallCubeRedRenderer() {
+					public SmallCubePurpleRenderer() {
 						MinecraftForge.EVENT_BUS.register(this);
 					}
 
@@ -61,7 +61,7 @@ public class SmallCubeRedParticle extends TextureSheetParticle {
 					@SubscribeEvent
 					public void render(RenderLevelStageEvent event) {
 						if (event.getStage() == RenderLevelStageEvent.Stage.AFTER_PARTICLES) {
-							VertexConsumer consumer = Minecraft.getInstance().renderBuffers().bufferSource().getBuffer(RenderType.entityCutoutNoCull(new ResourceLocation("animeoddysey:textures/particle/small_cube_red.png")));
+							VertexConsumer consumer = Minecraft.getInstance().renderBuffers().bufferSource().getBuffer(RenderType.entityCutoutNoCull(new ResourceLocation("animeoddysey:textures/particle/small_cube_purple.png")));
 							Vec3 camPos = event.getCamera().getPosition();
 							double x = Mth.lerp(event.getPartialTick(), particle.xo, particle.x) - camPos.x();
 							double y = Mth.lerp(event.getPartialTick(), particle.yo, particle.y) - camPos.y();
@@ -79,10 +79,10 @@ public class SmallCubeRedParticle extends TextureSheetParticle {
 					}
 				}
 
-				private SmallCubeRedRenderer renderer;
+				private SmallCubePurpleRenderer renderer;
 
 				public void start(ClientLevel world) {
-					this.renderer = new SmallCubeRedRenderer();
+					this.renderer = new SmallCubePurpleRenderer();
 					MinecraftForge.EVENT_BUS.register(this);
 					this.world = world;
 				}
@@ -98,7 +98,7 @@ public class SmallCubeRedParticle extends TextureSheetParticle {
 					MinecraftForge.EVENT_BUS.unregister(this);
 				}
 			}
-			SmallCubeRedRenderSequence sequence = new SmallCubeRedRenderSequence();
+			SmallCubePurpleRenderSequence sequence = new SmallCubePurpleRenderSequence();
 			sequence.start(worldIn);
 			return particle;
 		}
@@ -106,12 +106,12 @@ public class SmallCubeRedParticle extends TextureSheetParticle {
 
 	private final SpriteSet spriteSet;
 
-	protected SmallCubeRedParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
+	protected SmallCubePurpleParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(1f, 1f);
 		this.quadSize *= 3f;
-		this.lifetime = 1;
+		this.lifetime = 17;
 		this.gravity = 0f;
 		this.hasPhysics = true;
 		this.xd = vx * 0;

@@ -39,13 +39,13 @@ public class RedParticle extends TextureSheetParticle {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
-		this.quadSize *= 0.9f;
-		this.lifetime = 7;
+		this.quadSize *= 2f;
+		this.lifetime = 10;
 		this.gravity = 0f;
 		this.hasPhysics = true;
-		this.xd = vx * -2;
-		this.yd = vy * -2;
-		this.zd = vz * -2;
+		this.xd = vx * 2;
+		this.yd = vy * 2;
+		this.zd = vz * 2;
 		this.angularVelocity = 0.15f;
 		this.angularAcceleration = 0.15f;
 		this.pickSprite(spriteSet);

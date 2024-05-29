@@ -1578,6 +1578,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -3321,24 +3337,121 @@
       "path": "~/Creative Tabs"
     },
     {
-      "name": "StoneParticle",
-      "type": "particlemodel",
-      "sortid": 145,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stone_particle",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/Particles/3D"
-    },
-    {
       "name": "SmallCubeParticle",
       "type": "particlemodel",
       "sortid": 146,
       "compiles": true,
       "locked_code": false,
       "registry_name": "small_cube_particle",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Particles/3D"
+    },
+    {
+      "name": "Iframe",
+      "type": "potioneffect",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iframe",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/IframeMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "Shaders",
+      "type": "procedure",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shaders",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/ShadersProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "IframeEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iframe_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/IframeEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "SmallCubePurple",
+      "type": "particle",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_cube_purple",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/SmallCubePurpleParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/small_cube_purple.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "SmallCubeParticlePurple",
+      "type": "particlemodel",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_cube_particle_purple",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Particles/3D"
+    },
+    {
+      "name": "StonePartcileDrop",
+      "type": "particlemodel",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_partcile_drop",
       "metadata": {
         "files": []
       },
@@ -3507,6 +3620,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "RedAnim",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -3616,6 +3735,7 @@
       "subtitles.heartbeat": "",
       "effect.animeoddysey.outwards": "Outwards",
       "gui.animeoddysey.mob_psycho_selection.tooltip_ssbsslkillua_zoldyck_assassin": "§d§lMob \"100\" | Energy Based Kit",
+      "effect.animeoddysey.iframe": "Impact Frame",
       "gui.animeoddysey.hx_h_selection.button_killua": "Killua",
       "entity.animeoddysey.after_image": "After Image",
       "gamerule.constantBlackFlashes": "constantblackflashes",

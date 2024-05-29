@@ -11,28 +11,21 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
-import net.mcreator.animeoddysey.procedures.OutwardsReversalRedOnEffectActiveTickProcedure;
-import net.mcreator.animeoddysey.procedures.OutwardsReversalRedEffectExpiresProcedure;
+import net.mcreator.animeoddysey.procedures.IframeEffectStartedappliedProcedure;
 
-public class OutwardsReversalRedMobEffect extends MobEffect {
-	public OutwardsReversalRedMobEffect() {
+public class IframeMobEffect extends MobEffect {
+	public IframeMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.animeoddysey.outwards_reversal_red";
+		return "effect.animeoddysey.iframe";
 	}
 
 	@Override
-	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		OutwardsReversalRedOnEffectActiveTickProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-	}
-
-	@Override
-	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
-		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		OutwardsReversalRedEffectExpiresProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
+		IframeEffectStartedappliedProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ());
 	}
 
 	@Override
