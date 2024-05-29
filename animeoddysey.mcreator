@@ -347,9 +347,9 @@
       "registry_name": "character_select_main",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/animeoddysey/world/inventory/CharacterSelectMainMenu.java",
           "src/main/java/net/mcreator/animeoddysey/network/CharacterSelectMainButtonMessage.java",
-          "src/main/java/net/mcreator/animeoddysey/client/gui/CharacterSelectMainScreen.java",
-          "src/main/java/net/mcreator/animeoddysey/world/inventory/CharacterSelectMainMenu.java"
+          "src/main/java/net/mcreator/animeoddysey/client/gui/CharacterSelectMainScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -363,9 +363,9 @@
       "registry_name": "hx_h_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/network/HxHSelectionButtonMessage.java",
+          "src/main/java/net/mcreator/animeoddysey/client/gui/HxHSelectionScreen.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/HxHSelectionMenu.java",
-          "src/main/java/net/mcreator/animeoddysey/client/gui/HxHSelectionScreen.java"
+          "src/main/java/net/mcreator/animeoddysey/network/HxHSelectionButtonMessage.java"
         ]
       },
       "path": "~/GUI"
@@ -415,8 +415,8 @@
       "registry_name": "character_selector",
       "metadata": {
         "files": [
-          "src/main/resources/assets/animeoddysey/models/item/character_selector.json",
-          "src/main/java/net/mcreator/animeoddysey/item/CharacterSelectorItem.java"
+          "src/main/java/net/mcreator/animeoddysey/item/CharacterSelectorItem.java",
+          "src/main/resources/assets/animeoddysey/models/item/character_selector.json"
         ]
       },
       "path": "~/Items"
@@ -609,8 +609,8 @@
       "registry_name": "electricity_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/animeoddysey/particles/electricity_particle.json",
-          "src/main/java/net/mcreator/animeoddysey/client/particle/ElectricityParticleParticle.java"
+          "src/main/java/net/mcreator/animeoddysey/client/particle/ElectricityParticleParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/electricity_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -956,9 +956,6 @@
       "locked_code": false,
       "registry_name": "setup_animations",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/SetupAnimationsProcedure.java"
-        ],
         "dependencies": []
       },
       "path": "~/Procedures"
@@ -1504,8 +1501,8 @@
       "registry_name": "jjk_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/gui/JJKSelectionScreen.java",
           "src/main/java/net/mcreator/animeoddysey/network/JJKSelectionButtonMessage.java",
+          "src/main/java/net/mcreator/animeoddysey/client/gui/JJKSelectionScreen.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/JJKSelectionMenu.java"
         ]
       },
@@ -1891,8 +1888,8 @@
       "registry_name": "red_electricity",
       "metadata": {
         "files": [
-          "src/main/resources/assets/animeoddysey/particles/red_electricity.json",
-          "src/main/java/net/mcreator/animeoddysey/client/particle/RedElectricityParticle.java"
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedElectricityParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/red_electricity.json"
         ]
       },
       "path": "~/Particles"
@@ -2266,9 +2263,9 @@
       "registry_name": "mob_psycho_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/gui/MobPsychoSelectionScreen.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/MobPsychoSelectionMenu.java",
-          "src/main/java/net/mcreator/animeoddysey/network/MobPsychoSelectionButtonMessage.java"
+          "src/main/java/net/mcreator/animeoddysey/network/MobPsychoSelectionButtonMessage.java",
+          "src/main/java/net/mcreator/animeoddysey/client/gui/MobPsychoSelectionScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -2332,6 +2329,66 @@
         ]
       },
       "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "LapseBlueMax",
+      "type": "particle",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_max",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/animeoddysey/particles/lapse_blue_max.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/LapseBlueMaxParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "LapseBlueMax2",
+      "type": "particle",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_max_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/LapseBlueMax2Particle.java",
+          "src/main/resources/assets/animeoddysey/particles/lapse_blue_max_2.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "Red2",
+      "type": "particle",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/Red2Particle.java",
+          "src/main/resources/assets/animeoddysey/particles/red_2.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "Red",
+      "type": "particle",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/red.json"
+        ]
+      },
+      "path": "~/Particles"
     }
   ],
   "variable_elements": [
