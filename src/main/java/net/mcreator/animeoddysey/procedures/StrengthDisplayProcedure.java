@@ -1,8 +1,8 @@
 package net.mcreator.animeoddysey.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
 
 public class StrengthDisplayProcedure {
 	public static String execute(Entity entity) {

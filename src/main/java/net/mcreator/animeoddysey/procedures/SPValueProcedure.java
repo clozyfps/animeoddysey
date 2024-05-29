@@ -1,11 +1,13 @@
 package net.mcreator.animeoddysey.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
 
 public class SPValueProcedure {
-	public static String execute() {
-		return "\u00A7lSP: " + new java.text.DecimalFormat("#").format();
+	public static String execute(Entity entity) {
+		if (entity == null)
+			return "";
+		return "\u00A7lSP: " + new java.text.DecimalFormat("#").format((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).SP);
 	}
 }

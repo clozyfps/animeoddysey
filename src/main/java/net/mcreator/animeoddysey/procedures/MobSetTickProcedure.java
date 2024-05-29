@@ -1,6 +1,21 @@
 package net.mcreator.animeoddysey.procedures;
 
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.TickEvent;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+
+import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
+import net.mcreator.animeoddysey.init.AnimeoddyseyModMobEffects;
+import net.mcreator.animeoddysey.init.AnimeoddyseyModEntities;
+import net.mcreator.animeoddysey.entity.PsychicBlastEntity;
 
 import javax.annotation.Nullable;
 
@@ -135,7 +150,7 @@ public class MobSetTickProcedure {
 					if (!projectileLevel.isClientSide()) {
 						Projectile _entityToSpawn = new Object() {
 							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-								AbstractArrow entityToSpawn = new PsychicBlastEntity(AnimeoddyseyModEntities.DELETED_MOD_ELEMENT.get(), level);
+								AbstractArrow entityToSpawn = new PsychicBlastEntity(AnimeoddyseyModEntities.PSYCHIC_BLAST.get(), level);
 								entityToSpawn.setOwner(shooter);
 								entityToSpawn.setBaseDamage(damage);
 								entityToSpawn.setKnockback(knockback);

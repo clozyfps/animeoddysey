@@ -1,14 +1,40 @@
 package net.mcreator.animeoddysey.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.registries.ForgeRegistries;
 
-import javax.annotation.Nullable;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
+
+import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
+import net.mcreator.animeoddysey.init.AnimeoddyseyModMobEffects;
+import net.mcreator.animeoddysey.AnimeoddyseyMod;
+
+import java.util.List;
+import java.util.Comparator;
 
 public class PsychicBlastWhileProjectileFlyingTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
 		if (entity == null || immediatesourceentity == null)
 			return;
-		if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(AnimeoddyseyModMobEffects.DELETED_MOD_ELEMENT.get()))) {
+		if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(AnimeoddyseyModMobEffects.EXPLOSION_OF_EMOTIONS.get()))) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"particle minecraft:dust 0.21 0.84 0.95 3 ^0 ^0 ^0 1 1 1 0 55");
@@ -21,7 +47,7 @@ public class PsychicBlastWhileProjectileFlyingTickProcedure {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"particle minecraft:dust 0.31 0.31 0.97 3 ^0 ^0 ^0 1 1 1 0 55");
-		} else if (entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(AnimeoddyseyModMobEffects.DELETED_MOD_ELEMENT.get())) {
+		} else if (entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(AnimeoddyseyModMobEffects.EXPLOSION_OF_EMOTIONS.get())) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"particle minecraft:dust 0 0 0 3 ^0 ^0 ^0 1 1 1 0 55");
