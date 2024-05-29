@@ -70,5 +70,13 @@
         "stream": false
       }
     ]
+  },
+  "spiritawareness": {
+    "sounds": [
+      {
+        "name": "animeoddysey:shigeo_spiritual_awareness_sound_effect_japanese_mob_psycho_100",
+        "stream": false
+      }
+    ]
   }
 }

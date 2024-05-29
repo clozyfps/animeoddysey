@@ -27,9 +27,9 @@ public class ExplosionOfEmotionsOnEffectActiveTickProcedure {
 		if (entity == null)
 			return;
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.POOF, x, y, z, 8, 1, 4, 1, 0.2);
+			_level.sendParticles(ParticleTypes.POOF, x, y, z, 8, 0.5, 1, 0.5, 0.1);
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.SQUID_INK, x, y, z, 8, 1, 4, 1, 0.2);
+			_level.sendParticles(ParticleTypes.SQUID_INK, x, y, z, 8, 0.5, 1, 0.5, 0.1);
 		if (!(entity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(MobEffects.REGENERATION))) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 5, 6, false, false));

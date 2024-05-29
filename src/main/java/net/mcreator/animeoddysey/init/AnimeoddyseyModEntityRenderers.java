@@ -21,5 +21,6 @@ public class AnimeoddyseyModEntityRenderers {
 		event.registerEntityRenderer(AnimeoddyseyModEntities.AFTER_IMAGE.get(), AfterImageRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.KNOCKBACK_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.PSYCHIC_BLAST.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(AnimeoddyseyModEntities.PSYCHIC_SLASH.get(), ThrownItemRenderer::new);
 	}
 }

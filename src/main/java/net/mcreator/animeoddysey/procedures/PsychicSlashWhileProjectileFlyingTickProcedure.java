@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
@@ -30,38 +31,38 @@ import net.mcreator.animeoddysey.AnimeoddyseyMod;
 import java.util.List;
 import java.util.Comparator;
 
-public class PsychicBlastWhileProjectileFlyingTickProcedure {
+public class PsychicSlashWhileProjectileFlyingTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity) {
 		if (entity == null || immediatesourceentity == null)
 			return;
 		if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(AnimeoddyseyModMobEffects.EXPLOSION_OF_EMOTIONS.get()))) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:dust 0.18 0.55 0.95 3 ^0 ^0 ^0 1 1 1 0 55");
+						"particle minecraft:dust 0.18 0.55 0.95 3 ^0 ^0 ^0 0.3 0.3 0.3 0 10");
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:dust 0.48 0.98 0.98 3 ^0 ^0 ^0 1 1 1 0 55");
+						"particle minecraft:dust 0.48 0.98 0.98 3 ^0 ^0 ^0 0.3 0.3 0.3 0 10");
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:dust 0.53 0.29 0.99 3 ^0 ^0 ^0 1 1 1 0 55");
+						"particle minecraft:dust 0.53 0.29 0.99 3 ^0 ^0 ^0 0.3 0.3 0.3 0 10");
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:dust 0.31 0.31 0.97 3 ^0 ^0 ^0 1 1 1 0 55");
+						"particle minecraft:dust 0.31 0.31 0.97 3 ^0 ^0 ^0 0.3 0.3 0.3 0 10");
 		} else if (entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(AnimeoddyseyModMobEffects.EXPLOSION_OF_EMOTIONS.get())) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:dust 0 0 0 3 ^0 ^0 ^0 1 1 1 0 55");
+						"particle minecraft:dust 0 0 0 3 ^0 ^0 ^0 0.3 0.3 0.3 0 10");
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:dust 1 1 1 3 ^0 ^0 ^0 1 1 1 0 55");
+						"particle minecraft:dust 1 1 1 3 ^0 ^0 ^0 0.3 0.3 0.3 0 10");
 		}
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 1, 0.1, 0.1, 0.1, 0);
+			_level.sendParticles(ParticleTypes.SWEEP_ATTACK, x, y, z, 1, 0.01, 0.01, 0.01, 0);
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
-				_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dragon_fireball.explode")), SoundSource.NEUTRAL, 1, 1);
+				_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1);
 			} else {
-				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dragon_fireball.explode")), SoundSource.NEUTRAL, 1, 1, false);
+				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1, false);
 			}
 		}
 		{
@@ -70,14 +71,16 @@ public class PsychicBlastWhileProjectileFlyingTickProcedure {
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
 					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), immediatesourceentity, entity),
-							(float) (8 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthStat / 5
+							(float) (11 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthStat / 5
 									+ (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthMod));
-					world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(Blocks.REDSTONE_BLOCK.defaultBlockState()));
+					if (entityiterator instanceof LivingEntity || entityiterator instanceof Player) {
+						world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(Blocks.REDSTONE_BLOCK.defaultBlockState()));
+					}
 				}
 			}
 		}
 		immediatesourceentity.setNoGravity(true);
-		AnimeoddyseyMod.queueServerWork(35, () -> {
+		AnimeoddyseyMod.queueServerWork(5, () -> {
 			if (!immediatesourceentity.level().isClientSide())
 				immediatesourceentity.discard();
 		});

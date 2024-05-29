@@ -2232,6 +2232,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -2889,6 +2905,270 @@
         ]
       },
       "path": "~/Projectiles"
+    },
+    {
+      "name": "PsychicSlashWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "psychic_slash_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/PsychicSlashWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles/Procedures"
+    },
+    {
+      "name": "PsychicSlash",
+      "type": "projectile",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "psychic_slash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/entity/PsychicSlashEntity.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "PsychicMeteorite",
+      "type": "procedure",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "psychic_meteorite",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/PsychicMeteoriteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Mob"
+    },
+    {
+      "name": "AuraControlOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aura_control_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/AuraControlOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "AuraControl",
+      "type": "potioneffect",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "aura_control",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/AuraControlMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "SpiritualAwarenessOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spiritual_awareness_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/SpiritualAwarenessOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "SpiritualAwareness",
+      "type": "potioneffect",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spiritual_awareness",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/SpiritualAwarenessMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "Chlorokinesis",
+      "type": "procedure",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chlorokinesis",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/ChlorokinesisProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Mob"
+    },
+    {
+      "name": "SlamOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slam_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/SlamOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "Slam",
+      "type": "potioneffect",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slam",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/SlamMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
     }
   ],
   "variable_elements": [
@@ -3127,6 +3407,14 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "spiritawareness",
+      "files": [
+        "shigeo_spiritual_awareness_sound_effect_japanese_mob_psycho_100"
+      ],
+      "category": "neutral",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -3145,9 +3433,11 @@
       "effect.animeoddysey.reversed_cursed_technique": "Reversed Cursed Technique",
       "effect.animeoddysey.zone": "Zone",
       "effect.animeoddysey.lapse_blue_maximum": "Lapse Blue Maximum",
+      "effect.animeoddysey.aura_control": "Aura Control",
       "advancements.post_mortem.descr": "Awaken Reversed Cursed Technique As Teen Gojo",
       "item.animeoddysey.character_selector": "Character Selector",
       "gui.animeoddysey.character_select_main.button_hxh": "HxH",
+      "effect.animeoddysey.slam": "Slam",
       "effect.animeoddysey.impact_frame": "Impact Frame",
       "subtitles.heartbeat": "",
       "effect.animeoddysey.outwards": "Outwards",
@@ -3170,6 +3460,7 @@
       "gui.animeoddysey.jjk_selection.button_gojo_teen": "Gojo (Teen)",
       "subtitles.mobrage": "",
       "effect.animeoddysey.honored_one_sky": "Honored One Sky",
+      "effect.animeoddysey.spiritual_awareness": "Spiritual Awareness",
       "effect.animeoddysey.explosion_of_emotions": "Explosion Of Emotions",
       "death.attack.eraser.item": "%1$s was killed by %2$s using %3$s",
       "key.animeoddysey.use_skill": "Use Skill",
@@ -3188,7 +3479,8 @@
       "advancements.anime_oddysey.descr": "Start In The Vast Anime Universe!",
       "key.animeoddysey.talent": "Talent",
       "subtitles.stresspercentage": "",
-      "effect.animeoddysey.exploding": "Exploding"
+      "effect.animeoddysey.exploding": "Exploding",
+      "subtitles.spiritawareness": ""
     }
   },
   "foldersRoot": {
