@@ -2953,7 +2953,7 @@
       "type": "particlemodel",
       "sortid": 130,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "stone_particle",
       "metadata": {
         "files": []
@@ -3025,7 +3025,7 @@
       "type": "particlemodel",
       "sortid": 129,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "small_cube_red_3_d",
       "metadata": {
         "files": []
