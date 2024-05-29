@@ -363,9 +363,9 @@
       "registry_name": "character_select_main",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/animeoddysey/world/inventory/CharacterSelectMainMenu.java",
           "src/main/java/net/mcreator/animeoddysey/network/CharacterSelectMainButtonMessage.java",
-          "src/main/java/net/mcreator/animeoddysey/client/gui/CharacterSelectMainScreen.java",
-          "src/main/java/net/mcreator/animeoddysey/world/inventory/CharacterSelectMainMenu.java"
+          "src/main/java/net/mcreator/animeoddysey/client/gui/CharacterSelectMainScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -379,9 +379,9 @@
       "registry_name": "hx_h_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/network/HxHSelectionButtonMessage.java",
+          "src/main/java/net/mcreator/animeoddysey/client/gui/HxHSelectionScreen.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/HxHSelectionMenu.java",
-          "src/main/java/net/mcreator/animeoddysey/client/gui/HxHSelectionScreen.java"
+          "src/main/java/net/mcreator/animeoddysey/network/HxHSelectionButtonMessage.java"
         ]
       },
       "path": "~/GUI"
@@ -431,8 +431,8 @@
       "registry_name": "character_selector",
       "metadata": {
         "files": [
-          "src/main/resources/assets/animeoddysey/models/item/character_selector.json",
-          "src/main/java/net/mcreator/animeoddysey/item/CharacterSelectorItem.java"
+          "src/main/java/net/mcreator/animeoddysey/item/CharacterSelectorItem.java",
+          "src/main/resources/assets/animeoddysey/models/item/character_selector.json"
         ]
       },
       "path": "~/Items"
@@ -625,8 +625,8 @@
       "registry_name": "electricity_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/animeoddysey/particles/electricity_particle.json",
-          "src/main/java/net/mcreator/animeoddysey/client/particle/ElectricityParticleParticle.java"
+          "src/main/java/net/mcreator/animeoddysey/client/particle/ElectricityParticleParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/electricity_particle.json"
         ]
       },
       "path": "~/Particles"
@@ -972,9 +972,6 @@
       "locked_code": false,
       "registry_name": "setup_animations",
       "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/SetupAnimationsProcedure.java"
-        ],
         "dependencies": []
       },
       "path": "~/Procedures"
@@ -1520,8 +1517,8 @@
       "registry_name": "jjk_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/gui/JJKSelectionScreen.java",
           "src/main/java/net/mcreator/animeoddysey/network/JJKSelectionButtonMessage.java",
+          "src/main/java/net/mcreator/animeoddysey/client/gui/JJKSelectionScreen.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/JJKSelectionMenu.java"
         ]
       },
@@ -1907,8 +1904,8 @@
       "registry_name": "red_electricity",
       "metadata": {
         "files": [
-          "src/main/resources/assets/animeoddysey/particles/red_electricity.json",
-          "src/main/java/net/mcreator/animeoddysey/client/particle/RedElectricityParticle.java"
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedElectricityParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/red_electricity.json"
         ]
       },
       "path": "~/Particles"
@@ -2232,6 +2229,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -2286,9 +2299,9 @@
       "registry_name": "mob_psycho_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/gui/MobPsychoSelectionScreen.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/MobPsychoSelectionMenu.java",
-          "src/main/java/net/mcreator/animeoddysey/network/MobPsychoSelectionButtonMessage.java"
+          "src/main/java/net/mcreator/animeoddysey/network/MobPsychoSelectionButtonMessage.java",
+          "src/main/java/net/mcreator/animeoddysey/client/gui/MobPsychoSelectionScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -3561,9 +3574,11 @@
       "effect.animeoddysey.reversed_cursed_technique": "Reversed Cursed Technique",
       "effect.animeoddysey.zone": "Zone",
       "effect.animeoddysey.lapse_blue_maximum": "Lapse Blue Maximum",
+      "effect.animeoddysey.aura_control": "Aura Control",
       "advancements.post_mortem.descr": "Awaken Reversed Cursed Technique As Teen Gojo",
       "item.animeoddysey.character_selector": "Character Selector",
       "gui.animeoddysey.character_select_main.button_hxh": "HxH",
+      "effect.animeoddysey.slam": "Slam",
       "effect.animeoddysey.impact_frame": "Impact Frame",
       "subtitles.heartbeat": "",
       "effect.animeoddysey.outwards": "Outwards",
@@ -3586,6 +3601,7 @@
       "gui.animeoddysey.jjk_selection.button_gojo_teen": "Gojo (Teen)",
       "subtitles.mobrage": "",
       "effect.animeoddysey.honored_one_sky": "Honored One Sky",
+      "effect.animeoddysey.spiritual_awareness": "Spiritual Awareness",
       "effect.animeoddysey.explosion_of_emotions": "Explosion Of Emotions",
       "death.attack.eraser.item": "%1$s was killed by %2$s using %3$s",
       "key.animeoddysey.use_skill": "Use Skill",
