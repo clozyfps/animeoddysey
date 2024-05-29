@@ -3321,7 +3321,7 @@
           "src/main/resources/assets/animeoddysey/models/item/killua_zoldyck_spawn_egg.json"
         ]
       },
-      "path": "~/Particles/3D"
+      "path": "~/Mobs"
     }
   ],
   "variable_elements": [
