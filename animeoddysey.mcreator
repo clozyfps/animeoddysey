@@ -123,6 +123,7 @@
     {
       "name": "MainHUD",
       "type": "overlay",
+      "sortid": 141,
       "compiles": true,
       "locked_code": false,
       "registry_name": "main_hud",
@@ -344,6 +345,7 @@
     {
       "name": "AnimeOddyseySet",
       "type": "command",
+      "sortid": 142,
       "compiles": true,
       "locked_code": false,
       "registry_name": "anime_oddysey_set",
@@ -634,6 +636,7 @@
     {
       "name": "LightningPalmImpact",
       "type": "function",
+      "sortid": 143,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_palm_impact",
@@ -2136,6 +2139,7 @@
     {
       "name": "ConstantBlackFlashes",
       "type": "gamerule",
+      "sortid": 144,
       "compiles": true,
       "locked_code": false,
       "registry_name": "constant_black_flashes",
@@ -2949,18 +2953,6 @@
       "path": "~/Particles"
     },
     {
-      "name": "StoneParticle",
-      "type": "particlemodel",
-      "sortid": 130,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "stone_particle",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/Particles/3D"
-    },
-    {
       "name": "Red2",
       "type": "particle",
       "sortid": 105,
@@ -3019,18 +3011,6 @@
         ]
       },
       "path": "~/Particles"
-    },
-    {
-      "name": "SmallCubeRed3D",
-      "type": "particlemodel",
-      "sortid": 129,
-      "compiles": true,
-      "locked_code": true,
-      "registry_name": "small_cube_red_3_d",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/Particles/3D"
     },
     {
       "name": "LapseBlueMax2",
@@ -3339,6 +3319,30 @@
         "files": []
       },
       "path": "~/Creative Tabs"
+    },
+    {
+      "name": "StoneParticle",
+      "type": "particlemodel",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_particle",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Particles/3D"
+    },
+    {
+      "name": "SmallCubeParticle",
+      "type": "particlemodel",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_cube_particle",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Particles/3D"
     }
   ],
   "variable_elements": [
