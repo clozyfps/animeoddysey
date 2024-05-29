@@ -347,9 +347,9 @@
       "registry_name": "character_select_main",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/world/inventory/CharacterSelectMainMenu.java",
           "src/main/java/net/mcreator/animeoddysey/network/CharacterSelectMainButtonMessage.java",
-          "src/main/java/net/mcreator/animeoddysey/client/gui/CharacterSelectMainScreen.java"
+          "src/main/java/net/mcreator/animeoddysey/client/gui/CharacterSelectMainScreen.java",
+          "src/main/java/net/mcreator/animeoddysey/world/inventory/CharacterSelectMainMenu.java"
         ]
       },
       "path": "~/GUI"
@@ -363,9 +363,9 @@
       "registry_name": "hx_h_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/gui/HxHSelectionScreen.java",
+          "src/main/java/net/mcreator/animeoddysey/network/HxHSelectionButtonMessage.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/HxHSelectionMenu.java",
-          "src/main/java/net/mcreator/animeoddysey/network/HxHSelectionButtonMessage.java"
+          "src/main/java/net/mcreator/animeoddysey/client/gui/HxHSelectionScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -415,8 +415,8 @@
       "registry_name": "character_selector",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/item/CharacterSelectorItem.java",
-          "src/main/resources/assets/animeoddysey/models/item/character_selector.json"
+          "src/main/resources/assets/animeoddysey/models/item/character_selector.json",
+          "src/main/java/net/mcreator/animeoddysey/item/CharacterSelectorItem.java"
         ]
       },
       "path": "~/Items"
@@ -609,8 +609,8 @@
       "registry_name": "electricity_particle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/ElectricityParticleParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/electricity_particle.json"
+          "src/main/resources/assets/animeoddysey/particles/electricity_particle.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/ElectricityParticleParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -956,6 +956,9 @@
       "locked_code": false,
       "registry_name": "setup_animations",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/SetupAnimationsProcedure.java"
+        ],
         "dependencies": []
       },
       "path": "~/Procedures"
@@ -1501,8 +1504,8 @@
       "registry_name": "jjk_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/network/JJKSelectionButtonMessage.java",
           "src/main/java/net/mcreator/animeoddysey/client/gui/JJKSelectionScreen.java",
+          "src/main/java/net/mcreator/animeoddysey/network/JJKSelectionButtonMessage.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/JJKSelectionMenu.java"
         ]
       },
@@ -1888,8 +1891,8 @@
       "registry_name": "red_electricity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/RedElectricityParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/red_electricity.json"
+          "src/main/resources/assets/animeoddysey/particles/red_electricity.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedElectricityParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -2263,9 +2266,9 @@
       "registry_name": "mob_psycho_selection",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/gui/MobPsychoSelectionScreen.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/MobPsychoSelectionMenu.java",
-          "src/main/java/net/mcreator/animeoddysey/network/MobPsychoSelectionButtonMessage.java",
-          "src/main/java/net/mcreator/animeoddysey/client/gui/MobPsychoSelectionScreen.java"
+          "src/main/java/net/mcreator/animeoddysey/network/MobPsychoSelectionButtonMessage.java"
         ]
       },
       "path": "~/GUI"
@@ -2331,6 +2334,36 @@
       "path": "~/GUI/Procedures"
     },
     {
+      "name": "Red",
+      "type": "particle",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/red.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "Red2",
+      "type": "particle",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/Red2Particle.java",
+          "src/main/resources/assets/animeoddysey/particles/red_2.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
       "name": "LapseBlueMax",
       "type": "particle",
       "sortid": 103,
@@ -2361,34 +2394,521 @@
       "path": "~/Particles"
     },
     {
-      "name": "Red2",
-      "type": "particle",
+      "name": "UpgradeEnergy",
+      "type": "procedure",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_energy",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/UpgradeEnergyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ExpGain",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exp_gain",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/ExpGainProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "SPValue",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sp_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/SPValueProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "UpgradeAgility",
+      "type": "procedure",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_agility",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/UpgradeAgilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ExplosionOfEmotionsOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_of_emotions_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/ExplosionOfEmotionsOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Mob"
+    },
+    {
+      "name": "OpenMenu",
+      "type": "keybind",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/network/OpenMenuMessage.java"
+        ]
+      },
+      "path": "~/Keybinds"
+    },
+    {
+      "name": "ExplosionOfEmotionsEffectExpires",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_of_emotions_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/ExplosionOfEmotionsEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "RankValue",
+      "type": "procedure",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rank_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/RankValueProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "MainMenu",
+      "type": "gui",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "main_menu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/world/inventory/MainMenuMenu.java",
+          "src/main/java/net/mcreator/animeoddysey/network/MainMenuButtonMessage.java",
+          "src/main/java/net/mcreator/animeoddysey/client/gui/MainMenuScreen.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "LevelValue",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_value",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/LevelValueProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "AgilityDisplay",
+      "type": "procedure",
       "sortid": 105,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "red_2",
+      "registry_name": "agility_display",
       "metadata": {
+        "return_type": "string",
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/Red2Particle.java",
-          "src/main/resources/assets/animeoddysey/particles/red_2.json"
+          "src/main/java/net/mcreator/animeoddysey/procedures/AgilityDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       },
-      "path": "~/Particles"
+      "path": "~/GUI/Procedures"
     },
     {
-      "name": "Red",
-      "type": "particle",
+      "name": "UpgradeStrength",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_strength",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/UpgradeStrengthProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "MobPassiveMax",
+      "type": "procedure",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mob_passive_max",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/MobPassiveMaxProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Mob"
+    },
+    {
+      "name": "PsychicBlastWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "psychic_blast_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/PsychicBlastWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles/Procedures"
+    },
+    {
+      "name": "EnergyValue",
+      "type": "procedure",
       "sortid": 106,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "red",
+      "registry_name": "energy_value",
       "metadata": {
+        "return_type": "string",
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/RedParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/red.json"
+          "src/main/java/net/mcreator/animeoddysey/procedures/EnergyValueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       },
-      "path": "~/Particles"
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "PlusDisplay",
+      "type": "procedure",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plus_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/PlusDisplayProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "UpgradeDefense",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "upgrade_defense",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/UpgradeDefenseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "PsychicBlast",
+      "type": "projectile",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "psychic_blast",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/entity/PsychicBlastEntity.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "OpenMenuOnKeyPressed",
+      "type": "procedure",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_menu_on_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/OpenMenuOnKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Keybinds/Procedures"
+    },
+    {
+      "name": "StrengthDisplay",
+      "type": "procedure",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "strength_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/StrengthDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "DefenseDisplay",
+      "type": "procedure",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "defense_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/DefenseDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ExplosionOfEmotions",
+      "type": "potioneffect",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_of_emotions",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/ExplosionOfEmotionsMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
     }
   ],
   "variable_elements": [
@@ -2523,6 +3043,36 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
+    },
+    {
+      "name": "Rank",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "Level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "ExpMax",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "20.0"
+    },
+    {
+      "name": "Exp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "SP",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -2573,6 +3123,30 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "beep",
+      "files": [
+        "mob-psycho-100-percentage-beep-sound-effect_z4neetnv"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "mobrage",
+      "files": [
+        "mob-psycho-100-ost-2-explosion-of-mob-feelings_a41bouwx"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "psychicenergy",
+      "files": [
+        "mobenergy"
+      ],
+      "category": "neutral",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -2605,10 +3179,12 @@
       "advancements.anime_oddysey.title": "Anime Oddysey",
       "effect.animeoddysey.en": "En",
       "effect.animeoddysey.godspeed": "Godspeed",
+      "subtitles.psychicenergy": "",
       "subtitles.bloody": "",
       "death.attack.internal.item": "%1$s was killed by %2$s using %3$s",
       "subtitles.blackflash": "",
       "gui.animeoddysey.jjk_selection.button_gojo_teen": "Gojo (Teen)",
+      "subtitles.mobrage": "",
       "effect.animeoddysey.honored_one_sky": "Honored One Sky",
       "death.attack.eraser.item": "%1$s was killed by %2$s using %3$s",
       "key.animeoddysey.use_skill": "Use Skill",
@@ -2622,6 +3198,7 @@
       "gui.animeoddysey.character_select_main.button_hxh2": "JJK",
       "gui.animeoddysey.jjk_selection.button_itadori": "Itadori",
       "subtitles.electricity": "",
+      "subtitles.beep": "",
       "advancements.anime_oddysey.descr": "Start In The Vast Anime Universe!",
       "key.animeoddysey.talent": "Talent",
       "subtitles.stresspercentage": "",
@@ -2631,6 +3208,10 @@
   "foldersRoot": {
     "name": "~",
     "children": [
+      {
+        "name": "Gamerules",
+        "children": []
+      },
       {
         "name": "Procedures",
         "children": [
@@ -2654,25 +3235,11 @@
         ]
       },
       {
-        "name": "Mobs",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
+        "name": "Advancements",
+        "children": []
       },
       {
-        "name": "Items",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Potions",
+        "name": "GUI",
         "children": [
           {
             "name": "Procedures",
@@ -2685,11 +3252,7 @@
         "children": []
       },
       {
-        "name": "Armors",
-        "children": []
-      },
-      {
-        "name": "GUI",
+        "name": "Items",
         "children": [
           {
             "name": "Procedures",
@@ -2707,8 +3270,55 @@
         ]
       },
       {
+        "name": "Projectiles",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Creative Tabs",
+        "children": []
+      },
+      {
         "name": "Particles",
         "children": []
+      },
+      {
+        "name": "Recipes",
+        "children": []
+      },
+      {
+        "name": "Function",
+        "children": []
+      },
+      {
+        "name": "Armors",
+        "children": []
+      },
+      {
+        "name": "Damage Source",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Potions",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Keybinds",
@@ -2727,39 +3337,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "name": "Creative Tabs",
-        "children": []
-      },
-      {
-        "name": "Gamerules",
-        "children": []
-      },
-      {
-        "name": "Projectiles",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Recipes",
-        "children": []
-      },
-      {
-        "name": "Function",
-        "children": []
-      },
-      {
-        "name": "Damage Source",
-        "children": []
-      },
-      {
-        "name": "Advancements",
-        "children": []
       }
     ]
   },

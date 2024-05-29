@@ -15,6 +15,7 @@ import net.minecraftforge.common.capabilities.CapabilityToken;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.Capability;
 
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
@@ -87,6 +88,11 @@ public class AnimeoddyseyModVariables {
 			clone.DefenseStat = original.DefenseStat;
 			clone.DefenseMod = original.DefenseMod;
 			clone.ZoneMod = original.ZoneMod;
+			clone.Rank = original.Rank;
+			clone.Level = original.Level;
+			clone.ExpMax = original.ExpMax;
+			clone.Exp = original.Exp;
+			clone.SP = original.SP;
 			if (!event.isWasDeath()) {
 				clone.Percentage = original.Percentage;
 			}
@@ -146,6 +152,11 @@ public class AnimeoddyseyModVariables {
 		public double DefenseMod = 0;
 		public double ZoneMod = 0;
 		public double Percentage = 0;
+		public String Rank = "";
+		public double Level = 1.0;
+		public double ExpMax = 20.0;
+		public double Exp = 0;
+		public double SP = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -176,6 +187,11 @@ public class AnimeoddyseyModVariables {
 			nbt.putDouble("DefenseMod", DefenseMod);
 			nbt.putDouble("ZoneMod", ZoneMod);
 			nbt.putDouble("Percentage", Percentage);
+			nbt.putString("Rank", Rank);
+			nbt.putDouble("Level", Level);
+			nbt.putDouble("ExpMax", ExpMax);
+			nbt.putDouble("Exp", Exp);
+			nbt.putDouble("SP", SP);
 			return nbt;
 		}
 
@@ -203,6 +219,11 @@ public class AnimeoddyseyModVariables {
 			DefenseMod = nbt.getDouble("DefenseMod");
 			ZoneMod = nbt.getDouble("ZoneMod");
 			Percentage = nbt.getDouble("Percentage");
+			Rank = nbt.getString("Rank");
+			Level = nbt.getDouble("Level");
+			ExpMax = nbt.getDouble("ExpMax");
+			Exp = nbt.getDouble("Exp");
+			SP = nbt.getDouble("SP");
 		}
 	}
 
@@ -249,6 +270,11 @@ public class AnimeoddyseyModVariables {
 					variables.DefenseMod = message.data.DefenseMod;
 					variables.ZoneMod = message.data.ZoneMod;
 					variables.Percentage = message.data.Percentage;
+					variables.Rank = message.data.Rank;
+					variables.Level = message.data.Level;
+					variables.ExpMax = message.data.ExpMax;
+					variables.Exp = message.data.Exp;
+					variables.SP = message.data.SP;
 				}
 			});
 			context.setPacketHandled(true);

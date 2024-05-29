@@ -46,5 +46,29 @@
         "stream": false
       }
     ]
+  },
+  "beep": {
+    "sounds": [
+      {
+        "name": "animeoddysey:mob-psycho-100-percentage-beep-sound-effect_z4neetnv",
+        "stream": false
+      }
+    ]
+  },
+  "mobrage": {
+    "sounds": [
+      {
+        "name": "animeoddysey:mob-psycho-100-ost-2-explosion-of-mob-feelings_a41bouwx",
+        "stream": false
+      }
+    ]
+  },
+  "psychicenergy": {
+    "sounds": [
+      {
+        "name": "animeoddysey:mobenergy",
+        "stream": false
+      }
+    ]
   }
 }
