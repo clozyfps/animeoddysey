@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "particlemodel",
+  "definition": {
+    "particle": "SmallCubeRed",
+    "model": "Modelsmallcube",
+    "rendertype": "Glowing",
+    "modelScale": {
+      "fixedValue": 0.3
+    },
+    "modelRotationX": {
+      "fixedValue": 0.0
+    },
+    "modelRotationY": {
+      "fixedValue": 0.0
+    },
+    "modelRotationZ": {
+      "fixedValue": 0.0
+    }
+  }
+}

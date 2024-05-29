@@ -578,7 +578,7 @@
           "src/main/java/net/mcreator/animeoddysey/client/renderer/AfterImageRenderer.java"
         ]
       },
-      "path": "~/Mobs/Misc"
+      "path": "~/Mobs"
     },
     {
       "name": "HeartSteal",
@@ -3169,6 +3169,150 @@
         ]
       },
       "path": "~/Potions"
+    },
+    {
+      "name": "Red",
+      "type": "particle",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/animeoddysey/particles/red.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "Blueflash",
+      "type": "particle",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blueflash",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/animeoddysey/particles/blueflash.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/BlueflashParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "SmallCubeRed",
+      "type": "particle",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "small_cube_red",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/SmallCubeRedParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/small_cube_red.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "StoneParticle",
+      "type": "particlemodel",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "stone_particle",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Particles/3D"
+    },
+    {
+      "name": "Red2",
+      "type": "particle",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/animeoddysey/particles/red_2.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/Red2Particle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "StoneParticlePre",
+      "type": "particle",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_particle_pre",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/animeoddysey/particles/stone_particle_pre.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/StoneParticlePreParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "RedAnim",
+      "type": "particle",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "red_anim",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/animeoddysey/particles/red_anim.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedAnimParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "LapseBlueMax",
+      "type": "particle",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_max",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/animeoddysey/particles/lapse_blue_max.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/LapseBlueMaxParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "SmallCubeRed3D",
+      "type": "particlemodel",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "small_cube_red_3_d",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Particles/3D"
+    },
+    {
+      "name": "LapseBlueMax2",
+      "type": "particle",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lapse_blue_max_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/LapseBlueMax2Particle.java",
+          "src/main/resources/assets/animeoddysey/particles/lapse_blue_max_2.json"
+        ]
+      },
+      "path": "~/Particles"
     }
   ],
   "variable_elements": [
@@ -3458,7 +3602,6 @@
       "death.attack.internal.item": "%1$s was killed by %2$s using %3$s",
       "subtitles.blackflash": "",
       "gui.animeoddysey.jjk_selection.button_gojo_teen": "Gojo (Teen)",
-      "subtitles.spiritualawareness": "",
       "subtitles.mobrage": "",
       "effect.animeoddysey.honored_one_sky": "Honored One Sky",
       "effect.animeoddysey.spiritual_awareness": "Spiritual Awareness",
@@ -3488,6 +3631,10 @@
     "name": "~",
     "children": [
       {
+        "name": "Gamerules",
+        "children": []
+      },
+      {
         "name": "Procedures",
         "children": [
           {
@@ -3510,29 +3657,11 @@
         ]
       },
       {
-        "name": "Mobs",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          },
-          {
-            "name": "Misc",
-            "children": []
-          }
-        ]
+        "name": "Advancements",
+        "children": []
       },
       {
-        "name": "Items",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Potions",
+        "name": "GUI",
         "children": [
           {
             "name": "Procedures",
@@ -3545,11 +3674,7 @@
         "children": []
       },
       {
-        "name": "Armors",
-        "children": []
-      },
-      {
-        "name": "GUI",
+        "name": "Items",
         "children": [
           {
             "name": "Procedures",
@@ -3567,8 +3692,64 @@
         ]
       },
       {
-        "name": "Particles",
+        "name": "Projectiles",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Creative Tabs",
         "children": []
+      },
+      {
+        "name": "Particles",
+        "children": [
+          {
+            "name": "3D",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Recipes",
+        "children": []
+      },
+      {
+        "name": "Function",
+        "children": []
+      },
+      {
+        "name": "Armors",
+        "children": []
+      },
+      {
+        "name": "Damage Source",
+        "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          },
+          {
+            "name": "Misc",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Potions",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Keybinds",
@@ -3587,39 +3768,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "name": "Creative Tabs",
-        "children": []
-      },
-      {
-        "name": "Gamerules",
-        "children": []
-      },
-      {
-        "name": "Projectiles",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Recipes",
-        "children": []
-      },
-      {
-        "name": "Function",
-        "children": []
-      },
-      {
-        "name": "Damage Source",
-        "children": []
-      },
-      {
-        "name": "Advancements",
-        "children": []
       }
     ]
   },
