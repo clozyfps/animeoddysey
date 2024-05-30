@@ -38,16 +38,11 @@ public class DetroitSmashWhileProjectileFlyingTickProcedure {
 						(1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 13),
 						(1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 13), 0.3);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.EXPLOSION_EMITTER, x, y, z, (int) (1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 5),
-						(0.1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 13),
-						(0.1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 13),
-						(0.1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 13), 0);
+				_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, (int) (1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 5), 0.5, 0.5,
+						0.5, 0);
 			{
 				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world
-						.getEntitiesOfClass(Entity.class,
-								new AABB(_center, _center).inflate((5 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 12) / 2d), e -> true)
-						.stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator)) {
 						if (!(immediatesourceentity == entityiterator)) {
@@ -66,8 +61,8 @@ public class DetroitSmashWhileProjectileFlyingTickProcedure {
 				if (!immediatesourceentity.level().isClientSide())
 					immediatesourceentity.discard();
 			});
-			int horizontalRadiusSphere = (int) (2 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Moves / 15) - 1;
-			int verticalRadiusSphere = (int) (2 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Moves / 15) - 1;
+			int horizontalRadiusSphere = (int) 3 - 1;
+			int verticalRadiusSphere = (int) 3 - 1;
 			int yIterationsSphere = verticalRadiusSphere;
 			for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
 				for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
@@ -90,15 +85,9 @@ public class DetroitSmashWhileProjectileFlyingTickProcedure {
 		} else if (entity instanceof LivingEntity _livEnt28 && _livEnt28.hasEffect(AnimeoddyseyModMobEffects.FULL_COWLING.get())
 				&& (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage >= 100) {
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.POOF, x, y, z, (int) (8 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 5),
-						(1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 13),
-						(1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 13),
-						(1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 13), 0.3);
+				_level.sendParticles(ParticleTypes.POOF, x, y, z, 8, 1, 1, 1, 0.3);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, (int) (3 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 5),
-						(0.1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 13),
-						(0.1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 13),
-						(0.1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 13), 0);
+				_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 3, 2, 2, 2, 0);
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"particle minecraft:dust 0.97 0.56 0.19 7 ^0 ^0 ^0 3 3 3 0 85");
@@ -107,16 +96,13 @@ public class DetroitSmashWhileProjectileFlyingTickProcedure {
 						"particle minecraft:dust 0.95 0.21 0.93 7 ^0 ^0 ^0 3 3 3 0 85");
 			{
 				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world
-						.getEntitiesOfClass(Entity.class,
-								new AABB(_center, _center).inflate((7 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 12) / 2d), e -> true)
-						.stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(9 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator)) {
 						if (!(immediatesourceentity == entityiterator)) {
 							if (entity.isAlive()) {
 								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.PLAYER_EXPLOSION), immediatesourceentity, entity),
-										(float) (12 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthStat / 5
+										(float) (15 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthStat / 5
 												+ (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 15
 												+ (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthMod));
 								entityiterator.setDeltaMovement(new Vec3((1.5 * immediatesourceentity.getLookAngle().x), (2 * immediatesourceentity.getLookAngle().y), (1.5 * immediatesourceentity.getLookAngle().z)));

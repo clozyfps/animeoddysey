@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.animeoddysey.client.renderer.ShigeoKageyamaRenderer;
+import net.mcreator.animeoddysey.client.renderer.LapseBlueEnityRenderer;
 import net.mcreator.animeoddysey.client.renderer.KilluaZoldyckRenderer;
 import net.mcreator.animeoddysey.client.renderer.AfterImageRenderer;
 
@@ -30,5 +31,6 @@ public class AnimeoddyseyModEntityRenderers {
 		event.registerEntityRenderer(AnimeoddyseyModEntities.BLACK_WHIP.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.BLACK_WHIP_PINPOINT_FOCUS.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.SHIGEO_KAGEYAMA.get(), ShigeoKageyamaRenderer::new);
+		event.registerEntityRenderer(AnimeoddyseyModEntities.LAPSE_BLUE_ENITY.get(), LapseBlueEnityRenderer::new);
 	}
 }

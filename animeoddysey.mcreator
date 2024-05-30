@@ -4825,6 +4825,258 @@
         ]
       },
       "path": "~/Particles"
+    },
+    {
+      "name": "StatSet",
+      "type": "procedure",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stat_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/StatSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "OutwardsPoofOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "outwards_poof_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/OutwardsPoofOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "OutwardsPoof",
+      "type": "potioneffect",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "outwards_poof",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/OutwardsPoofMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "PsychicMeteoriteUpgrade",
+      "type": "procedure",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "psychic_meteorite_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/PsychicMeteoriteUpgradeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Mob"
+    },
+    {
+      "name": "PsychicEnergyOutwardsEffectOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 211,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "psychic_energy_outwards_effect_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/PsychicEnergyOutwardsEffectOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "PsychicEnergyOutwardsEffect",
+      "type": "potioneffect",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "psychic_energy_outwards_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/PsychicEnergyOutwardsEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "PlayRage",
+      "type": "procedure",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_rage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/PlayRageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Mob"
+    },
+    {
+      "name": "PlayMobRage",
+      "type": "procedure",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_mob_rage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/PlayMobRageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Mob"
+    },
+    {
+      "name": "PlayBeep",
+      "type": "procedure",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_beep",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/PlayBeepProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Mob"
     }
   ],
   "variable_elements": [
@@ -5149,6 +5401,14 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "rage",
+      "files": [
+        "shigeo-rage-sound-effect-japanese-mob-psycho-100_tfckldat"
+      ],
+      "category": "neutral",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -5156,11 +5416,13 @@
       "key.animeoddysey.open_menu": "Open Menu",
       "gui.animeoddysey.mha_selection.tooltip_ssassldeku_successor_strength1": "§a§lDeku \"Successor\" | Strength Based Kit",
       "death.attack.eraser.player": "%1$s died whilst trying to escape %2$s",
+      "effect.animeoddysey.outwards_poof": "Outwards Poof",
       "effect.animeoddysey.snake_awakens": "Snake Awakens",
       "gamerule.constantBlackFlashes.description": "Hit a Black Flash every punch.",
       "gui.animeoddysey.mob_psycho_selection.button_mob": "Mob",
       "death.attack.eraser": "%1$s was erased from existence",
       "death.attack.internal": "%1$s got their heart taken.",
+      "subtitles.rage": "",
       "effect.animeoddysey.cooldown": "Cooldown",
       "subtitles.honoredone": "",
       "effect.animeoddysey.speed_effect": "Speed Effect",
@@ -5176,6 +5438,7 @@
       "gui.animeoddysey.character_select_main.button_hxh": "HxH",
       "effect.animeoddysey.slam": "Slam",
       "entity.animeoddysey.shigeo_kageyama": "Shigeo Kageyama",
+      "effect.animeoddysey.psychic_energy_outwards_effect": "Psychic Energy Outwards",
       "effect.animeoddysey.impact_frame": "Impact Frame",
       "subtitles.heartbeat": "",
       "effect.animeoddysey.outwards": "Outwards",
@@ -5347,19 +5610,6 @@
         "children": []
       },
       {
-        "name": "Mobs",
-        "children": [
-          {
-            "name": "Procedures",
-            "children": []
-          },
-          {
-            "name": "Misc",
-            "children": []
-          }
-        ]
-      },
-      {
         "name": "Potions",
         "children": [
           {
@@ -5389,6 +5639,19 @@
       {
         "name": "McFunctions",
         "children": []
+      },
+      {
+        "name": "Mobs",
+        "children": [
+          {
+            "name": "Procedures",
+            "children": []
+          },
+          {
+            "name": "Misc",
+            "children": []
+          }
+        ]
       }
     ]
   },

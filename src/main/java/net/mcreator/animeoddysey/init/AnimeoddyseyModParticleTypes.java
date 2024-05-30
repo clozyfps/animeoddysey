@@ -31,4 +31,7 @@ public class AnimeoddyseyModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> ONE_FOR_ALL_SPARKS = REGISTRY.register("one_for_all_sparks", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> PURPLE_SMOKE = REGISTRY.register("purple_smoke", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> FA_JIN_BLITZ = REGISTRY.register("fa_jin_blitz", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> FULL_CROWLING = REGISTRY.register("full_crowling", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> BLUE_ANIM = REGISTRY.register("blue_anim", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> STAR_PURPLE = REGISTRY.register("star_purple", () -> new SimpleParticleType(true));
 }

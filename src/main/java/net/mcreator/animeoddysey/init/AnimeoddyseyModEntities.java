@@ -19,6 +19,7 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.animeoddysey.entity.ShigeoKageyamaEntity;
 import net.mcreator.animeoddysey.entity.PsychicSlashEntity;
 import net.mcreator.animeoddysey.entity.PsychicBlastEntity;
+import net.mcreator.animeoddysey.entity.LapseBlueEnityEntity;
 import net.mcreator.animeoddysey.entity.KnockbackProjectileEntity;
 import net.mcreator.animeoddysey.entity.KilluaZoldyckEntity;
 import net.mcreator.animeoddysey.entity.HollowPurpleWeakEntity;
@@ -61,6 +62,8 @@ public class AnimeoddyseyModEntities {
 			EntityType.Builder.<ShigeoKageyamaEntity>of(ShigeoKageyamaEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ShigeoKageyamaEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<LapseBlueEnityEntity>> LAPSE_BLUE_ENITY = register("lapse_blue_enity", EntityType.Builder.<LapseBlueEnityEntity>of(LapseBlueEnityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(LapseBlueEnityEntity::new).fireImmune().sized(0.1f, 0.1f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -72,6 +75,7 @@ public class AnimeoddyseyModEntities {
 			AfterImageEntity.init();
 			KilluaZoldyckEntity.init();
 			ShigeoKageyamaEntity.init();
+			LapseBlueEnityEntity.init();
 		});
 	}
 
@@ -80,5 +84,6 @@ public class AnimeoddyseyModEntities {
 		event.put(AFTER_IMAGE.get(), AfterImageEntity.createAttributes().build());
 		event.put(KILLUA_ZOLDYCK.get(), KilluaZoldyckEntity.createAttributes().build());
 		event.put(SHIGEO_KAGEYAMA.get(), ShigeoKageyamaEntity.createAttributes().build());
+		event.put(LAPSE_BLUE_ENITY.get(), LapseBlueEnityEntity.createAttributes().build());
 	}
 }

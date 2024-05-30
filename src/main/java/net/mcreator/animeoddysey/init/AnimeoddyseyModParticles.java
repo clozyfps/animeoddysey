@@ -10,6 +10,7 @@ import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.animeoddysey.client.particle.StoneParticlePreParticle;
+import net.mcreator.animeoddysey.client.particle.StarPurpleParticle;
 import net.mcreator.animeoddysey.client.particle.SmallCubeRedParticle;
 import net.mcreator.animeoddysey.client.particle.SmallCubePurpleParticle;
 import net.mcreator.animeoddysey.client.particle.RedParticle;
@@ -20,9 +21,11 @@ import net.mcreator.animeoddysey.client.particle.PurpleSmokeParticle;
 import net.mcreator.animeoddysey.client.particle.OneForAllSparksParticle;
 import net.mcreator.animeoddysey.client.particle.LapseBlueMaxParticle;
 import net.mcreator.animeoddysey.client.particle.LapseBlueMax2Particle;
+import net.mcreator.animeoddysey.client.particle.FullCrowlingParticle;
 import net.mcreator.animeoddysey.client.particle.FaJinBlitzParticle;
 import net.mcreator.animeoddysey.client.particle.ElectricityParticleParticle;
 import net.mcreator.animeoddysey.client.particle.BlueflashParticle;
+import net.mcreator.animeoddysey.client.particle.BlueAnimParticle;
 import net.mcreator.animeoddysey.client.particle.BlackElectricityParticle;
 import net.mcreator.animeoddysey.client.particle.AirPulseParticle;
 
@@ -46,5 +49,8 @@ public class AnimeoddyseyModParticles {
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.ONE_FOR_ALL_SPARKS.get(), OneForAllSparksParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.PURPLE_SMOKE.get(), PurpleSmokeParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.FA_JIN_BLITZ.get(), FaJinBlitzParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.FULL_CROWLING.get(), FullCrowlingParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.BLUE_ANIM.get(), BlueAnimParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.STAR_PURPLE.get(), StarPurpleParticle::provider);
 	}
 }

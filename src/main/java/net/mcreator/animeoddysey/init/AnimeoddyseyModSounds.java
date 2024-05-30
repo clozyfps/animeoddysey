@@ -28,4 +28,5 @@ public class AnimeoddyseyModSounds {
 	public static final RegistryObject<SoundEvent> EXPLOSIVEPUNCH = REGISTRY.register("explosivepunch", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "explosivepunch")));
 	public static final RegistryObject<SoundEvent> OFACHARGE = REGISTRY.register("ofacharge", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "ofacharge")));
 	public static final RegistryObject<SoundEvent> DELAWARESMASH = REGISTRY.register("delawaresmash", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "delawaresmash")));
+	public static final RegistryObject<SoundEvent> RAGE = REGISTRY.register("rage", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "rage")));
 }

@@ -102,5 +102,13 @@
         "stream": false
       }
     ]
+  },
+  "rage": {
+    "sounds": [
+      {
+        "name": "animeoddysey:shigeo-rage-sound-effect-japanese-mob-psycho-100_tfckldat",
+        "stream": false
+      }
+    ]
   }
 }

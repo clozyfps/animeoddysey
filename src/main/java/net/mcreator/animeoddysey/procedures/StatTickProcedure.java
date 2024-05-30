@@ -39,6 +39,7 @@ public class StatTickProcedure {
 		if (entity == null)
 			return;
 		double randomizebda = 0;
+		StatSetProcedure.execute(entity);
 		if (entity.isAlive()) {
 			if (new Object() {
 				public boolean checkGamemode(Entity _ent) {

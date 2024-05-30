@@ -98,6 +98,7 @@ public class AnimeoddyseyModVariables {
 			clone.OFAPercentage = original.OFAPercentage;
 			clone.FaJin = original.FaJin;
 			clone.JoinedWorld = original.JoinedWorld;
+			clone.LapseBlueID = original.LapseBlueID;
 			if (!event.isWasDeath()) {
 				clone.Percentage = original.Percentage;
 				clone.HelmetSlotSave = original.HelmetSlotSave;
@@ -174,6 +175,7 @@ public class AnimeoddyseyModVariables {
 		public ItemStack BootsSlotSave = ItemStack.EMPTY;
 		public double FaJin = 0;
 		public boolean JoinedWorld = false;
+		public double LapseBlueID = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -217,6 +219,7 @@ public class AnimeoddyseyModVariables {
 			nbt.put("BootsSlotSave", BootsSlotSave.save(new CompoundTag()));
 			nbt.putDouble("FaJin", FaJin);
 			nbt.putBoolean("JoinedWorld", JoinedWorld);
+			nbt.putDouble("LapseBlueID", LapseBlueID);
 			return nbt;
 		}
 
@@ -257,6 +260,7 @@ public class AnimeoddyseyModVariables {
 			BootsSlotSave = ItemStack.of(nbt.getCompound("BootsSlotSave"));
 			FaJin = nbt.getDouble("FaJin");
 			JoinedWorld = nbt.getBoolean("JoinedWorld");
+			LapseBlueID = nbt.getDouble("LapseBlueID");
 		}
 	}
 
@@ -316,6 +320,7 @@ public class AnimeoddyseyModVariables {
 					variables.BootsSlotSave = message.data.BootsSlotSave;
 					variables.FaJin = message.data.FaJin;
 					variables.JoinedWorld = message.data.JoinedWorld;
+					variables.LapseBlueID = message.data.LapseBlueID;
 				}
 			});
 			context.setPacketHandled(true);
