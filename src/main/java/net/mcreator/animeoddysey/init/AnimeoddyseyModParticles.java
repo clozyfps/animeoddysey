@@ -10,6 +10,7 @@ import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.animeoddysey.client.particle.StoneParticlePreParticle;
+import net.mcreator.animeoddysey.client.particle.StarPurpleParticle;
 import net.mcreator.animeoddysey.client.particle.SmallCubeRedParticle;
 import net.mcreator.animeoddysey.client.particle.SmallCubePurpleParticle;
 import net.mcreator.animeoddysey.client.particle.RedParticle;
@@ -50,5 +51,6 @@ public class AnimeoddyseyModParticles {
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.FA_JIN_BLITZ.get(), FaJinBlitzParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.FULL_CROWLING.get(), FullCrowlingParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.BLUE_ANIM.get(), BlueAnimParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.STAR_PURPLE.get(), StarPurpleParticle::provider);
 	}
 }

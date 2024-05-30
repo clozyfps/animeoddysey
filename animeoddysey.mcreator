@@ -4810,6 +4810,21 @@
         ]
       },
       "path": "~/McFunctions"
+    },
+    {
+      "name": "StarPurple",
+      "type": "particle",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_purple",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/StarPurpleParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/star_purple.json"
+        ]
+      },
+      "path": "~/Particles"
     }
   ],
   "variable_elements": [
