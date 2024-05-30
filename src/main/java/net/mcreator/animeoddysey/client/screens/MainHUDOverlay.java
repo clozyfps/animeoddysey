@@ -64,7 +64,7 @@ public class MainHUDOverlay {
 			if (ImageDisplayConditionProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-						CooldownCounterDisplayProcedure.execute(entity), 17, h - 63, -1, false);
+						CooldownCounterDisplayProcedure.execute(entity), 19, h - 61, -1, false);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();

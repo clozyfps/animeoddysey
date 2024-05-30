@@ -16,11 +16,17 @@ import net.mcreator.animeoddysey.client.particle.RedParticle;
 import net.mcreator.animeoddysey.client.particle.RedElectricityParticle;
 import net.mcreator.animeoddysey.client.particle.RedAnimParticle;
 import net.mcreator.animeoddysey.client.particle.Red2Particle;
+import net.mcreator.animeoddysey.client.particle.PurpleSmokeParticle;
+import net.mcreator.animeoddysey.client.particle.OneForAllSparksParticle;
 import net.mcreator.animeoddysey.client.particle.LapseBlueMaxParticle;
 import net.mcreator.animeoddysey.client.particle.LapseBlueMax2Particle;
+import net.mcreator.animeoddysey.client.particle.FullCrowlingParticle;
+import net.mcreator.animeoddysey.client.particle.FaJinBlitzParticle;
 import net.mcreator.animeoddysey.client.particle.ElectricityParticleParticle;
 import net.mcreator.animeoddysey.client.particle.BlueflashParticle;
+import net.mcreator.animeoddysey.client.particle.BlueAnimParticle;
 import net.mcreator.animeoddysey.client.particle.BlackElectricityParticle;
+import net.mcreator.animeoddysey.client.particle.AirPulseParticle;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class AnimeoddyseyModParticles {
@@ -38,5 +44,11 @@ public class AnimeoddyseyModParticles {
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.STONE_PARTICLE_PRE.get(), StoneParticlePreParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.SMALL_CUBE_RED.get(), SmallCubeRedParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.SMALL_CUBE_PURPLE.get(), SmallCubePurpleParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.AIR_PULSE.get(), AirPulseParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.ONE_FOR_ALL_SPARKS.get(), OneForAllSparksParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.PURPLE_SMOKE.get(), PurpleSmokeParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.FA_JIN_BLITZ.get(), FaJinBlitzParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.FULL_CROWLING.get(), FullCrowlingParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.BLUE_ANIM.get(), BlueAnimParticle::provider);
 	}
 }

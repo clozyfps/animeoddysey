@@ -40,7 +40,7 @@ public class Red2Particle extends TextureSheetParticle {
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
 		this.quadSize *= 3f;
-		this.lifetime = 10;
+		this.lifetime = 35;
 		this.gravity = 0f;
 		this.hasPhysics = false;
 		this.xd = vx * 0;

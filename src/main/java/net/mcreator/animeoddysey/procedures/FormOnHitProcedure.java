@@ -72,7 +72,7 @@ public class FormOnHitProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt8 && _livEnt8.hasEffect(AnimeoddyseyModMobEffects.SMOKESCREEN.get())) {
+		if (entity instanceof LivingEntity _livEnt6 && _livEnt6.hasEffect(AnimeoddyseyModMobEffects.SMOKESCREEN.get())) {
 			if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 15, 0, false, false));
 			if (event != null && event.isCancelable()) {
@@ -86,7 +86,7 @@ public class FormOnHitProcedure {
 				}
 			}
 		}
-		if (sourceentity instanceof LivingEntity _livEnt11 && _livEnt11.hasEffect(AnimeoddyseyModMobEffects.GEARSHIFT_OVERDRIVE.get())) {
+		if (sourceentity instanceof LivingEntity _livEnt9 && _livEnt9.hasEffect(AnimeoddyseyModMobEffects.GEARSHIFT_OVERDRIVE.get())) {
 			{
 				Entity _shootFrom = entity;
 				Level projectileLevel = _shootFrom.level();
