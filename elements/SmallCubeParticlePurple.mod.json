@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "particlemodel",
   "definition": {
-    "particle": "SmallCubeRed",
+    "particle": "SmallCubePurple",
     "model": "Modelsmallcube",
     "rendertype": "Cutout",
     "modelScale": {

@@ -93,6 +93,7 @@ public class AnimeoddyseyModVariables {
 			clone.Exp = original.Exp;
 			clone.ExpMax = original.ExpMax;
 			clone.SP = original.SP;
+			clone.RedAnim = original.RedAnim;
 			if (!event.isWasDeath()) {
 				clone.Percentage = original.Percentage;
 			}
@@ -157,6 +158,7 @@ public class AnimeoddyseyModVariables {
 		public double Exp = 0;
 		public double ExpMax = 20.0;
 		public double SP = 0;
+		public boolean RedAnim = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -192,6 +194,7 @@ public class AnimeoddyseyModVariables {
 			nbt.putDouble("Exp", Exp);
 			nbt.putDouble("ExpMax", ExpMax);
 			nbt.putDouble("SP", SP);
+			nbt.putBoolean("RedAnim", RedAnim);
 			return nbt;
 		}
 
@@ -224,6 +227,7 @@ public class AnimeoddyseyModVariables {
 			Exp = nbt.getDouble("Exp");
 			ExpMax = nbt.getDouble("ExpMax");
 			SP = nbt.getDouble("SP");
+			RedAnim = nbt.getBoolean("RedAnim");
 		}
 	}
 
@@ -275,6 +279,7 @@ public class AnimeoddyseyModVariables {
 					variables.Exp = message.data.Exp;
 					variables.ExpMax = message.data.ExpMax;
 					variables.SP = message.data.SP;
+					variables.RedAnim = message.data.RedAnim;
 				}
 			});
 			context.setPacketHandled(true);

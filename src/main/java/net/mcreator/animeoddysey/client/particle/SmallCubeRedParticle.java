@@ -53,7 +53,7 @@ public class SmallCubeRedParticle extends TextureSheetParticle {
 						MinecraftForge.EVENT_BUS.register(this);
 					}
 
-					private float scale = (float) 1;
+					private float scale = (float) 0.4;
 					private int rotX = (int) 0;
 					private int rotY = (int) 0;
 					private int rotZ = (int) 0;

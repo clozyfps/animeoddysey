@@ -2,11 +2,11 @@
   "_fv": 57,
   "_type": "particlemodel",
   "definition": {
-    "particle": "SmallCubeRed",
-    "model": "Modelsmallcube",
+    "particle": "StoneParticlePre",
+    "model": "Modelstone",
     "rendertype": "Cutout",
     "modelScale": {
-      "fixedValue": 0.4
+      "fixedValue": 1.0
     },
     "modelRotationX": {
       "fixedValue": 0.0

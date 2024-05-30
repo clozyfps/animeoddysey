@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.animeoddysey.client.particle.StoneParticlePreParticle;
 import net.mcreator.animeoddysey.client.particle.SmallCubeRedParticle;
+import net.mcreator.animeoddysey.client.particle.SmallCubePurpleParticle;
 import net.mcreator.animeoddysey.client.particle.RedParticle;
 import net.mcreator.animeoddysey.client.particle.RedElectricityParticle;
 import net.mcreator.animeoddysey.client.particle.RedAnimParticle;
@@ -36,5 +37,6 @@ public class AnimeoddyseyModParticles {
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.RED_ANIM.get(), RedAnimParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.STONE_PARTICLE_PRE.get(), StoneParticlePreParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.SMALL_CUBE_RED.get(), SmallCubeRedParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.SMALL_CUBE_PURPLE.get(), SmallCubePurpleParticle::provider);
 	}
 }

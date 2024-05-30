@@ -41,9 +41,9 @@ public class HollowPurpleWeakWhileProjectileFlyingTickProcedure {
 		}
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					"particle minecraft:dust 0.66 0.09 0.97 5 ^0 ^0 ^0 1 1 1 0 25");
+					"particle minecraft:dust 0.66 0.09 0.97 5 ^0 ^0 ^0 1 1 1 0 40");
 		int horizontalRadiusSphere = (int) 5 - 1;
-		int verticalRadiusSphere = (int) 5 - 1;
+		int verticalRadiusSphere = (int) 6 - 1;
 		int yIterationsSphere = verticalRadiusSphere;
 		for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
 			for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
@@ -52,8 +52,10 @@ public class HollowPurpleWeakWhileProjectileFlyingTickProcedure {
 							+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
 					if (distanceSq <= 1.0) {
 						if (!((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.AIR)) {
-							world.destroyBlock(BlockPos.containing(x + xi, y + i, z + zi), false);
-							world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), Blocks.AIR.defaultBlockState(), 3);
+							if (!((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == Blocks.BEDROCK)) {
+								world.destroyBlock(BlockPos.containing(x + xi, y + i, z + zi), false);
+								world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), Blocks.AIR.defaultBlockState(), 3);
+							}
 						}
 					}
 				}
