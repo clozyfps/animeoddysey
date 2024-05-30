@@ -3,7 +3,10 @@ package net.mcreator.animeoddysey.procedures;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.commands.CommandSourceStack;
@@ -20,6 +23,8 @@ public class OutwardsReversalRedOnEffectActiveTickProcedure {
 		double y_pos = 0;
 		double z_pos = 0;
 		boolean red = false;
+		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 1, 2, false, false));
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					("/execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.6 ~ run particle minecraft:dust_color_transition 1 0.09 0.09 0.2 1 0.44 0.44 ^-0.2 ^ ^0.5 0.01 0.01 0.01 0.01 30 normal"));

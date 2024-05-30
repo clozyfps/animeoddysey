@@ -9,6 +9,8 @@ public class CooldownCounterDisplayProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return new java.text.DecimalFormat("#").format((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(AnimeoddyseyModMobEffects.COOLDOWN.get()) ? _livEnt.getEffect(AnimeoddyseyModMobEffects.COOLDOWN.get()).getDuration() : 0) / 20);
+		return "["
+				+ (new java.text.DecimalFormat("#").format((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(AnimeoddyseyModMobEffects.COOLDOWN.get()) ? _livEnt.getEffect(AnimeoddyseyModMobEffects.COOLDOWN.get()).getDuration() : 0) / 20))
+				+ "]";
 	}
 }

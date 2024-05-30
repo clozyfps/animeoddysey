@@ -56,19 +56,6 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "x.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "ImageDisplayCondition"
-          },
-          "anchorPoint": "BOTTOM_LEFT",
-          "x": 13,
-          "y": 174
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_proc_cooldown_counter_display",
@@ -77,14 +64,14 @@
             "name": "CooldownCounterDisplay"
           },
           "color": {
-            "value": -1,
+            "value": -65536,
             "falpha": 0.0
           },
           "displayCondition": {
             "name": "ImageDisplayCondition"
           },
           "anchorPoint": "BOTTOM_LEFT",
-          "x": 17,
+          "x": 14,
           "y": 177
         }
       }

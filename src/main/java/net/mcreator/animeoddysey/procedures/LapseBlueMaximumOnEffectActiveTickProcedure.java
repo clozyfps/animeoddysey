@@ -30,19 +30,19 @@ public class LapseBlueMaximumOnEffectActiveTickProcedure {
 					("/execute at " + entity.getDisplayName().getString() + " positioned ~ ~2 ~ run particle minecraft:end_rod ^ ^ ^6 0 0 0 0.2 1"));
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					("/execute at " + entity.getDisplayName().getString() + " positioned ~ ~2.7 ~ run particle minecraft:enchant ^ ^ ^6 0.4 0.4 0.4 3 10"));
+					("/execute at " + entity.getDisplayName().getString() + " positioned ~ ~2.5 ~ run particle minecraft:enchant ^ ^ ^6 0.4 0.4 0.4 3 10"));
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					("/execute at " + entity.getDisplayName().getString() + " positioned ~ ~2.2 ~ run particle minecraft:dust_color_transition 0 0.91 0.98 0.5 0.32 0.92 1 ^ ^ ^6 0.8 0.8 0.8 0.01 100 normal"));
+					("/execute at " + entity.getDisplayName().getString() + " positioned ~ ~2 ~ run particle minecraft:dust_color_transition 0 0.91 0.98 0.5 0.32 0.92 1 ^ ^ ^6 0.8 0.8 0.8 0.01 100 normal"));
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					("/execute at " + entity.getDisplayName().getString() + " positioned ~ ~2.2 ~ run particle minecraft:dust_color_transition 0.58 0.97 1 0.7 0.7 0.96 1 ^ ^ ^6 0.4 0.4 0.4 0.01 100 normal"));
+					("/execute at " + entity.getDisplayName().getString() + " positioned ~ ~2 ~ run particle minecraft:dust_color_transition 0.58 0.97 1 0.7 0.7 0.96 1 ^ ^ ^6 0.4 0.4 0.4 0.01 100 normal"));
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					("/execute at " + entity.getDisplayName().getString() + " positioned ~ ~2.2 ~ run particle minecraft:dust_color_transition 0 0.91 0.98 1 0.32 0.92 1 ^ ^ ^6 0.2 0.2 0.2 0.01 100 normal"));
+					("/execute at " + entity.getDisplayName().getString() + " positioned ~ ~2 ~ run particle minecraft:dust_color_transition 0 0.91 0.98 1 0.32 0.92 1 ^ ^ ^6 0.2 0.2 0.2 0.01 100 normal"));
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-					("/execute at " + entity.getDisplayName().getString() + " positioned ~ ~2.2 ~ run particle minecraft:white_ash ^ ^ ^6 0.4 0.4 0.4 0.1 1"));
+					("/execute at " + entity.getDisplayName().getString() + " positioned ~ ~2 ~ run particle minecraft:white_ash ^ ^ ^6 0.4 0.4 0.4 0.1 1"));
 		BlueTickProcedure.execute(world,
 				(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(10)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 				(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(10)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
