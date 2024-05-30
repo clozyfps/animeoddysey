@@ -52,7 +52,7 @@ public class DekuSetTickProcedure {
 		double randomizebda = 0;
 		if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Character).equals("Deku")) {
 			{
-				double _setval = 8;
+				double _setval = 9;
 				entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Moves = _setval;
 					capability.syncPlayerVariables(entity);
@@ -264,6 +264,13 @@ public class DekuSetTickProcedure {
 						_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.FATIGUE.get(),
 								(int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(AnimeoddyseyModMobEffects.FATIGUE.get()) ? _livEnt.getEffect(AnimeoddyseyModMobEffects.FATIGUE.get()).getDuration() : 0) + 200), 0, false, true));
 				}
+				{
+					String _setval = "";
+					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.ActiveMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Delaware Smash")) {
 				if (entity instanceof LivingEntity _entity)
@@ -324,6 +331,13 @@ public class DekuSetTickProcedure {
 						_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.FATIGUE.get(),
 								(int) ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(AnimeoddyseyModMobEffects.FATIGUE.get()) ? _livEnt.getEffect(AnimeoddyseyModMobEffects.FATIGUE.get()).getDuration() : 0) + 200), 0, false, true));
 				}
+				{
+					String _setval = "";
+					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.ActiveMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Manchester Smash")) {
 				ManchesterSmashProcedure.execute(world, x, y, z, entity);
@@ -353,6 +367,13 @@ public class DekuSetTickProcedure {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal("MANCHESTER SMASH"), true);
 				}
+				{
+					String _setval = "";
+					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.ActiveMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Black Whip Swing")) {
 				if (entity instanceof LivingEntity _entity)
@@ -378,6 +399,13 @@ public class DekuSetTickProcedure {
 				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 20, 0, false, false));
+				{
+					String _setval = "";
+					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.ActiveMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Black Whip: Pinpoint Focus")) {
 				if (entity instanceof LivingEntity _entity)
@@ -404,6 +432,13 @@ public class DekuSetTickProcedure {
 				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 150, 0, false, false));
+				{
+					String _setval = "";
+					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.ActiveMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Smokescreen")) {
 				if (entity instanceof LivingEntity _entity)
@@ -430,17 +465,38 @@ public class DekuSetTickProcedure {
 				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 150, 0, false, false));
+				{
+					String _setval = "";
+					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.ActiveMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Smokescreen")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.SMOKESCREEN.get(), 100, 0, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 250, 0, false, false));
+				{
+					String _setval = "";
+					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.ActiveMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Transmission")) {
 				TransmissionProcedure.execute(world, entity);
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 200, 0, false, false));
+				{
+					String _setval = "";
+					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.ActiveMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Gearshift Overdrive")) {
 				if ((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Level >= 50) {
@@ -460,12 +516,26 @@ public class DekuSetTickProcedure {
 						_player.displayClientMessage(Component.literal(("\u00A7lMust be level 50+ | Current Level: "
 								+ new java.text.DecimalFormat("#").format((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Level))), false);
 				}
+				{
+					String _setval = "";
+					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.ActiveMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Fa Jin")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 100, 0, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.FA_JIN_ACTIVE.get(), 30, 0, false, false));
+				{
+					String _setval = "";
+					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.ActiveMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		}
 	}
