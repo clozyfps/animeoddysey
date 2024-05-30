@@ -54,6 +54,39 @@
           "x": 13,
           "y": 222
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "x.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ImageDisplayCondition"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 13,
+          "y": 174
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_cooldown_counter_display",
+          "text": {
+            "fixedValue": "",
+            "name": "CooldownCounterDisplay"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "displayCondition": {
+            "name": "ImageDisplayCondition"
+          },
+          "anchorPoint": "BOTTOM_LEFT",
+          "x": 17,
+          "y": 177
+        }
       }
     ],
     "baseTexture": "",

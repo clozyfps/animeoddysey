@@ -53,7 +53,7 @@ public class TalentMessage {
 			return;
 		if (type == 0) {
 
-			TalentOnKeyPressedProcedure.execute(entity);
+			TalentOnKeyPressedProcedure.execute(world, x, y, z, entity);
 		}
 		if (type == 1) {
 
