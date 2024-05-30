@@ -4796,6 +4796,20 @@
         ]
       },
       "path": "~/Potions"
+    },
+    {
+      "name": "HollowStar",
+      "type": "function",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hollow_star",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/animeoddysey/functions/hollow_star.mcfunction"
+        ]
+      },
+      "path": "~/McFunctions"
     }
   ],
   "variable_elements": [
@@ -5356,6 +5370,10 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "McFunctions",
+        "children": []
       }
     ]
   },

@@ -15,6 +15,7 @@ import net.minecraft.commands.CommandSource;
 import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModEntities;
 import net.mcreator.animeoddysey.entity.HollowPurpleWeakEntity;
+import net.mcreator.animeoddysey.AnimeoddyseyMod;
 
 public class HollowPurpleActiveOnEffectActiveTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -44,29 +45,115 @@ public class HollowPurpleActiveOnEffectActiveTickProcedure {
 			if (entity.getPersistentData().getDouble("hollowPurple") == 1) {
 				entity.getPersistentData().putDouble("purpleDistance", 0);
 				entity.getPersistentData().putDouble("hollowPurple", 0);
-				{
-					Entity _shootFrom = entity;
-					Level projectileLevel = _shootFrom.level();
-					if (!projectileLevel.isClientSide()) {
-						Projectile _entityToSpawn = new Object() {
-							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-								AbstractArrow entityToSpawn = new HollowPurpleWeakEntity(AnimeoddyseyModEntities.HOLLOW_PURPLE_WEAK.get(), level);
-								entityToSpawn.setOwner(shooter);
-								entityToSpawn.setBaseDamage(damage);
-								entityToSpawn.setKnockback(knockback);
-								entityToSpawn.setSilent(true);
-								entityToSpawn.setPierceLevel(piercing);
-								return entityToSpawn;
-							}
-						}.getArrow(projectileLevel, entity, (float) (25 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthStat / 3
-								+ (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthMod), 0, (byte) 25);
-						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 7, 0);
-						projectileLevel.addFreshEntity(_entityToSpawn);
-					}
-				}
 				entity.getPersistentData().putDouble("hollowPurple", 0);
 				entity.getPersistentData().putBoolean("initial", false);
+				if (world instanceof ServerLevel _level)
+					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+							("execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.2 ~ positioned ^-0.2 ^ ^1 run function animeoddysey:hollow_star"));
+				AnimeoddyseyMod.queueServerWork(1, () -> {
+					if (world instanceof ServerLevel _level)
+						_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+								("execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.2 ~ positioned ^-0.2 ^ ^1 run function animeoddysey:hollow_star"));
+					AnimeoddyseyMod.queueServerWork(1, () -> {
+						if (world instanceof ServerLevel _level)
+							_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+									("execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.2 ~ positioned ^-0.2 ^ ^1 run function animeoddysey:hollow_star"));
+						AnimeoddyseyMod.queueServerWork(1, () -> {
+							if (world instanceof ServerLevel _level)
+								_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+										("execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.2 ~ positioned ^-0.2 ^ ^1 run function animeoddysey:hollow_star"));
+							AnimeoddyseyMod.queueServerWork(1, () -> {
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+											("execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.2 ~ positioned ^-0.2 ^ ^1 run function animeoddysey:hollow_star"));
+								AnimeoddyseyMod.queueServerWork(1, () -> {
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands().performPrefixedCommand(
+												new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+												("execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.2 ~ positioned ^-0.2 ^ ^1 run function animeoddysey:hollow_star"));
+									AnimeoddyseyMod.queueServerWork(1, () -> {
+										if (world instanceof ServerLevel _level)
+											_level.getServer().getCommands().performPrefixedCommand(
+													new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+													("execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.2 ~ positioned ^-0.2 ^ ^1 run function animeoddysey:hollow_star"));
+										AnimeoddyseyMod.queueServerWork(1, () -> {
+											if (world instanceof ServerLevel _level)
+												_level.getServer().getCommands().performPrefixedCommand(
+														new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+														("execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.2 ~ positioned ^-0.2 ^ ^1 run function animeoddysey:hollow_star"));
+											AnimeoddyseyMod.queueServerWork(1, () -> {
+												if (world instanceof ServerLevel _level)
+													_level.getServer().getCommands().performPrefixedCommand(
+															new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+															("execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.2 ~ positioned ^-0.2 ^ ^1 run function animeoddysey:hollow_star"));
+												AnimeoddyseyMod.queueServerWork(1, () -> {
+													if (world instanceof ServerLevel _level)
+														_level.getServer().getCommands().performPrefixedCommand(
+																new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+																("execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.2 ~ positioned ^-0.2 ^ ^1 run function animeoddysey:hollow_star"));
+													AnimeoddyseyMod.queueServerWork(1, () -> {
+														if (world instanceof ServerLevel _level)
+															_level.getServer().getCommands().performPrefixedCommand(
+																	new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+																	("execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.2 ~ positioned ^-0.2 ^ ^1 run function animeoddysey:hollow_star"));
+														AnimeoddyseyMod.queueServerWork(1, () -> {
+															if (world instanceof ServerLevel _level)
+																_level.getServer().getCommands().performPrefixedCommand(
+																		new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+																		("execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.2 ~ positioned ^-0.2 ^ ^1 run function animeoddysey:hollow_star"));
+															AnimeoddyseyMod.queueServerWork(1, () -> {
+																if (world instanceof ServerLevel _level)
+																	_level.getServer().getCommands().performPrefixedCommand(
+																			new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+																			("execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.2 ~ positioned ^-0.2 ^ ^1 run function animeoddysey:hollow_star"));
+																AnimeoddyseyMod.queueServerWork(1, () -> {
+																	if (world instanceof ServerLevel _level)
+																		_level.getServer().getCommands().performPrefixedCommand(
+																				new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+																				("execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.2 ~ positioned ^-0.2 ^ ^1 run function animeoddysey:hollow_star"));
+																	AnimeoddyseyMod.queueServerWork(1, () -> {
+																		if (world instanceof ServerLevel _level)
+																			_level.getServer().getCommands().performPrefixedCommand(
+																					new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+																					("execute at " + entity.getDisplayName().getString() + " positioned ~ ~1.2 ~ positioned ^-0.2 ^ ^1 run function animeoddysey:hollow_star"));
+																		{
+																			Entity _shootFrom = entity;
+																			Level projectileLevel = _shootFrom.level();
+																			if (!projectileLevel.isClientSide()) {
+																				Projectile _entityToSpawn = new Object() {
+																					public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
+																						AbstractArrow entityToSpawn = new HollowPurpleWeakEntity(AnimeoddyseyModEntities.HOLLOW_PURPLE_WEAK.get(), level);
+																						entityToSpawn.setOwner(shooter);
+																						entityToSpawn.setBaseDamage(damage);
+																						entityToSpawn.setKnockback(knockback);
+																						entityToSpawn.setSilent(true);
+																						entityToSpawn.setPierceLevel(piercing);
+																						return entityToSpawn;
+																					}
+																				}.getArrow(projectileLevel, entity, (float) (25
+																						+ (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthStat / 3
+																						+ (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthMod), 0,
+																						(byte) 25);
+																				_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+																				_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 7, 0);
+																				projectileLevel.addFreshEntity(_entityToSpawn);
+																			}
+																		}
+																	});
+																});
+															});
+														});
+													});
+												});
+											});
+										});
+									});
+								});
+							});
+						});
+					});
+				});
 			}
 		}
 	}
