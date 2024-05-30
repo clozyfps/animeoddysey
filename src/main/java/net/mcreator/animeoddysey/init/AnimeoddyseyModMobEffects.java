@@ -21,7 +21,6 @@ import net.mcreator.animeoddysey.potion.OutwardsReversalRedMobEffect;
 import net.mcreator.animeoddysey.potion.OutwardsMobEffect;
 import net.mcreator.animeoddysey.potion.LapseBlueMaximumMobEffect;
 import net.mcreator.animeoddysey.potion.ImpactFrameMobEffect;
-import net.mcreator.animeoddysey.potion.IframeMobEffect;
 import net.mcreator.animeoddysey.potion.HonoredOneSkyMobEffect;
 import net.mcreator.animeoddysey.potion.HollowPurpleActiveMobEffect;
 import net.mcreator.animeoddysey.potion.GodspeedMobEffect;
@@ -55,5 +54,4 @@ public class AnimeoddyseyModMobEffects {
 	public static final RegistryObject<MobEffect> AURA_CONTROL = REGISTRY.register("aura_control", () -> new AuraControlMobEffect());
 	public static final RegistryObject<MobEffect> SPIRITUAL_AWARENESS = REGISTRY.register("spiritual_awareness", () -> new SpiritualAwarenessMobEffect());
 	public static final RegistryObject<MobEffect> SLAM = REGISTRY.register("slam", () -> new SlamMobEffect());
-	public static final RegistryObject<MobEffect> IFRAME = REGISTRY.register("iframe", () -> new IframeMobEffect());
 }
