@@ -3494,6 +3494,26 @@
         ]
       },
       "path": "~/Commands/Procedures"
+    },
+    {
+      "name": "DekuSetTick",
+      "type": "procedure",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deku_set_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/DekuSetTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Deku"
     }
   ],
   "variable_elements": [
@@ -3834,6 +3854,10 @@
               },
               {
                 "name": "Mob",
+                "children": []
+              },
+              {
+                "name": "Deku",
                 "children": []
               }
             ]

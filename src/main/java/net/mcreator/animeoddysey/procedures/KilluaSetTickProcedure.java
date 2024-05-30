@@ -159,7 +159,7 @@ public class KilluaSetTickProcedure {
 					});
 				}
 				{
-					double _setval = 0;
+					double _setval = 200;
 					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.Cost = _setval;
 						capability.syncPlayerVariables(entity);

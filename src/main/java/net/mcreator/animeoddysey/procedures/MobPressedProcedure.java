@@ -29,7 +29,7 @@ public class MobPressedProcedure {
 		{
 			double _setval = 150;
 			entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.EnergyStat = _setval;
+				capability.EnergyMax = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}
