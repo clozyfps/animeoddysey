@@ -15,7 +15,6 @@ import net.mcreator.animeoddysey.potion.TalentCooldownMobEffect;
 import net.mcreator.animeoddysey.potion.SpiritualAwarenessMobEffect;
 import net.mcreator.animeoddysey.potion.SpeedEffectMobEffect;
 import net.mcreator.animeoddysey.potion.SnakeAwakensMobEffect;
-import net.mcreator.animeoddysey.potion.SmokescreenMobEffect;
 import net.mcreator.animeoddysey.potion.SlamMobEffect;
 import net.mcreator.animeoddysey.potion.ReversedCursedTechniqueMobEffect;
 import net.mcreator.animeoddysey.potion.OutwardsReversalRedMobEffect;
@@ -26,10 +25,6 @@ import net.mcreator.animeoddysey.potion.IframeMobEffect;
 import net.mcreator.animeoddysey.potion.HonoredOneSkyMobEffect;
 import net.mcreator.animeoddysey.potion.HollowPurpleActiveMobEffect;
 import net.mcreator.animeoddysey.potion.GodspeedMobEffect;
-import net.mcreator.animeoddysey.potion.GearshiftOverdriveMobEffect;
-import net.mcreator.animeoddysey.potion.FullCowlingMobEffect;
-import net.mcreator.animeoddysey.potion.FatigueMobEffect;
-import net.mcreator.animeoddysey.potion.FaJinActiveMobEffect;
 import net.mcreator.animeoddysey.potion.ExplosionOfEmotionsMobEffect;
 import net.mcreator.animeoddysey.potion.ExplodingMobEffect;
 import net.mcreator.animeoddysey.potion.EnMobEffect;
@@ -61,9 +56,4 @@ public class AnimeoddyseyModMobEffects {
 	public static final RegistryObject<MobEffect> SPIRITUAL_AWARENESS = REGISTRY.register("spiritual_awareness", () -> new SpiritualAwarenessMobEffect());
 	public static final RegistryObject<MobEffect> SLAM = REGISTRY.register("slam", () -> new SlamMobEffect());
 	public static final RegistryObject<MobEffect> IFRAME = REGISTRY.register("iframe", () -> new IframeMobEffect());
-	public static final RegistryObject<MobEffect> FULL_COWLING = REGISTRY.register("full_cowling", () -> new FullCowlingMobEffect());
-	public static final RegistryObject<MobEffect> FATIGUE = REGISTRY.register("fatigue", () -> new FatigueMobEffect());
-	public static final RegistryObject<MobEffect> SMOKESCREEN = REGISTRY.register("smokescreen", () -> new SmokescreenMobEffect());
-	public static final RegistryObject<MobEffect> GEARSHIFT_OVERDRIVE = REGISTRY.register("gearshift_overdrive", () -> new GearshiftOverdriveMobEffect());
-	public static final RegistryObject<MobEffect> FA_JIN_ACTIVE = REGISTRY.register("fa_jin_active", () -> new FaJinActiveMobEffect());
 }

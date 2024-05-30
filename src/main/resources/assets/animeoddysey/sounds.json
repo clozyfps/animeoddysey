@@ -78,29 +78,5 @@
         "stream": false
       }
     ]
-  },
-  "explosivepunch": {
-    "sounds": [
-      {
-        "name": "animeoddysey:audio_-_explosion_sound_-_creator_store",
-        "stream": false
-      }
-    ]
-  },
-  "ofacharge": {
-    "sounds": [
-      {
-        "name": "animeoddysey:chargeofs",
-        "stream": false
-      }
-    ]
-  },
-  "delawaresmash": {
-    "sounds": [
-      {
-        "name": "animeoddysey:audio_-_one_for_all-_unleash_-_creator_store",
-        "stream": false
-      }
-    ]
   }
 }

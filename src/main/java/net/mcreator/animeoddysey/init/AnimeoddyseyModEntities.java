@@ -16,16 +16,11 @@ import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
-import net.mcreator.animeoddysey.entity.ShigeoKageyamaEntity;
 import net.mcreator.animeoddysey.entity.PsychicSlashEntity;
 import net.mcreator.animeoddysey.entity.PsychicBlastEntity;
 import net.mcreator.animeoddysey.entity.KnockbackProjectileEntity;
 import net.mcreator.animeoddysey.entity.KilluaZoldyckEntity;
 import net.mcreator.animeoddysey.entity.HollowPurpleWeakEntity;
-import net.mcreator.animeoddysey.entity.DetroitSmashEntity;
-import net.mcreator.animeoddysey.entity.DelawareSmashEntity;
-import net.mcreator.animeoddysey.entity.BlackWhipPinpointFocusEntity;
-import net.mcreator.animeoddysey.entity.BlackWhipEntity;
 import net.mcreator.animeoddysey.entity.AfterImageEntity;
 import net.mcreator.animeoddysey.AnimeoddyseyMod;
 
@@ -48,19 +43,6 @@ public class AnimeoddyseyModEntities {
 			EntityType.Builder.<KilluaZoldyckEntity>of(KilluaZoldyckEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(KilluaZoldyckEntity::new)
 
 					.sized(0.6f, 1.8f));
-	public static final RegistryObject<EntityType<DetroitSmashEntity>> DETROIT_SMASH = register("projectile_detroit_smash",
-			EntityType.Builder.<DetroitSmashEntity>of(DetroitSmashEntity::new, MobCategory.MISC).setCustomClientFactory(DetroitSmashEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<DelawareSmashEntity>> DELAWARE_SMASH = register("projectile_delaware_smash",
-			EntityType.Builder.<DelawareSmashEntity>of(DelawareSmashEntity::new, MobCategory.MISC).setCustomClientFactory(DelawareSmashEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<BlackWhipEntity>> BLACK_WHIP = register("projectile_black_whip",
-			EntityType.Builder.<BlackWhipEntity>of(BlackWhipEntity::new, MobCategory.MISC).setCustomClientFactory(BlackWhipEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<BlackWhipPinpointFocusEntity>> BLACK_WHIP_PINPOINT_FOCUS = register("projectile_black_whip_pinpoint_focus",
-			EntityType.Builder.<BlackWhipPinpointFocusEntity>of(BlackWhipPinpointFocusEntity::new, MobCategory.MISC).setCustomClientFactory(BlackWhipPinpointFocusEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<ShigeoKageyamaEntity>> SHIGEO_KAGEYAMA = register("shigeo_kageyama",
-			EntityType.Builder.<ShigeoKageyamaEntity>of(ShigeoKageyamaEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ShigeoKageyamaEntity::new)
-
-					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -71,7 +53,6 @@ public class AnimeoddyseyModEntities {
 		event.enqueueWork(() -> {
 			AfterImageEntity.init();
 			KilluaZoldyckEntity.init();
-			ShigeoKageyamaEntity.init();
 		});
 	}
 
@@ -79,6 +60,5 @@ public class AnimeoddyseyModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(AFTER_IMAGE.get(), AfterImageEntity.createAttributes().build());
 		event.put(KILLUA_ZOLDYCK.get(), KilluaZoldyckEntity.createAttributes().build());
-		event.put(SHIGEO_KAGEYAMA.get(), ShigeoKageyamaEntity.createAttributes().build());
 	}
 }

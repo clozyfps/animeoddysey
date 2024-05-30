@@ -11,7 +11,6 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
-import net.mcreator.animeoddysey.client.renderer.ShigeoKageyamaRenderer;
 import net.mcreator.animeoddysey.client.renderer.KilluaZoldyckRenderer;
 import net.mcreator.animeoddysey.client.renderer.AfterImageRenderer;
 
@@ -25,10 +24,5 @@ public class AnimeoddyseyModEntityRenderers {
 		event.registerEntityRenderer(AnimeoddyseyModEntities.PSYCHIC_BLAST.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.PSYCHIC_SLASH.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.KILLUA_ZOLDYCK.get(), KilluaZoldyckRenderer::new);
-		event.registerEntityRenderer(AnimeoddyseyModEntities.DETROIT_SMASH.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(AnimeoddyseyModEntities.DELAWARE_SMASH.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(AnimeoddyseyModEntities.BLACK_WHIP.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(AnimeoddyseyModEntities.BLACK_WHIP_PINPOINT_FOCUS.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(AnimeoddyseyModEntities.SHIGEO_KAGEYAMA.get(), ShigeoKageyamaRenderer::new);
 	}
 }
