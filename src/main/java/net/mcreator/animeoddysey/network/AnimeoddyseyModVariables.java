@@ -16,6 +16,7 @@ import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.Capability;
 
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
@@ -93,8 +94,16 @@ public class AnimeoddyseyModVariables {
 			clone.Exp = original.Exp;
 			clone.ExpMax = original.ExpMax;
 			clone.SP = original.SP;
+			clone.RedAnim = original.RedAnim;
+			clone.OFAPercentage = original.OFAPercentage;
+			clone.FaJin = original.FaJin;
+			clone.JoinedWorld = original.JoinedWorld;
 			if (!event.isWasDeath()) {
 				clone.Percentage = original.Percentage;
+				clone.HelmetSlotSave = original.HelmetSlotSave;
+				clone.ChestSlotSave = original.ChestSlotSave;
+				clone.LeggingsSlotSave = original.LeggingsSlotSave;
+				clone.BootsSlotSave = original.BootsSlotSave;
 			}
 		}
 	}
@@ -157,6 +166,14 @@ public class AnimeoddyseyModVariables {
 		public double Exp = 0;
 		public double ExpMax = 20.0;
 		public double SP = 0;
+		public boolean RedAnim = false;
+		public double OFAPercentage = 0;
+		public ItemStack HelmetSlotSave = ItemStack.EMPTY;
+		public ItemStack ChestSlotSave = ItemStack.EMPTY;
+		public ItemStack LeggingsSlotSave = ItemStack.EMPTY;
+		public ItemStack BootsSlotSave = ItemStack.EMPTY;
+		public double FaJin = 0;
+		public boolean JoinedWorld = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -192,6 +209,14 @@ public class AnimeoddyseyModVariables {
 			nbt.putDouble("Exp", Exp);
 			nbt.putDouble("ExpMax", ExpMax);
 			nbt.putDouble("SP", SP);
+			nbt.putBoolean("RedAnim", RedAnim);
+			nbt.putDouble("OFAPercentage", OFAPercentage);
+			nbt.put("HelmetSlotSave", HelmetSlotSave.save(new CompoundTag()));
+			nbt.put("ChestSlotSave", ChestSlotSave.save(new CompoundTag()));
+			nbt.put("LeggingsSlotSave", LeggingsSlotSave.save(new CompoundTag()));
+			nbt.put("BootsSlotSave", BootsSlotSave.save(new CompoundTag()));
+			nbt.putDouble("FaJin", FaJin);
+			nbt.putBoolean("JoinedWorld", JoinedWorld);
 			return nbt;
 		}
 
@@ -224,6 +249,14 @@ public class AnimeoddyseyModVariables {
 			Exp = nbt.getDouble("Exp");
 			ExpMax = nbt.getDouble("ExpMax");
 			SP = nbt.getDouble("SP");
+			RedAnim = nbt.getBoolean("RedAnim");
+			OFAPercentage = nbt.getDouble("OFAPercentage");
+			HelmetSlotSave = ItemStack.of(nbt.getCompound("HelmetSlotSave"));
+			ChestSlotSave = ItemStack.of(nbt.getCompound("ChestSlotSave"));
+			LeggingsSlotSave = ItemStack.of(nbt.getCompound("LeggingsSlotSave"));
+			BootsSlotSave = ItemStack.of(nbt.getCompound("BootsSlotSave"));
+			FaJin = nbt.getDouble("FaJin");
+			JoinedWorld = nbt.getBoolean("JoinedWorld");
 		}
 	}
 
@@ -275,6 +308,14 @@ public class AnimeoddyseyModVariables {
 					variables.Exp = message.data.Exp;
 					variables.ExpMax = message.data.ExpMax;
 					variables.SP = message.data.SP;
+					variables.RedAnim = message.data.RedAnim;
+					variables.OFAPercentage = message.data.OFAPercentage;
+					variables.HelmetSlotSave = message.data.HelmetSlotSave;
+					variables.ChestSlotSave = message.data.ChestSlotSave;
+					variables.LeggingsSlotSave = message.data.LeggingsSlotSave;
+					variables.BootsSlotSave = message.data.BootsSlotSave;
+					variables.FaJin = message.data.FaJin;
+					variables.JoinedWorld = message.data.JoinedWorld;
 				}
 			});
 			context.setPacketHandled(true);

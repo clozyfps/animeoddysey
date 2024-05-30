@@ -365,9 +365,9 @@
       "registry_name": "character_select_main",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/world/inventory/CharacterSelectMainMenu.java",
           "src/main/java/net/mcreator/animeoddysey/network/CharacterSelectMainButtonMessage.java",
-          "src/main/java/net/mcreator/animeoddysey/client/gui/CharacterSelectMainScreen.java"
+          "src/main/java/net/mcreator/animeoddysey/client/gui/CharacterSelectMainScreen.java",
+          "src/main/java/net/mcreator/animeoddysey/world/inventory/CharacterSelectMainMenu.java"
         ]
       },
       "path": "~/GUI"
@@ -381,9 +381,9 @@
       "registry_name": "hx_h_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/gui/HxHSelectionScreen.java",
+          "src/main/java/net/mcreator/animeoddysey/network/HxHSelectionButtonMessage.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/HxHSelectionMenu.java",
-          "src/main/java/net/mcreator/animeoddysey/network/HxHSelectionButtonMessage.java"
+          "src/main/java/net/mcreator/animeoddysey/client/gui/HxHSelectionScreen.java"
         ]
       },
       "path": "~/GUI"
@@ -433,8 +433,8 @@
       "registry_name": "character_selector",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/item/CharacterSelectorItem.java",
-          "src/main/resources/assets/animeoddysey/models/item/character_selector.json"
+          "src/main/resources/assets/animeoddysey/models/item/character_selector.json",
+          "src/main/java/net/mcreator/animeoddysey/item/CharacterSelectorItem.java"
         ]
       },
       "path": "~/Items"
@@ -627,8 +627,8 @@
       "registry_name": "electricity_particle",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/ElectricityParticleParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/electricity_particle.json"
+          "src/main/resources/assets/animeoddysey/particles/electricity_particle.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/ElectricityParticleParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -975,6 +975,9 @@
       "locked_code": false,
       "registry_name": "setup_animations",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/SetupAnimationsProcedure.java"
+        ],
         "dependencies": []
       },
       "path": "~/Procedures"
@@ -993,6 +996,10 @@
         "dependencies": [
           {
             "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
             "type": "entity"
           },
           {
@@ -1520,8 +1527,8 @@
       "registry_name": "jjk_selection",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/network/JJKSelectionButtonMessage.java",
           "src/main/java/net/mcreator/animeoddysey/client/gui/JJKSelectionScreen.java",
+          "src/main/java/net/mcreator/animeoddysey/network/JJKSelectionButtonMessage.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/JJKSelectionMenu.java"
         ]
       },
@@ -1578,6 +1585,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1764,6 +1787,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -1907,8 +1946,8 @@
       "registry_name": "red_electricity",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/RedElectricityParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/red_electricity.json"
+          "src/main/resources/assets/animeoddysey/particles/red_electricity.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedElectricityParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -2303,9 +2342,9 @@
       "registry_name": "mob_psycho_selection",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/gui/MobPsychoSelectionScreen.java",
           "src/main/java/net/mcreator/animeoddysey/world/inventory/MobPsychoSelectionMenu.java",
-          "src/main/java/net/mcreator/animeoddysey/network/MobPsychoSelectionButtonMessage.java",
-          "src/main/java/net/mcreator/animeoddysey/client/gui/MobPsychoSelectionScreen.java"
+          "src/main/java/net/mcreator/animeoddysey/network/MobPsychoSelectionButtonMessage.java"
         ]
       },
       "path": "~/GUI"
@@ -2916,8 +2955,8 @@
       "registry_name": "red",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/RedParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/red.json"
+          "src/main/resources/assets/animeoddysey/particles/red.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -2946,8 +2985,8 @@
       "registry_name": "small_cube_red",
       "metadata": {
         "files": [
-          "src/main/resources/assets/animeoddysey/particles/small_cube_red.json",
-          "src/main/java/net/mcreator/animeoddysey/client/particle/SmallCubeRedParticle.java"
+          "src/main/java/net/mcreator/animeoddysey/client/particle/SmallCubeRedParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/small_cube_red.json"
         ]
       },
       "path": "~/Particles"
@@ -2961,8 +3000,8 @@
       "registry_name": "red_2",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/Red2Particle.java",
-          "src/main/resources/assets/animeoddysey/particles/red_2.json"
+          "src/main/resources/assets/animeoddysey/particles/red_2.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/Red2Particle.java"
         ]
       },
       "path": "~/Particles"
@@ -2991,8 +3030,8 @@
       "registry_name": "red_anim",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/RedAnimParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/red_anim.json"
+          "src/main/resources/assets/animeoddysey/particles/red_anim.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RedAnimParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -3300,10 +3339,10 @@
       "registry_name": "killua_zoldyck",
       "metadata": {
         "files": [
-          "src/main/resources/data/animeoddysey/forge/biome_modifier/killua_zoldyck_biome_modifier.json",
           "src/main/java/net/mcreator/animeoddysey/client/renderer/KilluaZoldyckRenderer.java",
-          "src/main/resources/assets/animeoddysey/models/item/killua_zoldyck_spawn_egg.json",
-          "src/main/java/net/mcreator/animeoddysey/entity/KilluaZoldyckEntity.java"
+          "src/main/resources/data/animeoddysey/forge/biome_modifier/killua_zoldyck_biome_modifier.json",
+          "src/main/java/net/mcreator/animeoddysey/entity/KilluaZoldyckEntity.java",
+          "src/main/resources/assets/animeoddysey/models/item/killua_zoldyck_spawn_egg.json"
         ]
       },
       "path": "~/Mobs"
@@ -3616,10 +3655,1019 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
       "path": "~/Procedures/CharacterTick/Deku"
+    },
+    {
+      "name": "FullCowling",
+      "type": "potioneffect",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "full_cowling",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/FullCowlingMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "AirPulse",
+      "type": "particle",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_pulse",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/AirPulseParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/air_pulse.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "OneForAllSparks",
+      "type": "particle",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "one_for_all_sparks",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/animeoddysey/particles/one_for_all_sparks.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/OneForAllSparksParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "DetroitSmashWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detroit_smash_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/DetroitSmashWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles/Procedures"
+    },
+    {
+      "name": "DetroitSmash",
+      "type": "projectile",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detroit_smash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/entity/DetroitSmashEntity.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "FullCowlingOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "full_cowling_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/FullCowlingOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "MHASelection",
+      "type": "gui",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mha_selection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/world/inventory/MHASelectionMenu.java",
+          "src/main/java/net/mcreator/animeoddysey/client/gui/MHASelectionScreen.java",
+          "src/main/java/net/mcreator/animeoddysey/network/MHASelectionButtonMessage.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "DekuPressed",
+      "type": "procedure",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deku_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/DekuPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ImageDisplayCondition",
+      "type": "procedure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "image_display_condition",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/ImageDisplayConditionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "CooldownCounterDisplay",
+      "type": "procedure",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cooldown_counter_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/CooldownCounterDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "FullCowlingEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "full_cowling_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/FullCowlingEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "DelawareSmashWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "delaware_smash_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/DelawareSmashWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles/Procedures"
+    },
+    {
+      "name": "DelawareSmash",
+      "type": "projectile",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "delaware_smash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/entity/DelawareSmashEntity.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "Fatigue",
+      "type": "potioneffect",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fatigue",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/FatigueMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "FatigueOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fatigue_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/FatigueOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "ManchesterSmash",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manchester_smash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/ManchesterSmashProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Deku"
+    },
+    {
+      "name": "BlackWhipWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_whip_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/BlackWhipWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles/Procedures"
+    },
+    {
+      "name": "BlackWhip",
+      "type": "projectile",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_whip",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/entity/BlackWhipEntity.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "BlackWhipPinpointFocusWhileProjectileFlyingTick",
+      "type": "procedure",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_whip_pinpoint_focus_while_projectile_flying_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/BlackWhipPinpointFocusWhileProjectileFlyingTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles/Procedures"
+    },
+    {
+      "name": "BlackWhipPinpointFocusProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_whip_pinpoint_focus_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/BlackWhipPinpointFocusProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles/Procedures"
+    },
+    {
+      "name": "BlackWhipPinpointFocus",
+      "type": "projectile",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_whip_pinpoint_focus",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/entity/BlackWhipPinpointFocusEntity.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "PurpleSmoke",
+      "type": "particle",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "purple_smoke",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/animeoddysey/particles/purple_smoke.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/PurpleSmokeParticle.java"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "SmokescreenOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smokescreen_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/SmokescreenOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "SmokescreenEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smokescreen_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/SmokescreenEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "SmokescreenEffectExpires",
+      "type": "procedure",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smokescreen_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/SmokescreenEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "Smokescreen",
+      "type": "potioneffect",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smokescreen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/SmokescreenMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "Transmission",
+      "type": "procedure",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "transmission",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/TransmissionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Deku"
+    },
+    {
+      "name": "GearshiftOverdrive",
+      "type": "potioneffect",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gearshift_overdrive",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/GearshiftOverdriveMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "GearshiftOverdriveOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gearshift_overdrive_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/GearshiftOverdriveOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "DekuPassive",
+      "type": "procedure",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deku_passive",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/DekuPassiveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Deku"
+    },
+    {
+      "name": "DekuPassive2",
+      "type": "procedure",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deku_passive_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/DekuPassive2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Deku"
+    },
+    {
+      "name": "FaJinActive",
+      "type": "potioneffect",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fa_jin_active",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/FaJinActiveMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "FaJinBlitz",
+      "type": "particle",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fa_jin_blitz",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/FaJinBlitzParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/fa_jin_blitz.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "FaJinActiveOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fa_jin_active_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/FaJinActiveOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "JoinedWorld",
+      "type": "procedure",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "joined_world",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/JoinedWorldProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "RankTick",
+      "type": "procedure",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rank_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/RankTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "RespawnHealthRefill",
+      "type": "procedure",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "respawn_health_refill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/RespawnHealthRefillProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "ShigeoKageyamaOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shigeo_kageyama_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/ShigeoKageyamaOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "ShigeoKageyamaOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shigeo_kageyama_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/ShigeoKageyamaOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "ShigeoKageyama",
+      "type": "livingentity",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shigeo_kageyama",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/animeoddysey/models/item/shigeo_kageyama_spawn_egg.json",
+          "src/main/java/net/mcreator/animeoddysey/client/renderer/ShigeoKageyamaRenderer.java",
+          "src/main/resources/data/animeoddysey/forge/biome_modifier/shigeo_kageyama_biome_modifier.json",
+          "src/main/java/net/mcreator/animeoddysey/entity/ShigeoKageyamaEntity.java"
+        ]
+      },
+      "path": "~/Mobs"
+    },
+    {
+      "name": "OpenMHA",
+      "type": "procedure",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_mha",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/OpenMHAProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
     }
   ],
   "variable_elements": [
@@ -3790,6 +4838,48 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "OFAPercentage",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "HelmetSlotSave",
+      "type": "itemstack",
+      "scope": "player_lifetime",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "ChestSlotSave",
+      "type": "itemstack",
+      "scope": "player_lifetime",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "LeggingsSlotSave",
+      "type": "itemstack",
+      "scope": "player_lifetime",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "BootsSlotSave",
+      "type": "itemstack",
+      "scope": "player_lifetime",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "FaJin",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "JoinedWorld",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -3872,11 +4962,36 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "explosivepunch",
+      "files": [
+        "audio_-_explosion_sound_-_creator_store"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "ofacharge",
+      "files": [
+        "chargeofs"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "delawaresmash",
+      "files": [
+        "audio_-_one_for_all-_unleash_-_creator_store"
+      ],
+      "category": "neutral",
+      "subtitle": ""
     }
   ],
   "language_map": {
     "en_us": {
       "key.animeoddysey.open_menu": "Open Menu",
+      "gui.animeoddysey.mha_selection.tooltip_ssassldeku_successor_strength1": "§a§lDeku \"Successor\" | Strength Based Kit",
       "death.attack.eraser.player": "%1$s died whilst trying to escape %2$s",
       "effect.animeoddysey.snake_awakens": "Snake Awakens",
       "gamerule.constantBlackFlashes.description": "Hit a Black Flash every punch.",
@@ -3893,49 +5008,61 @@
       "effect.animeoddysey.aura_control": "Aura Control",
       "advancements.post_mortem.descr": "Awaken Reversed Cursed Technique As Teen Gojo",
       "item.animeoddysey.character_selector": "Character Selector",
+      "effect.animeoddysey.fa_jin_active": "FaJinActive",
+      "effect.animeoddysey.fatigue": "Fatigue",
       "gui.animeoddysey.character_select_main.button_hxh": "HxH",
       "effect.animeoddysey.slam": "Slam",
+      "entity.animeoddysey.shigeo_kageyama": "Shigeo Kageyama",
       "effect.animeoddysey.impact_frame": "Impact Frame",
       "subtitles.heartbeat": "",
       "effect.animeoddysey.outwards": "Outwards",
       "gui.animeoddysey.mob_psycho_selection.tooltip_ssbsslkillua_zoldyck_assassin": "§d§lMob \"100\" | Energy Based Kit",
       "effect.animeoddysey.iframe": "Impact Frame",
+      "subtitles.delawaresmash": "",
       "gui.animeoddysey.hx_h_selection.button_killua": "Killua",
       "entity.animeoddysey.after_image": "After Image",
       "gamerule.constantBlackFlashes": "constantblackflashes",
       "item.animeoddysey.test": "Test",
       "key.animeoddysey.switch_skill": "Switch Skill",
+      "effect.animeoddysey.smokescreen": "Smokescreen",
       "gui.animeoddysey.main_menu.button_ssl1": "§l+",
       "gui.animeoddysey.main_menu.button_ssl2": "§l+",
       "gui.animeoddysey.main_menu.button_ssl3": "§l+",
       "advancements.anime_oddysey.title": "Anime Oddysey",
       "effect.animeoddysey.en": "En",
       "item_group.animeoddysey.anime_oddysey_mobs": "Anime Oddysey Mobs",
+      "subtitles.explosivepunch": "",
       "effect.animeoddysey.godspeed": "Godspeed",
       "subtitles.psychicenergy": "",
       "subtitles.bloody": "",
+      "item.animeoddysey.shigeo_kageyama_spawn_egg": "Shigeo Kageyama Spawn Egg",
       "death.attack.internal.item": "%1$s was killed by %2$s using %3$s",
       "subtitles.blackflash": "",
+      "effect.animeoddysey.full_cowling": "FullCowling",
       "gui.animeoddysey.jjk_selection.button_gojo_teen": "Gojo (Teen)",
       "subtitles.mobrage": "",
       "effect.animeoddysey.honored_one_sky": "Honored One Sky",
       "effect.animeoddysey.spiritual_awareness": "Spiritual Awareness",
       "effect.animeoddysey.explosion_of_emotions": "Explosion Of Emotions",
+      "gui.animeoddysey.mha_selection.tooltip_ssassldeku_successor_strength": "§a§lDeku \"Successor\" | Strength Based Kit",
       "death.attack.eraser.item": "%1$s was killed by %2$s using %3$s",
       "key.animeoddysey.use_skill": "Use Skill",
       "effect.animeoddysey.talent_cooldown": "Talent Cooldown",
+      "subtitles.ofacharge": "",
       "advancements.post_mortem.title": "Post Mortem",
+      "gui.animeoddysey.mha_selection.button_deku": "Deku",
       "death.attack.internal.player": "%1$s got their heart taken whilst trying to escape %2$s",
       "gui.animeoddysey.character_select_main.button_hxh3": "MP100",
       "effect.animeoddysey.black_outwards": "Black Outwards",
       "effect.animeoddysey.outwards_reversal_red": "Outwards Reversal Red",
-      "gui.animeoddysey.character_select_main.button_hxh1": "OPM",
+      "gui.animeoddysey.character_select_main.button_hxh1": "MHA",
       "gui.animeoddysey.character_select_main.button_hxh2": "JJK",
       "gui.animeoddysey.jjk_selection.button_itadori": "Itadori",
       "subtitles.electricity": "",
       "item.animeoddysey.killua_zoldyck_spawn_egg": "Killua Zoldyck Spawn Egg",
       "entity.animeoddysey.killua_zoldyck": "Killua Zoldyck",
       "gui.animeoddysey.main_menu.button_ssl": "§l+",
+      "effect.animeoddysey.gearshift_overdrive": "Gearshift Overdrive",
       "subtitles.beep": "",
       "advancements.anime_oddysey.descr": "Start In The Vast Anime Universe!",
       "key.animeoddysey.talent": "Talent",

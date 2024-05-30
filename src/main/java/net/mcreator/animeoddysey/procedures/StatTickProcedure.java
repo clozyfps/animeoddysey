@@ -114,5 +114,8 @@ public class StatTickProcedure {
 				}
 			}
 		}
+		if ((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).SpeedStat >= 30) {
+			entity.setMaxUpStep(1);
+		}
 	}
 }
