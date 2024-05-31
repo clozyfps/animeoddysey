@@ -7,12 +7,9 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
@@ -43,7 +40,6 @@ public class LapseBlueEnityOnEntityTickUpdateProcedure {
 					if (!(entityiterator instanceof LapseBlueEnityEntity)) {
 						if (entityiterator.getPersistentData().getDouble("LapseBluePlayerID") != entity.getPersistentData().getDouble("LapseBluePlayerID")) {
 							if (!(entityiterator instanceof LivingEntity _livEnt7 && _livEnt7.hasEffect(AnimeoddyseyModMobEffects.LAPSE_BLUE_POITON.get()))) {
-								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FALL), entity), 2);
 								entityiterator.setDeltaMovement(new Vec3(((x - entityiterator.getX()) / 4), ((y - entityiterator.getY()) / 4), ((z - entityiterator.getZ()) / 4)));
 								if (entityiterator instanceof Player) {
 									{

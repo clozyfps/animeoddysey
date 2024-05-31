@@ -15,6 +15,7 @@ import net.mcreator.animeoddysey.client.gui.MobPsychoSelectionScreen;
 import net.mcreator.animeoddysey.client.gui.MainMenuScreen;
 import net.mcreator.animeoddysey.client.gui.MHASelectionScreen;
 import net.mcreator.animeoddysey.client.gui.JJKSelectionScreen;
+import net.mcreator.animeoddysey.client.gui.JJBASelectionScreen;
 import net.mcreator.animeoddysey.client.gui.HxHSelectionScreen;
 import net.mcreator.animeoddysey.client.gui.CharacterSelectMainScreen;
 
@@ -29,6 +30,7 @@ public class AnimeoddyseyModScreens {
 			MenuScreens.register(AnimeoddyseyModMenus.MOB_PSYCHO_SELECTION.get(), MobPsychoSelectionScreen::new);
 			MenuScreens.register(AnimeoddyseyModMenus.MAIN_MENU.get(), MainMenuScreen::new);
 			MenuScreens.register(AnimeoddyseyModMenus.MHA_SELECTION.get(), MHASelectionScreen::new);
+			MenuScreens.register(AnimeoddyseyModMenus.JJBA_SELECTION.get(), JJBASelectionScreen::new);
 		});
 	}
 }

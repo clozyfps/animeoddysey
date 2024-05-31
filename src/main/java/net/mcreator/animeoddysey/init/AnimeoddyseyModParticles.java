@@ -11,12 +11,14 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.animeoddysey.client.particle.StoneParticlePreParticle;
 import net.mcreator.animeoddysey.client.particle.StarPurpleParticle;
+import net.mcreator.animeoddysey.client.particle.StarPurpleBigParticle;
 import net.mcreator.animeoddysey.client.particle.SmallCubeRedParticle;
 import net.mcreator.animeoddysey.client.particle.SmallCubePurpleParticle;
 import net.mcreator.animeoddysey.client.particle.RedParticle;
 import net.mcreator.animeoddysey.client.particle.RedElectricityParticle;
 import net.mcreator.animeoddysey.client.particle.RedAnimParticle;
 import net.mcreator.animeoddysey.client.particle.Red2Particle;
+import net.mcreator.animeoddysey.client.particle.RatioHitParticle;
 import net.mcreator.animeoddysey.client.particle.PurpleSmokeParticle;
 import net.mcreator.animeoddysey.client.particle.OneForAllSparksParticle;
 import net.mcreator.animeoddysey.client.particle.LapseBlueMaxParticle;
@@ -52,5 +54,7 @@ public class AnimeoddyseyModParticles {
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.FULL_CROWLING.get(), FullCrowlingParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.BLUE_ANIM.get(), BlueAnimParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.STAR_PURPLE.get(), StarPurpleParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.STAR_PURPLE_BIG.get(), StarPurpleBigParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.RATIO_HIT.get(), RatioHitParticle::provider);
 	}
 }

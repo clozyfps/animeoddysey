@@ -34,4 +34,6 @@ public class AnimeoddyseyModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> FULL_CROWLING = REGISTRY.register("full_crowling", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> BLUE_ANIM = REGISTRY.register("blue_anim", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> STAR_PURPLE = REGISTRY.register("star_purple", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> STAR_PURPLE_BIG = REGISTRY.register("star_purple_big", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> RATIO_HIT = REGISTRY.register("ratio_hit", () -> new SimpleParticleType(true));
 }

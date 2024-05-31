@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 200,
-    "height": 50,
+    "width": 204,
+    "height": 73,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -22,7 +22,7 @@
           "width": 82,
           "height": 20,
           "x": 123,
-          "y": 107
+          "y": 89
         }
       },
       {
@@ -36,7 +36,7 @@
           "width": 24,
           "height": 24,
           "x": 123,
-          "y": 107
+          "y": 89
         }
       },
       {
@@ -50,7 +50,7 @@
           "width": 24,
           "height": 24,
           "x": 150,
-          "y": 107
+          "y": 89
         }
       },
       {
@@ -64,7 +64,7 @@
           "width": 24,
           "height": 24,
           "x": 177,
-          "y": 107
+          "y": 89
         }
       },
       {
@@ -76,7 +76,22 @@
           "width": 61,
           "height": 20,
           "x": 213,
-          "y": 107
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_nanami",
+          "text": "Nanami",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "NanamiPressed"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 123,
+          "y": 116
         }
       }
     ],

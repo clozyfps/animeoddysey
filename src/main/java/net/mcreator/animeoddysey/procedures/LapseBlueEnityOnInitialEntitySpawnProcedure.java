@@ -3,7 +3,6 @@ package net.mcreator.animeoddysey.procedures;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
@@ -40,8 +39,6 @@ public class LapseBlueEnityOnInitialEntitySpawnProcedure {
 						}
 					}
 				}
-				if (world instanceof Level _level && !_level.isClientSide())
-					_level.explode(null, x, y, z, 3, Level.ExplosionInteraction.NONE);
 				if (!entity.level().isClientSide())
 					entity.discard();
 			});

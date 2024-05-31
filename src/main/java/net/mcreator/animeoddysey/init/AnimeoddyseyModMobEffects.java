@@ -20,6 +20,7 @@ import net.mcreator.animeoddysey.potion.SlamMobEffect;
 import net.mcreator.animeoddysey.potion.ReversedCursedTechniqueMobEffect;
 import net.mcreator.animeoddysey.potion.OutwardsReversalRedMobEffect;
 import net.mcreator.animeoddysey.potion.OutwardsMobEffect;
+import net.mcreator.animeoddysey.potion.NanamiHitEffectMobEffect;
 import net.mcreator.animeoddysey.potion.LapseBluePoitonMobEffect;
 import net.mcreator.animeoddysey.potion.LapseBlueMaximumMobEffect;
 import net.mcreator.animeoddysey.potion.ImpactFrameMobEffect;
@@ -68,4 +69,5 @@ public class AnimeoddyseyModMobEffects {
 	public static final RegistryObject<MobEffect> GEARSHIFT_OVERDRIVE = REGISTRY.register("gearshift_overdrive", () -> new GearshiftOverdriveMobEffect());
 	public static final RegistryObject<MobEffect> FA_JIN_ACTIVE = REGISTRY.register("fa_jin_active", () -> new FaJinActiveMobEffect());
 	public static final RegistryObject<MobEffect> LAPSE_BLUE_POITON = REGISTRY.register("lapse_blue_poiton", () -> new LapseBluePoitonMobEffect());
+	public static final RegistryObject<MobEffect> NANAMI_HIT_EFFECT = REGISTRY.register("nanami_hit_effect", () -> new NanamiHitEffectMobEffect());
 }

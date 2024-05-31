@@ -27,7 +27,7 @@ public class TeenGojoPressedProcedure {
 		if (world.isClientSide())
 			Minecraft.getInstance().gameRenderer.displayItemActivation(new ItemStack(AnimeoddyseyModItems.CHARACTER_SELECTOR.get()));
 		{
-			double _setval = 150;
+			double _setval = 300;
 			entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.EnergyMax = _setval;
 				capability.syncPlayerVariables(entity);

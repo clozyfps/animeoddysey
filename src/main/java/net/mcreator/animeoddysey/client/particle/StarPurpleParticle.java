@@ -37,7 +37,7 @@ public class StarPurpleParticle extends TextureSheetParticle {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
-		this.quadSize *= 100f;
+		this.quadSize *= 50f;
 		this.lifetime = 100;
 		this.gravity = 0f;
 		this.hasPhysics = true;

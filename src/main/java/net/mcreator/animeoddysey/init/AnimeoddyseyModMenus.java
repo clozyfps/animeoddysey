@@ -15,6 +15,7 @@ import net.mcreator.animeoddysey.world.inventory.MobPsychoSelectionMenu;
 import net.mcreator.animeoddysey.world.inventory.MainMenuMenu;
 import net.mcreator.animeoddysey.world.inventory.MHASelectionMenu;
 import net.mcreator.animeoddysey.world.inventory.JJKSelectionMenu;
+import net.mcreator.animeoddysey.world.inventory.JJBASelectionMenu;
 import net.mcreator.animeoddysey.world.inventory.HxHSelectionMenu;
 import net.mcreator.animeoddysey.world.inventory.CharacterSelectMainMenu;
 import net.mcreator.animeoddysey.AnimeoddyseyMod;
@@ -27,4 +28,5 @@ public class AnimeoddyseyModMenus {
 	public static final RegistryObject<MenuType<MobPsychoSelectionMenu>> MOB_PSYCHO_SELECTION = REGISTRY.register("mob_psycho_selection", () -> IForgeMenuType.create(MobPsychoSelectionMenu::new));
 	public static final RegistryObject<MenuType<MainMenuMenu>> MAIN_MENU = REGISTRY.register("main_menu", () -> IForgeMenuType.create(MainMenuMenu::new));
 	public static final RegistryObject<MenuType<MHASelectionMenu>> MHA_SELECTION = REGISTRY.register("mha_selection", () -> IForgeMenuType.create(MHASelectionMenu::new));
+	public static final RegistryObject<MenuType<JJBASelectionMenu>> JJBA_SELECTION = REGISTRY.register("jjba_selection", () -> IForgeMenuType.create(JJBASelectionMenu::new));
 }

@@ -99,6 +99,7 @@ public class AnimeoddyseyModVariables {
 			clone.FaJin = original.FaJin;
 			clone.JoinedWorld = original.JoinedWorld;
 			clone.LapseBlueID = original.LapseBlueID;
+			clone.HitNanamiVaribleClientSide = original.HitNanamiVaribleClientSide;
 			if (!event.isWasDeath()) {
 				clone.Percentage = original.Percentage;
 				clone.HelmetSlotSave = original.HelmetSlotSave;
@@ -176,6 +177,7 @@ public class AnimeoddyseyModVariables {
 		public double FaJin = 0;
 		public boolean JoinedWorld = false;
 		public double LapseBlueID = 0;
+		public boolean HitNanamiVaribleClientSide = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -220,6 +222,7 @@ public class AnimeoddyseyModVariables {
 			nbt.putDouble("FaJin", FaJin);
 			nbt.putBoolean("JoinedWorld", JoinedWorld);
 			nbt.putDouble("LapseBlueID", LapseBlueID);
+			nbt.putBoolean("HitNanamiVaribleClientSide", HitNanamiVaribleClientSide);
 			return nbt;
 		}
 
@@ -261,6 +264,7 @@ public class AnimeoddyseyModVariables {
 			FaJin = nbt.getDouble("FaJin");
 			JoinedWorld = nbt.getBoolean("JoinedWorld");
 			LapseBlueID = nbt.getDouble("LapseBlueID");
+			HitNanamiVaribleClientSide = nbt.getBoolean("HitNanamiVaribleClientSide");
 		}
 	}
 
@@ -321,6 +325,7 @@ public class AnimeoddyseyModVariables {
 					variables.FaJin = message.data.FaJin;
 					variables.JoinedWorld = message.data.JoinedWorld;
 					variables.LapseBlueID = message.data.LapseBlueID;
+					variables.HitNanamiVaribleClientSide = message.data.HitNanamiVaribleClientSide;
 				}
 			});
 			context.setPacketHandled(true);
