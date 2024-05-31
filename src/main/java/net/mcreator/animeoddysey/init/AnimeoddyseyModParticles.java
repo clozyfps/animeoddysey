@@ -28,6 +28,8 @@ import net.mcreator.animeoddysey.client.particle.FaJinBlitzParticle;
 import net.mcreator.animeoddysey.client.particle.ElectricityParticleParticle;
 import net.mcreator.animeoddysey.client.particle.BlueflashParticle;
 import net.mcreator.animeoddysey.client.particle.BlueAnimParticle;
+import net.mcreator.animeoddysey.client.particle.BlackFlashParticleParticle;
+import net.mcreator.animeoddysey.client.particle.BlackFlashBigParticle;
 import net.mcreator.animeoddysey.client.particle.BlackElectricityParticle;
 import net.mcreator.animeoddysey.client.particle.AirPulseParticle;
 
@@ -56,5 +58,7 @@ public class AnimeoddyseyModParticles {
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.STAR_PURPLE.get(), StarPurpleParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.STAR_PURPLE_BIG.get(), StarPurpleBigParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.RATIO_HIT.get(), RatioHitParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.BLACK_FLASH_PARTICLE.get(), BlackFlashParticleParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.BLACK_FLASH_BIG.get(), BlackFlashBigParticle::provider);
 	}
 }

@@ -27,6 +27,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.animeoddysey.procedures.NanamiHitOnInitialEntitySpawnProcedure;
+import net.mcreator.animeoddysey.procedures.NanamiHitOnEntityTickUpdateProcedure;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModEntities;
 
 import javax.annotation.Nullable;
@@ -75,6 +76,12 @@ public class NanamiHitEntity extends PathfinderMob {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
 		NanamiHitOnInitialEntitySpawnProcedure.execute(world, this);
 		return retval;
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		NanamiHitOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

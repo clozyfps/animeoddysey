@@ -4808,7 +4808,8 @@
         "files": [
           "src/main/resources/data/animeoddysey/functions/hollow_star.mcfunction"
         ]
-      }
+      },
+      "path": "~/Function"
     },
     {
       "name": "StarPurple",
@@ -5086,6 +5087,18 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -5370,6 +5383,96 @@
         ]
       },
       "path": "~/Procedures/CharacterTick/Mob"
+    },
+    {
+      "name": "BlackFlashParticle",
+      "type": "particle",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_flash_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/BlackFlashParticleParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/black_flash_particle.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "BlackFlashBig",
+      "type": "particle",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "black_flash_big",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/BlackFlashBigParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/black_flash_big.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "NanamiHitOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nanami_hit_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/NanamiHitOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "ColapseAbility",
+      "type": "procedure",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "colapse_ability",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/ColapseAbilityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Nanami"
     }
   ],
   "variable_elements": [
@@ -5594,6 +5697,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "HitNanamiPlayer",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -5708,16 +5817,26 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "blackflashshort",
+      "files": [
+        "blackflashshort"
+      ],
+      "category": "player",
+      "subtitle": "Black Flash"
     }
   ],
   "language_map": {
     "en_us": {
       "key.animeoddysey.open_menu": "Open Menu",
-      "gui.animeoddysey.mha_selection.tooltip_ssassldeku_successor_strength1": "§a§lDeku \"Successor\" | Strength Based Kit",
       "gui.animeoddysey.jjba_selection.button_itadori": "Itadori",
+      "gui.animeoddysey.mha_selection.tooltip_ssassldeku_successor_strength1": "§a§lDeku \"Successor\" | Strength Based Kit",
       "death.attack.eraser.player": "%1$s died whilst trying to escape %2$s",
+      "effect.animeoddysey.outwards_poof": "Outwards Poof",
       "effect.animeoddysey.snake_awakens": "Snake Awakens",
       "gamerule.constantBlackFlashes.description": "Hit a Black Flash every punch.",
+      "effect.animeoddysey.nanami_hit_effect": "Nanami Hit",
       "gui.animeoddysey.mob_psycho_selection.button_mob": "Mob",
       "death.attack.eraser": "%1$s was erased from existence",
       "death.attack.internal": "%1$s got their heart taken.",
@@ -5729,6 +5848,7 @@
       "effect.animeoddysey.hollow_purple_active": "Hollow Purple Active",
       "effect.animeoddysey.reversed_cursed_technique": "Reversed Cursed Technique",
       "effect.animeoddysey.zone": "Zone",
+      "gui.animeoddysey.jjba_selection.button_gojo_teen": "Jotaro Kujo",
       "effect.animeoddysey.lapse_blue_maximum": "Lapse Blue Maximum",
       "effect.animeoddysey.aura_control": "Aura Control",
       "advancements.post_mortem.descr": "Awaken Reversed Cursed Technique As Teen Gojo",
@@ -5737,7 +5857,9 @@
       "effect.animeoddysey.fatigue": "Fatigue",
       "gui.animeoddysey.character_select_main.button_hxh": "HxH",
       "effect.animeoddysey.slam": "Slam",
+      "entity.animeoddysey.nanami_hit": "Nanami Hit",
       "entity.animeoddysey.shigeo_kageyama": "Shigeo Kageyama",
+      "effect.animeoddysey.psychic_energy_outwards_effect": "Psychic Energy Outwards",
       "effect.animeoddysey.impact_frame": "Impact Frame",
       "subtitles.heartbeat": "",
       "effect.animeoddysey.outwards": "Outwards",
@@ -5762,6 +5884,7 @@
       "subtitles.bloody": "",
       "item.animeoddysey.shigeo_kageyama_spawn_egg": "Shigeo Kageyama Spawn Egg",
       "death.attack.internal.item": "%1$s was killed by %2$s using %3$s",
+      "gui.animeoddysey.jjba_selection.button_dio_vampire": "Dio (Vampire)",
       "subtitles.blackflash": "",
       "effect.animeoddysey.full_cowling": "FullCowling",
       "gui.animeoddysey.jjk_selection.button_gojo_teen": "Gojo (Teen)",
@@ -5770,6 +5893,7 @@
       "effect.animeoddysey.spiritual_awareness": "Spiritual Awareness",
       "effect.animeoddysey.explosion_of_emotions": "Explosion Of Emotions",
       "gui.animeoddysey.mha_selection.tooltip_ssassldeku_successor_strength": "§a§lDeku \"Successor\" | Strength Based Kit",
+      "subtitles.blackflashshort": "Black Flash",
       "death.attack.eraser.item": "%1$s was killed by %2$s using %3$s",
       "key.animeoddysey.use_skill": "Use Skill",
       "effect.animeoddysey.talent_cooldown": "Talent Cooldown",

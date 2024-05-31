@@ -115,6 +115,9 @@
       "value": ""
     },
     "entityDataEntries": [],
+    "onMobTickUpdate": {
+      "name": "NanamiHitOnEntityTickUpdate"
+    },
     "onInitialSpawn": {
       "name": "NanamiHitOnInitialEntitySpawn"
     },

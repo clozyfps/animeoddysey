@@ -25,7 +25,7 @@ public class NanamiHitEffectMobEffect extends MobEffect {
 
 	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
-		NanamiHitEffectEffectStartedappliedProcedure.execute(entity.level(), entity);
+		NanamiHitEffectEffectStartedappliedProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override
