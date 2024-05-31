@@ -4808,8 +4808,7 @@
         "files": [
           "src/main/resources/data/animeoddysey/functions/hollow_star.mcfunction"
         ]
-      },
-      "path": "~/Function"
+      }
     },
     {
       "name": "StarPurple",
@@ -4825,97 +4824,6 @@
         ]
       },
       "path": "~/Particles"
-    },
-    {
-      "name": "StarPurpleBig",
-      "type": "particle",
-      "sortid": 207,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_purple_big",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/animeoddysey/particles/star_purple_big.json",
-          "src/main/java/net/mcreator/animeoddysey/client/particle/StarPurpleBigParticle.java"
-        ]
-      },
-      "path": "~/Particles"
-    },
-    {
-      "name": "JJBASelection",
-      "type": "gui",
-      "sortid": 208,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "jjba_selection",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/gui/JJBASelectionScreen.java",
-          "src/main/java/net/mcreator/animeoddysey/world/inventory/JJBASelectionMenu.java",
-          "src/main/java/net/mcreator/animeoddysey/network/JJBASelectionButtonMessage.java"
-        ]
-      },
-      "path": "~/GUI"
-    },
-    {
-      "name": "OpenJJBA",
-      "type": "procedure",
-      "sortid": 209,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_jjba",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/OpenJJBAProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "NanamiPressed",
-      "type": "procedure",
-      "sortid": 210,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nanami_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/NanamiPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
     },
     {
       "name": "NanamiSetTick",
@@ -4969,6 +4877,118 @@
       "path": "~/Mobs/Misc"
     },
     {
+      "name": "RatioHit",
+      "type": "particle",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ratio_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/RatioHitParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/ratio_hit.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "OpenJJBA",
+      "type": "procedure",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_jjba",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/OpenJJBAProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "JJBASelection",
+      "type": "gui",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jjba_selection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/gui/JJBASelectionScreen.java",
+          "src/main/java/net/mcreator/animeoddysey/world/inventory/JJBASelectionMenu.java",
+          "src/main/java/net/mcreator/animeoddysey/network/JJBASelectionButtonMessage.java"
+        ]
+      },
+      "path": "~/GUI"
+    },
+    {
+      "name": "ReturnNanamiHit",
+      "type": "procedure",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_nanami_hit",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/ReturnNanamiHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "NanamiPressed",
+      "type": "procedure",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nanami_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/NanamiPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
       "name": "HitNanamiAttacked",
       "type": "procedure",
       "sortid": 213,
@@ -5009,51 +5029,6 @@
       "path": "~/Procedures/CharacterTick/Nanami"
     },
     {
-      "name": "NanamiHitOnInitialEntitySpawn",
-      "type": "procedure",
-      "sortid": 215,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nanami_hit_on_initial_entity_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/NanamiHitOnInitialEntitySpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/Procedures"
-    },
-    {
-      "name": "ReturnNanamiHit",
-      "type": "procedure",
-      "sortid": 216,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "return_nanami_hit",
-      "metadata": {
-        "return_type": "logic",
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/ReturnNanamiHitProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Overlays/Procedures"
-    },
-    {
       "name": "NanamiHitOverlay",
       "type": "overlay",
       "sortid": 217,
@@ -5068,16 +5043,16 @@
       "path": "~/Overlays"
     },
     {
-      "name": "RatioHit",
+      "name": "StarPurpleBig",
       "type": "particle",
-      "sortid": 218,
+      "sortid": 207,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "ratio_hit",
+      "registry_name": "star_purple_big",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/RatioHitParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/ratio_hit.json"
+          "src/main/resources/assets/animeoddysey/particles/star_purple_big.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/StarPurpleBigParticle.java"
         ]
       },
       "path": "~/Particles"
@@ -5119,6 +5094,282 @@
         ]
       },
       "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "NanamiHitOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "nanami_hit_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/NanamiHitOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "PsychicEnergyOutwardsEffect",
+      "type": "potioneffect",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "psychic_energy_outwards_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/PsychicEnergyOutwardsEffectMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "PlayRage",
+      "type": "procedure",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_rage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/PlayRageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Mob"
+    },
+    {
+      "name": "OutwardsPoofOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "outwards_poof_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/OutwardsPoofOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "OutwardsPoof",
+      "type": "potioneffect",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "outwards_poof",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/OutwardsPoofMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "StatSet",
+      "type": "procedure",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stat_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/StatSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures"
+    },
+    {
+      "name": "PsychicEnergyOutwardsEffectOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 211,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "psychic_energy_outwards_effect_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/PsychicEnergyOutwardsEffectOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "PlayMobRage",
+      "type": "procedure",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_mob_rage",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/PlayMobRageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Mob"
+    },
+    {
+      "name": "PsychicMeteoriteUpgrade",
+      "type": "procedure",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "psychic_meteorite_upgrade",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/PsychicMeteoriteUpgradeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Mob"
+    },
+    {
+      "name": "PlayBeep",
+      "type": "procedure",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "play_beep",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/PlayBeepProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Mob"
     }
   ],
   "variable_elements": [
@@ -5449,6 +5700,14 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "rage",
+      "files": [
+        "shigeo-rage-sound-effect-japanese-mob-psycho-100_tfckldat"
+      ],
+      "category": "neutral",
+      "subtitle": ""
     }
   ],
   "language_map": {
@@ -5459,10 +5718,10 @@
       "death.attack.eraser.player": "%1$s died whilst trying to escape %2$s",
       "effect.animeoddysey.snake_awakens": "Snake Awakens",
       "gamerule.constantBlackFlashes.description": "Hit a Black Flash every punch.",
-      "effect.animeoddysey.nanami_hit_effect": "Nanami Hit",
       "gui.animeoddysey.mob_psycho_selection.button_mob": "Mob",
       "death.attack.eraser": "%1$s was erased from existence",
       "death.attack.internal": "%1$s got their heart taken.",
+      "subtitles.rage": "",
       "effect.animeoddysey.cooldown": "Cooldown",
       "subtitles.honoredone": "",
       "effect.animeoddysey.speed_effect": "Speed Effect",
@@ -5470,7 +5729,6 @@
       "effect.animeoddysey.hollow_purple_active": "Hollow Purple Active",
       "effect.animeoddysey.reversed_cursed_technique": "Reversed Cursed Technique",
       "effect.animeoddysey.zone": "Zone",
-      "gui.animeoddysey.jjba_selection.button_gojo_teen": "Jotaro Kujo",
       "effect.animeoddysey.lapse_blue_maximum": "Lapse Blue Maximum",
       "effect.animeoddysey.aura_control": "Aura Control",
       "advancements.post_mortem.descr": "Awaken Reversed Cursed Technique As Teen Gojo",
@@ -5479,7 +5737,6 @@
       "effect.animeoddysey.fatigue": "Fatigue",
       "gui.animeoddysey.character_select_main.button_hxh": "HxH",
       "effect.animeoddysey.slam": "Slam",
-      "entity.animeoddysey.nanami_hit": "Nanami Hit",
       "entity.animeoddysey.shigeo_kageyama": "Shigeo Kageyama",
       "effect.animeoddysey.impact_frame": "Impact Frame",
       "subtitles.heartbeat": "",
@@ -5505,7 +5762,6 @@
       "subtitles.bloody": "",
       "item.animeoddysey.shigeo_kageyama_spawn_egg": "Shigeo Kageyama Spawn Egg",
       "death.attack.internal.item": "%1$s was killed by %2$s using %3$s",
-      "gui.animeoddysey.jjba_selection.button_dio_vampire": "Dio (Vampire)",
       "subtitles.blackflash": "",
       "effect.animeoddysey.full_cowling": "FullCowling",
       "gui.animeoddysey.jjk_selection.button_gojo_teen": "Gojo (Teen)",
@@ -5565,15 +5821,15 @@
                 "children": []
               },
               {
-                "name": "Mob",
-                "children": []
-              },
-              {
                 "name": "Deku",
                 "children": []
               },
               {
                 "name": "Nanami",
+                "children": []
+              },
+              {
+                "name": "Mob",
                 "children": []
               }
             ]
@@ -5712,7 +5968,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "kleidersplayerrenderer"
+      "playeranimator"
     ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",

@@ -258,6 +258,16 @@ public class MobSetTickProcedure {
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 30, 0, false, false));
 			}
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Psycho Meteorite")) {
+				if (!(entity instanceof LivingEntity _livEnt12 && _livEnt12.hasEffect(AnimeoddyseyModMobEffects.EXPLOSION_OF_EMOTIONS.get()))) {
+					PsychicMeteoriteProcedure.execute(world, x, y, z, entity);
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 300, 0, false, false));
+				} else if (entity instanceof LivingEntity _livEnt14 && _livEnt14.hasEffect(AnimeoddyseyModMobEffects.EXPLOSION_OF_EMOTIONS.get())
+						&& (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Percentage >= 250) {
+					PsychicMeteoriteUpgradeProcedure.execute(world, x, y, z, entity);
+					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+						_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 500, 0, false, false));
+				}
 				{
 					String _setval = "";
 					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -265,9 +275,6 @@ public class MobSetTickProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 300, 0, false, false));
-				PsychicMeteoriteProcedure.execute(world, x, y, z, entity);
 			}
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Spiritual Awareness")) {
 				if (world instanceof Level _level) {
