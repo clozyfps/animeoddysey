@@ -25,6 +25,7 @@ public class JJKSelectionScreen extends AbstractContainerScreen<JJKSelectionMenu
 	private final Player entity;
 	Button button_gojo_teen;
 	Button button_itadori;
+	Button button_nanami;
 
 	public JJKSelectionScreen(JJKSelectionMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -33,8 +34,8 @@ public class JJKSelectionScreen extends AbstractContainerScreen<JJKSelectionMenu
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 200;
-		this.imageHeight = 50;
+		this.imageWidth = 204;
+		this.imageHeight = 73;
 	}
 
 	private static final ResourceLocation texture = new ResourceLocation("animeoddysey:textures/screens/jjk_selection.png");
@@ -44,11 +45,11 @@ public class JJKSelectionScreen extends AbstractContainerScreen<JJKSelectionMenu
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 9 && mouseX < leftPos + 33 && mouseY > topPos + 12 && mouseY < topPos + 36)
+		if (mouseX > leftPos + 11 && mouseX < leftPos + 35 && mouseY > topPos + 5 && mouseY < topPos + 29)
 			guiGraphics.renderTooltip(font, Component.literal(TeenGojoSelectionValueProcedure.execute()), mouseX, mouseY);
-		if (mouseX > leftPos + 36 && mouseX < leftPos + 60 && mouseY > topPos + 12 && mouseY < topPos + 36)
+		if (mouseX > leftPos + 38 && mouseX < leftPos + 62 && mouseY > topPos + 5 && mouseY < topPos + 29)
 			guiGraphics.renderTooltip(font, Component.literal(TeenGojoSelectionValueProcedure.execute()), mouseX, mouseY);
-		if (mouseX > leftPos + 63 && mouseX < leftPos + 87 && mouseY > topPos + 12 && mouseY < topPos + 36)
+		if (mouseX > leftPos + 65 && mouseX < leftPos + 89 && mouseY > topPos + 5 && mouseY < topPos + 29)
 			guiGraphics.renderTooltip(font, Component.literal(TeenGojoSelectionValueProcedure.execute()), mouseX, mouseY);
 	}
 
@@ -92,12 +93,20 @@ public class JJKSelectionScreen extends AbstractContainerScreen<JJKSelectionMenu
 				AnimeoddyseyMod.PACKET_HANDLER.sendToServer(new JJKSelectionButtonMessage(0, x, y, z));
 				JJKSelectionButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 9, this.topPos + 12, 82, 20).build();
+		}).bounds(this.leftPos + 11, this.topPos + 5, 82, 20).build();
 		guistate.put("button:button_gojo_teen", button_gojo_teen);
 		this.addRenderableWidget(button_gojo_teen);
 		button_itadori = Button.builder(Component.translatable("gui.animeoddysey.jjk_selection.button_itadori"), e -> {
-		}).bounds(this.leftPos + 99, this.topPos + 12, 61, 20).build();
+		}).bounds(this.leftPos + 101, this.topPos + 5, 61, 20).build();
 		guistate.put("button:button_itadori", button_itadori);
 		this.addRenderableWidget(button_itadori);
+		button_nanami = Button.builder(Component.translatable("gui.animeoddysey.jjk_selection.button_nanami"), e -> {
+			if (true) {
+				AnimeoddyseyMod.PACKET_HANDLER.sendToServer(new JJKSelectionButtonMessage(2, x, y, z));
+				JJKSelectionButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}).bounds(this.leftPos + 11, this.topPos + 32, 56, 20).build();
+		guistate.put("button:button_nanami", button_nanami);
+		this.addRenderableWidget(button_nanami);
 	}
 }

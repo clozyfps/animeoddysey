@@ -110,5 +110,14 @@
         "stream": false
       }
     ]
+  },
+  "blackflashshort": {
+    "subtitle": "subtitles.blackflashshort",
+    "sounds": [
+      {
+        "name": "animeoddysey:blackflashshort",
+        "stream": false
+      }
+    ]
   }
 }

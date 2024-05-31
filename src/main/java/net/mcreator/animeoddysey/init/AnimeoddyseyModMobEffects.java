@@ -22,6 +22,7 @@ import net.mcreator.animeoddysey.potion.PsychicEnergyOutwardsEffectMobEffect;
 import net.mcreator.animeoddysey.potion.OutwardsReversalRedMobEffect;
 import net.mcreator.animeoddysey.potion.OutwardsPoofMobEffect;
 import net.mcreator.animeoddysey.potion.OutwardsMobEffect;
+import net.mcreator.animeoddysey.potion.NanamiHitEffectMobEffect;
 import net.mcreator.animeoddysey.potion.LapseBluePoitonMobEffect;
 import net.mcreator.animeoddysey.potion.LapseBlueMaximumMobEffect;
 import net.mcreator.animeoddysey.potion.ImpactFrameMobEffect;
@@ -72,4 +73,5 @@ public class AnimeoddyseyModMobEffects {
 	public static final RegistryObject<MobEffect> LAPSE_BLUE_POITON = REGISTRY.register("lapse_blue_poiton", () -> new LapseBluePoitonMobEffect());
 	public static final RegistryObject<MobEffect> OUTWARDS_POOF = REGISTRY.register("outwards_poof", () -> new OutwardsPoofMobEffect());
 	public static final RegistryObject<MobEffect> PSYCHIC_ENERGY_OUTWARDS_EFFECT = REGISTRY.register("psychic_energy_outwards_effect", () -> new PsychicEnergyOutwardsEffectMobEffect());
+	public static final RegistryObject<MobEffect> NANAMI_HIT_EFFECT = REGISTRY.register("nanami_hit_effect", () -> new NanamiHitEffectMobEffect());
 }

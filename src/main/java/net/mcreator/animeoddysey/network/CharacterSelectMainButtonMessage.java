@@ -13,6 +13,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.animeoddysey.world.inventory.CharacterSelectMainMenu;
 import net.mcreator.animeoddysey.procedures.OpenMHAProcedure;
+import net.mcreator.animeoddysey.procedures.OpenJJBAProcedure;
 import net.mcreator.animeoddysey.procedures.OpenHxHProcedure;
 import net.mcreator.animeoddysey.procedures.JJKPressedProcedure;
 import net.mcreator.animeoddysey.procedures.ClickMP100Procedure;
@@ -80,6 +81,10 @@ public class CharacterSelectMainButtonMessage {
 		if (buttonID == 3) {
 
 			ClickMP100Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 4) {
+
+			OpenJJBAProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

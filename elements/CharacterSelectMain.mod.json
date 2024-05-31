@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 200,
-    "height": 50,
+    "width": 204,
+    "height": 75,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -22,7 +22,7 @@
           "width": 40,
           "height": 20,
           "x": 123,
-          "y": 107
+          "y": 89
         }
       },
       {
@@ -37,7 +37,7 @@
           "width": 40,
           "height": 20,
           "x": 168,
-          "y": 107
+          "y": 89
         }
       },
       {
@@ -52,7 +52,7 @@
           "width": 40,
           "height": 20,
           "x": 213,
-          "y": 107
+          "y": 89
         }
       },
       {
@@ -67,7 +67,22 @@
           "width": 40,
           "height": 20,
           "x": 258,
-          "y": 107
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_jjba",
+          "text": "JJBA",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OpenJJBA"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 123,
+          "y": 113
         }
       }
     ],
@@ -76,7 +91,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }
