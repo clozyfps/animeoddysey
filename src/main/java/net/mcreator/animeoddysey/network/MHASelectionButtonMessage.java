@@ -12,7 +12,6 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.animeoddysey.world.inventory.MHASelectionMenu;
-import net.mcreator.animeoddysey.procedures.NeitoPressedProcedure;
 import net.mcreator.animeoddysey.procedures.DekuPressedProcedure;
 import net.mcreator.animeoddysey.AnimeoddyseyMod;
 
@@ -69,7 +68,7 @@ public class MHASelectionButtonMessage {
 		}
 		if (buttonID == 1) {
 
-			NeitoPressedProcedure.execute(world, entity);
+			NeitoPressedProcedure.execute();
 		}
 	}
 

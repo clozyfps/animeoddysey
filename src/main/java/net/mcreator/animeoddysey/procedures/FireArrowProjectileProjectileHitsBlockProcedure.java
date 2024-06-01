@@ -79,7 +79,7 @@ public class FireArrowProjectileProjectileHitsBlockProcedure {
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"/particle minecraft:ash ~ ~ ~ 10 10 10 1 3700 force");
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.FUGA_PARICLE.get()), x, y, z, 1, 0, 0, 0, 0);
+			_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.DELETED_MOD_ELEMENT.get()), x, y, z, 1, 0, 0, 0, 0);
 		{
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();

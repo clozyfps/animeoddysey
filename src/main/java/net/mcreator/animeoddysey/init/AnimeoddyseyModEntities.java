@@ -74,7 +74,7 @@ public class AnimeoddyseyModEntities {
 	public static final RegistryObject<EntityType<NanamiHitEntity>> NANAMI_HIT = register("nanami_hit",
 			EntityType.Builder.<NanamiHitEntity>of(NanamiHitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NanamiHitEntity::new)
 
-					.sized(0.3f, 0.3f));
+					.sized(0.4f, 0.4f));
 	public static final RegistryObject<EntityType<FireballJutsuProjectileEntity>> FIREBALL_JUTSU_PROJECTILE = register("projectile_fireball_jutsu_projectile",
 			EntityType.Builder.<FireballJutsuProjectileEntity>of(FireballJutsuProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(FireballJutsuProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
@@ -87,7 +87,7 @@ public class AnimeoddyseyModEntities {
 	public static final RegistryObject<EntityType<CleaveProjectileEntity>> CLEAVE_PROJECTILE = register("projectile_cleave_projectile", EntityType.Builder.<CleaveProjectileEntity>of(CleaveProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(CleaveProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<FireArrowMobEntity>> FIRE_ARROW_MOB = register("fire_arrow_mob", EntityType.Builder.<FireArrowMobEntity>of(FireArrowMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FireArrowMobEntity::new).fireImmune().sized(0.6f, 1.8f));
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FireArrowMobEntity::new).fireImmune().sized(0.1f, 0.1f));
 	public static final RegistryObject<EntityType<FireArrowProjectileEntity>> FIRE_ARROW_PROJECTILE = register("projectile_fire_arrow_projectile", EntityType.Builder.<FireArrowProjectileEntity>of(FireArrowProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(FireArrowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 

@@ -13,7 +13,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.animeoddysey.procedures.StoredCharacterDisplayProcedure;
 import net.mcreator.animeoddysey.procedures.MainHUDDisplayOverlayIngameProcedure;
 import net.mcreator.animeoddysey.procedures.ImageDisplayConditionProcedure;
 import net.mcreator.animeoddysey.procedures.EnergyDisplayProcedure;
@@ -54,7 +53,7 @@ public class MainHUDOverlay {
 						CooldownCounterDisplayProcedure.execute(entity), 14, h - 63, -65536, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					StoredCharacterDisplayProcedure.execute(entity), w / 2 + 92, h - 9, -1, false);
+					StoredCharacterDisplayProcedure.execute(), w / 2 + 92, h - 9, -1, false);
 		}
 	}
 }

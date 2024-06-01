@@ -32,7 +32,6 @@ import net.minecraft.commands.CommandSource;
 import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModMobEffects;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModEntities;
-import net.mcreator.animeoddysey.entity.DismantleProjectileHUEntity;
 import net.mcreator.animeoddysey.AnimeoddyseyMod;
 
 import javax.annotation.Nullable;
@@ -153,7 +152,7 @@ public class SukunaSetTickProcedure {
 					if (!projectileLevel.isClientSide()) {
 						Projectile _entityToSpawn = new Object() {
 							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-								AbstractArrow entityToSpawn = new DismantleProjectileHUEntity(AnimeoddyseyModEntities.DISMANTLE_PROJECTILE_HU.get(), level);
+								AbstractArrow entityToSpawn = new DismantleProjectileHUEntity(AnimeoddyseyModEntities.DELETED_MOD_ELEMENT.get(), level);
 								entityToSpawn.setOwner(shooter);
 								entityToSpawn.setBaseDamage(damage);
 								entityToSpawn.setKnockback(knockback);
