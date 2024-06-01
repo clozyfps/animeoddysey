@@ -6,7 +6,7 @@
     "model": "Modelfugamodel",
     "rendertype": "Glowing",
     "modelScale": {
-      "fixedValue": 20.0
+      "fixedValue": 15.0
     },
     "modelRotationX": {
       "fixedValue": 0.0

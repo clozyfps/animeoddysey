@@ -47,6 +47,10 @@ public class MHASelectionScreen extends AbstractContainerScreen<MHASelectionMenu
 			guiGraphics.renderTooltip(font, Component.translatable("gui.animeoddysey.mha_selection.tooltip_ssassldeku_successor_strength"), mouseX, mouseY);
 		if (mouseX > leftPos + 33 && mouseX < leftPos + 57 && mouseY > topPos + 12 && mouseY < topPos + 36)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.animeoddysey.mha_selection.tooltip_ssassldeku_successor_strength1"), mouseX, mouseY);
+		if (mouseX > leftPos + 61 && mouseX < leftPos + 85 && mouseY > topPos + 12 && mouseY < topPos + 36)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.animeoddysey.mha_selection.tooltip_special_energy_kit"), mouseX, mouseY);
+		if (mouseX > leftPos + 86 && mouseX < leftPos + 110 && mouseY > topPos + 12 && mouseY < topPos + 36)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.animeoddysey.mha_selection.tooltip_ss6sslneito_special_energy_kit"), mouseX, mouseY);
 	}
 
 	@Override

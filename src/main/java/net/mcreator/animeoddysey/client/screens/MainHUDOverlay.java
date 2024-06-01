@@ -54,7 +54,7 @@ public class MainHUDOverlay {
 						CooldownCounterDisplayProcedure.execute(entity), 14, h - 63, -65536, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					StoredCharacterDisplayProcedure.execute(entity), w / 2 + 92, h - 12, -1, false);
+					StoredCharacterDisplayProcedure.execute(entity), w / 2 + 92, h - 9, -1, false);
 		}
 	}
 }

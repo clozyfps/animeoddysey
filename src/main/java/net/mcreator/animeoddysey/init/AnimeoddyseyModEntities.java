@@ -76,7 +76,7 @@ public class AnimeoddyseyModEntities {
 	public static final RegistryObject<EntityType<NanamiHitEntity>> NANAMI_HIT = register("nanami_hit",
 			EntityType.Builder.<NanamiHitEntity>of(NanamiHitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NanamiHitEntity::new)
 
-					.sized(0.3f, 0.3f));
+					.sized(0.4f, 0.4f));
 	public static final RegistryObject<EntityType<ElThorEntity>> EL_THOR = register("el_thor",
 			EntityType.Builder.<ElThorEntity>of(ElThorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ElThorEntity::new).fireImmune().sized(0.6f, 8f));
 	public static final RegistryObject<EntityType<FireballJutsuProjectileEntity>> FIREBALL_JUTSU_PROJECTILE = register("projectile_fireball_jutsu_projectile",

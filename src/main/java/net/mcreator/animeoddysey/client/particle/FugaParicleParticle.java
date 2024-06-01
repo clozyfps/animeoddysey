@@ -53,7 +53,7 @@ public class FugaParicleParticle extends TextureSheetParticle {
 						MinecraftForge.EVENT_BUS.register(this);
 					}
 
-					private float scale = (float) 20;
+					private float scale = (float) 15;
 					private int rotX = (int) 0;
 					private int rotY = (int) 0;
 					private int rotZ = (int) 0;

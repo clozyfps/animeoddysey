@@ -65,6 +65,32 @@
           "x": 174,
           "y": 107
         }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_special_energy_kit",
+          "text": {
+            "fixedValue": "§6§lNeito| Special Energy Kit"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 175,
+          "y": 107
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ss6sslneito_special_energy_kit",
+          "text": {
+            "fixedValue": "§6§lNeito| Special Energy Kit"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 107
+        }
       }
     ],
     "gridSettings": {

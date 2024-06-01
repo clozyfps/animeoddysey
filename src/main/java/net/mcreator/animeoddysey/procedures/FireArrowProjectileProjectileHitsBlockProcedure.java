@@ -43,8 +43,8 @@ public class FireArrowProjectileProjectileHitsBlockProcedure {
 		}
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.IFRAME.get(), 5, 0, false, false));
-		int horizontalRadiusSphere = (int) 20 - 1;
-		int verticalRadiusSphere = (int) 20 - 1;
+		int horizontalRadiusSphere = (int) 10 - 1;
+		int verticalRadiusSphere = (int) 10 - 1;
 		int yIterationsSphere = verticalRadiusSphere;
 		for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
 			for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
@@ -72,6 +72,9 @@ public class FireArrowProjectileProjectileHitsBlockProcedure {
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"particle minecraft:flame ~ ~ ~ 0 10 0 1 1700 force");
+		if (world instanceof ServerLevel _level)
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"/particle flame ~ ~ ~ 10 20 10 1 10000");
 		if (world instanceof ServerLevel _level)
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"/particle minecraft:ash ~ ~ ~ 10 10 10 1 3700 force");
