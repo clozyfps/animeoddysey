@@ -8,9 +8,16 @@ import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.mcreator.animeoddysey.entity.FireArrowMobEntity;
 import net.mcreator.animeoddysey.client.model.Modelfirearrowexplosion;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+
 public class FireArrowMobRenderer extends MobRenderer<FireArrowMobEntity, Modelfirearrowexplosion<FireArrowMobEntity>> {
 	public FireArrowMobRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelfirearrowexplosion(context.bakeLayer(Modelfirearrowexplosion.LAYER_LOCATION)), 0f);
+	}
+
+	@Override
+	protected void scale(FireArrowMobEntity entity, PoseStack poseStack, float f) {
+		poseStack.scale(5f, 5f, 5f);
 	}
 
 	@Override

@@ -7,7 +7,10 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
@@ -28,9 +31,11 @@ public class FireArrowMobOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		entity.getPersistentData().putDouble("rex", (Mth.nextInt(RandomSource.create(), -50, 50)));
+		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 5, 0, false, false));
+		entity.getPersistentData().putDouble("rex", (Mth.nextInt(RandomSource.create(), -25, 25)));
 		entity.getPersistentData().putDouble("rey", (Mth.nextInt(RandomSource.create(), 1, 20)));
-		entity.getPersistentData().putDouble("rez", (Mth.nextInt(RandomSource.create(), -50, 50)));
+		entity.getPersistentData().putDouble("rez", (Mth.nextInt(RandomSource.create(), -25, 25)));
 		if (entity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) {
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles(ParticleTypes.EXPLOSION_EMITTER, x, y, z, 80, 10, 2, 10, 0);
@@ -66,8 +71,8 @@ public class FireArrowMobOnEntityTickUpdateProcedure {
 					}
 				}
 			}
+			if (world instanceof Level _level && !_level.isClientSide())
+				_level.explode(null, (entity.getPersistentData().getDouble("rex")), (entity.getPersistentData().getDouble("rey")), (entity.getPersistentData().getDouble("rez")), 10, Level.ExplosionInteraction.BLOCK);
 		}
-		if (world instanceof Level _level && !_level.isClientSide())
-			_level.explode(null, (entity.getPersistentData().getDouble("rex")), (entity.getPersistentData().getDouble("rey")), (entity.getPersistentData().getDouble("rez")), 8, Level.ExplosionInteraction.BLOCK);
 	}
 }
