@@ -16,18 +16,11 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.player.AbstractClientPlayer;
 
 import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModParticleTypes;
 
 import javax.annotation.Nullable;
-
-import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
-import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
-import dev.kosmx.playerAnim.api.layered.ModifierLayer;
-import dev.kosmx.playerAnim.api.layered.KeyframeAnimationPlayer;
-import dev.kosmx.playerAnim.api.layered.IAnimation;
 
 @Mod.EventBusSubscriber
 public class SasukePassiveProcedure {
@@ -61,23 +54,7 @@ public class SasukePassiveProcedure {
 					event.setCanceled(true);
 				}
 				if (randomdodge == 1) {
-					if (world.isClientSide()) {
-						if (entity instanceof AbstractClientPlayer player) {
-							var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("animeoddysey", "player_animation"));
-							if (animation != null) {
-								animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("animeoddysey", "dodge1"))));
-							}
-						}
-					}
 				} else if (randomdodge == 2) {
-					if (world.isClientSide()) {
-						if (entity instanceof AbstractClientPlayer player) {
-							var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("animeoddysey", "player_animation"));
-							if (animation != null) {
-								animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("animeoddysey", "dodge2"))));
-							}
-						}
-					}
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {

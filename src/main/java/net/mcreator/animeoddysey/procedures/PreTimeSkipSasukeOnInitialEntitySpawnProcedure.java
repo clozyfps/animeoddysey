@@ -7,5 +7,6 @@ public class PreTimeSkipSasukeOnInitialEntitySpawnProcedure {
 		if (entity == null)
 			return;
 		entity.getPersistentData().putDouble("energy", 450);
+		entity.getPersistentData().putString("MobCharacter", "PTS Sasuke");
 	}
 }

@@ -56,6 +56,10 @@ public class JJKSelectionScreen extends AbstractContainerScreen<JJKSelectionMenu
 			guiGraphics.renderTooltip(font, Component.translatable("gui.animeoddysey.jjk_selection.tooltip_ss4sslsukuna_strongest_in_history"), mouseX, mouseY);
 		if (mouseX > leftPos + 101 && mouseX < leftPos + 125 && mouseY > topPos + 32 && mouseY < topPos + 56)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.animeoddysey.jjk_selection.tooltip_ss4sslsukuna_strongest_in_history1"), mouseX, mouseY);
+		if (mouseX > leftPos + 11 && mouseX < leftPos + 35 && mouseY > topPos + 32 && mouseY < topPos + 56)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.animeoddysey.jjk_selection.tooltip_empty"), mouseX, mouseY);
+		if (mouseX > leftPos + 38 && mouseX < leftPos + 62 && mouseY > topPos + 32 && mouseY < topPos + 56)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.animeoddysey.jjk_selection.tooltip_ss1sslnanami_energy_based_kit"), mouseX, mouseY);
 	}
 
 	@Override

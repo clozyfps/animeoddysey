@@ -4,8 +4,8 @@
   "definition": {
     "mobName": "Fire Arrow Mob",
     "mobLabel": "",
-    "mobModelName": "Modelfirearrowexplosion",
-    "mobModelTexture": "firearrowexplosion.png",
+    "mobModelName": "Biped",
+    "mobModelTexture": "a2ie_layer_2.png",
     "transparentModelCondition": {
       "fixedValue": true
     },
@@ -22,8 +22,8 @@
       "fixedValue": 1.0
     },
     "modelLayers": [],
-    "modelWidth": 0.6,
-    "modelHeight": 1.8,
+    "modelWidth": 0.1,
+    "modelHeight": 0.1,
     "modelShadowSize": 0.0,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": false,

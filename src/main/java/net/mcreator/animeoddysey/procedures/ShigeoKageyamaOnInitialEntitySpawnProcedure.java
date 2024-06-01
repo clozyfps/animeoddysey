@@ -7,5 +7,6 @@ public class ShigeoKageyamaOnInitialEntitySpawnProcedure {
 		if (entity == null)
 			return;
 		entity.getPersistentData().putDouble("energy", 5000);
+		entity.getPersistentData().putString("MobCharacter", "Mob");
 	}
 }

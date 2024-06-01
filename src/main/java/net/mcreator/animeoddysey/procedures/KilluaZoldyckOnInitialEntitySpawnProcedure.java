@@ -7,5 +7,6 @@ public class KilluaZoldyckOnInitialEntitySpawnProcedure {
 		if (entity == null)
 			return;
 		entity.getPersistentData().putDouble("energy", 750);
+		entity.getPersistentData().putString("MobCharacter", "Killua");
 	}
 }

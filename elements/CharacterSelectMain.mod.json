@@ -88,16 +88,28 @@
       {
         "type": "button",
         "data": {
-          "name": "button_mha",
-          "text": "Naruto",
+          "name": "button_op",
+          "text": "OP",
+          "isUndecorated": false,
+          "width": 40,
+          "height": 20,
+          "x": 168,
+          "y": 113
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_na",
+          "text": "NA",
           "isUndecorated": false,
           "onClick": {
             "name": "OpenNaruto"
           },
-          "width": 40,
+          "width": 39,
           "height": 20,
-          "x": 168,
-          "y": 114
+          "x": 214,
+          "y": 113
         }
       }
     ],

@@ -50,6 +50,47 @@
           "x": 147,
           "y": 107
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_neito",
+          "text": "Neito",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "NeitoPressed"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 174,
+          "y": 107
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_special_energy_kit",
+          "text": {
+            "fixedValue": "§6§lNeito| Special Energy Kit"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 175,
+          "y": 107
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ss6sslneito_special_energy_kit",
+          "text": {
+            "fixedValue": "§6§lNeito| Special Energy Kit"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 107
+        }
       }
     ],
     "gridSettings": {

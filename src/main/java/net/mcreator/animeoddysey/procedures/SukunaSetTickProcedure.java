@@ -1,41 +1,59 @@
 package net.mcreator.animeoddysey.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
 import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModMobEffects;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModEntities;
-import net.mcreator.animeoddysey.entity.DismantleProjectileEntity;
-import net.mcreator.animeoddysey.entity.CleaveProjectileEntity;
+import net.mcreator.animeoddysey.entity.DismantleProjectileHUEntity;
 import net.mcreator.animeoddysey.AnimeoddyseyMod;
 
 import javax.annotation.Nullable;
+
+import java.util.List;
+import java.util.Comparator;
 
 @Mod.EventBusSubscriber
 public class SukunaSetTickProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player.level(), event.player.getX(), event.player.getY(), event.player.getZ(), event.player);
+			execute(event, event.player.level(), event.player);
 		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		execute(null, world, x, y, z, entity);
+	public static void execute(LevelAccessor world, Entity entity) {
+		execute(null, world, entity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Character).equals("Sukuna")) {
@@ -135,7 +153,7 @@ public class SukunaSetTickProcedure {
 					if (!projectileLevel.isClientSide()) {
 						Projectile _entityToSpawn = new Object() {
 							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-								AbstractArrow entityToSpawn = new DismantleProjectileEntity(AnimeoddyseyModEntities.DISMANTLE_PROJECTILE.get(), level);
+								AbstractArrow entityToSpawn = new DismantleProjectileHUEntity(AnimeoddyseyModEntities.DISMANTLE_PROJECTILE_HU.get(), level);
 								entityToSpawn.setOwner(shooter);
 								entityToSpawn.setBaseDamage(damage);
 								entityToSpawn.setKnockback(knockback);
@@ -160,28 +178,14 @@ public class SukunaSetTickProcedure {
 				}
 			}
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Cleave")) {
-				{
-					Entity _shootFrom = entity;
-					Level projectileLevel = _shootFrom.level();
-					if (!projectileLevel.isClientSide()) {
-						Projectile _entityToSpawn = new Object() {
-							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-								AbstractArrow entityToSpawn = new CleaveProjectileEntity(AnimeoddyseyModEntities.CLEAVE_PROJECTILE.get(), level);
-								entityToSpawn.setOwner(shooter);
-								entityToSpawn.setBaseDamage(damage);
-								entityToSpawn.setKnockback(knockback);
-								entityToSpawn.setSilent(true);
-								entityToSpawn.setPierceLevel(piercing);
-								return entityToSpawn;
-							}
-						}.getArrow(projectileLevel, entity, 10, 0, (byte) 2);
-						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 9, 0);
-						projectileLevel.addFreshEntity(_entityToSpawn);
-					}
-				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 40, 0, false, false));
+				entity.getPersistentData().putDouble("CleaveX",
+						(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(5)), ClipContext.Block.VISUAL, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()));
+				entity.getPersistentData().putDouble("CleaveY",
+						(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(5)), ClipContext.Block.VISUAL, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()));
+				entity.getPersistentData().putDouble("CleaveZ",
+						(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(5)), ClipContext.Block.VISUAL, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()));
 				{
 					String _setval = "";
 					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -189,11 +193,247 @@ public class SukunaSetTickProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					final Vec3 _center = new Vec3((entity.getPersistentData().getDouble("CleaveX")), (entity.getPersistentData().getDouble("CleaveY")), (entity.getPersistentData().getDouble("CleaveZ")));
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					for (Entity entityiterator : _entfound) {
+						if (!(entityiterator == entity)) {
+							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 7, false, false));
+							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("animeoddysey:slice"))), entity),
+									(float) (1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthStat / 3));
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:slice")),
+											SoundSource.PLAYERS, 1, (float) 1.5);
+								} else {
+									_level.playLocalSound((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:slice")), SoundSource.PLAYERS, 1,
+											(float) 1.5, false);
+								}
+							}
+							if (world instanceof ServerLevel _level)
+								_level.getServer().getCommands().performPrefixedCommand(
+										new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+												.withSuppressedOutput(),
+										"particle animeoddysey:slice_1_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+							if (world instanceof ServerLevel _level)
+								_level.getServer().getCommands().performPrefixedCommand(
+										new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+												.withSuppressedOutput(),
+										"particle animeoddysey:slice_2_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+							if (world instanceof ServerLevel _level)
+								_level.getServer().getCommands().performPrefixedCommand(
+										new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+												.withSuppressedOutput(),
+										"particle animeoddysey:slice_3_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+							if (world instanceof ServerLevel _level)
+								_level.getServer().getCommands().performPrefixedCommand(
+										new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+												.withSuppressedOutput(),
+										"particle minecraft:block redstone_block ~ ~1 ~ 0.1 0.6 0.1 0 100 force");
+						}
+					}
+				}
+				AnimeoddyseyMod.queueServerWork(2, () -> {
+					{
+						final Vec3 _center = new Vec3((entity.getPersistentData().getDouble("CleaveX")), (entity.getPersistentData().getDouble("CleaveY")), (entity.getPersistentData().getDouble("CleaveZ")));
+						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+						for (Entity entityiterator : _entfound) {
+							if (!(entityiterator == entity)) {
+								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+									_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 7, false, false));
+								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("animeoddysey:slice"))), entity),
+										(float) (1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthStat / 3));
+								if (world instanceof Level _level) {
+									if (!_level.isClientSide()) {
+										_level.playSound(null, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:slice")),
+												SoundSource.PLAYERS, 1, (float) 1.5);
+									} else {
+										_level.playLocalSound((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:slice")), SoundSource.PLAYERS, 1,
+												(float) 1.5, false);
+									}
+								}
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+													.withSuppressedOutput(),
+											"particle animeoddysey:slice_1_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+													.withSuppressedOutput(),
+											"particle animeoddysey:slice_2_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+													.withSuppressedOutput(),
+											"particle animeoddysey:slice_3_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands().performPrefixedCommand(
+											new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+													.withSuppressedOutput(),
+											"particle minecraft:block redstone_block ~ ~1 ~ 0.1 0.6 0.1 0 100 force");
+							}
+						}
+					}
+					AnimeoddyseyMod.queueServerWork(2, () -> {
+						{
+							final Vec3 _center = new Vec3((entity.getPersistentData().getDouble("CleaveX")), (entity.getPersistentData().getDouble("CleaveY")), (entity.getPersistentData().getDouble("CleaveZ")));
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+							for (Entity entityiterator : _entfound) {
+								if (!(entityiterator == entity)) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 7, false, false));
+									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("animeoddysey:slice"))), entity),
+											(float) (1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthStat / 3));
+									if (world instanceof Level _level) {
+										if (!_level.isClientSide()) {
+											_level.playSound(null, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:slice")),
+													SoundSource.PLAYERS, 1, (float) 1.5);
+										} else {
+											_level.playLocalSound((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:slice")), SoundSource.PLAYERS, 1,
+													(float) 1.5, false);
+										}
+									}
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands().performPrefixedCommand(
+												new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+														.withSuppressedOutput(),
+												"particle animeoddysey:slice_1_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands().performPrefixedCommand(
+												new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+														.withSuppressedOutput(),
+												"particle animeoddysey:slice_2_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands().performPrefixedCommand(
+												new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+														.withSuppressedOutput(),
+												"particle animeoddysey:slice_3_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands().performPrefixedCommand(
+												new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
+														.withSuppressedOutput(),
+												"particle minecraft:block redstone_block ~ ~1 ~ 0.1 0.6 0.1 0 100 force");
+								}
+							}
+						}
+						AnimeoddyseyMod.queueServerWork(2, () -> {
+							{
+								final Vec3 _center = new Vec3((entity.getPersistentData().getDouble("CleaveX")), (entity.getPersistentData().getDouble("CleaveY")), (entity.getPersistentData().getDouble("CleaveZ")));
+								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+								for (Entity entityiterator : _entfound) {
+									if (!(entityiterator == entity)) {
+										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+											_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 7, false, false));
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("animeoddysey:slice"))), entity),
+												(float) (1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthStat / 3));
+										if (world instanceof Level _level) {
+											if (!_level.isClientSide()) {
+												_level.playSound(null, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:slice")),
+														SoundSource.PLAYERS, 1, (float) 1.5);
+											} else {
+												_level.playLocalSound((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:slice")), SoundSource.PLAYERS,
+														1, (float) 1.5, false);
+											}
+										}
+										if (world instanceof ServerLevel _level)
+											_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4,
+													"", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle animeoddysey:slice_1_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+										if (world instanceof ServerLevel _level)
+											_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4,
+													"", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle animeoddysey:slice_2_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+										if (world instanceof ServerLevel _level)
+											_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4,
+													"", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle animeoddysey:slice_3_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+										if (world instanceof ServerLevel _level)
+											_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4,
+													"", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle minecraft:block redstone_block ~ ~1 ~ 0.1 0.6 0.1 0 100 force");
+									}
+								}
+							}
+							AnimeoddyseyMod.queueServerWork(2, () -> {
+								{
+									final Vec3 _center = new Vec3((entity.getPersistentData().getDouble("CleaveX")), (entity.getPersistentData().getDouble("CleaveY")), (entity.getPersistentData().getDouble("CleaveZ")));
+									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+											.toList();
+									for (Entity entityiterator : _entfound) {
+										if (!(entityiterator == entity)) {
+											if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+												_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 7, false, false));
+											entityiterator.hurt(
+													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("animeoddysey:slice"))), entity),
+													(float) (1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthStat / 3));
+											if (world instanceof Level _level) {
+												if (!_level.isClientSide()) {
+													_level.playSound(null, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:slice")),
+															SoundSource.PLAYERS, 1, (float) 1.5);
+												} else {
+													_level.playLocalSound((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:slice")),
+															SoundSource.PLAYERS, 1, (float) 1.5, false);
+												}
+											}
+											if (world instanceof ServerLevel _level)
+												_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level,
+														4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle animeoddysey:slice_1_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+											if (world instanceof ServerLevel _level)
+												_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level,
+														4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle animeoddysey:slice_2_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+											if (world instanceof ServerLevel _level)
+												_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level,
+														4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle animeoddysey:slice_3_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+											if (world instanceof ServerLevel _level)
+												_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level,
+														4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle minecraft:block redstone_block ~ ~1 ~ 0.1 0.6 0.1 0 100 force");
+										}
+									}
+								}
+								AnimeoddyseyMod.queueServerWork(2, () -> {
+									{
+										final Vec3 _center = new Vec3((entity.getPersistentData().getDouble("CleaveX")), (entity.getPersistentData().getDouble("CleaveY")), (entity.getPersistentData().getDouble("CleaveZ")));
+										List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
+												.toList();
+										for (Entity entityiterator : _entfound) {
+											if (!(entityiterator == entity)) {
+												if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+													_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 7, false, false));
+												entityiterator.hurt(
+														new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("animeoddysey:slice"))), entity),
+														(float) (1 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).StrengthStat / 3));
+												if (world instanceof Level _level) {
+													if (!_level.isClientSide()) {
+														_level.playSound(null, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()),
+																ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:slice")), SoundSource.PLAYERS, 1, (float) 1.5);
+													} else {
+														_level.playLocalSound((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:slice")),
+																SoundSource.PLAYERS, 1, (float) 1.5, false);
+													}
+												}
+												if (world instanceof ServerLevel _level)
+													_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO,
+															_level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle animeoddysey:slice_3_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+												if (world instanceof ServerLevel _level)
+													_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO,
+															_level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle animeoddysey:slice_1_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+												if (world instanceof ServerLevel _level)
+													_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO,
+															_level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle animeoddysey:slice_2_small ~ ~1 ~ 0.1 0.3 0.1 0 2 force");
+												if (world instanceof ServerLevel _level)
+													_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO,
+															_level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "particle minecraft:block redstone_block ~ ~1 ~ 0.1 0.6 0.1 0 100 force");
+											}
+										}
+									}
+								});
+							});
+						});
+					});
+				});
 			}
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Fuga")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 600, 0, false, false));
-				FugaEffectProcedure.execute(world, x, y, z, entity);
 				AnimeoddyseyMod.queueServerWork(10, () -> {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.PRE_FIRE_ARROW.get(), 50, 0, false, false));

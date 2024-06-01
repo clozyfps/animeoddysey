@@ -87,7 +87,7 @@ public class CharacterSelectMainButtonMessage {
 
 			OpenJJBAProcedure.execute(world, x, y, z, entity);
 		}
-		if (buttonID == 5) {
+		if (buttonID == 6) {
 
 			OpenNarutoProcedure.execute(world, x, y, z, entity);
 		}

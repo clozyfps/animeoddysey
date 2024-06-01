@@ -1,0 +1,21 @@
+{
+  "_fv": 57,
+  "_type": "particlemodel",
+  "definition": {
+    "particle": "FugaParicle",
+    "model": "Modelfugamodel",
+    "rendertype": "Glowing",
+    "modelScale": {
+      "fixedValue": 15.0
+    },
+    "modelRotationX": {
+      "fixedValue": 0.0
+    },
+    "modelRotationY": {
+      "fixedValue": 0.0
+    },
+    "modelRotationZ": {
+      "fixedValue": 0.0
+    }
+  }
+}

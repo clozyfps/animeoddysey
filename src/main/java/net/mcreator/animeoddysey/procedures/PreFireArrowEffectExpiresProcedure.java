@@ -16,18 +16,11 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.player.AbstractClientPlayer;
 
 import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModParticleTypes;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModEntities;
 import net.mcreator.animeoddysey.entity.FireArrowProjectileEntity;
-
-import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
-import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
-import dev.kosmx.playerAnim.api.layered.ModifierLayer;
-import dev.kosmx.playerAnim.api.layered.KeyframeAnimationPlayer;
-import dev.kosmx.playerAnim.api.layered.IAnimation;
 
 public class PreFireArrowEffectExpiresProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -78,13 +71,5 @@ public class PreFireArrowEffectExpiresProcedure {
 		entity.getPersistentData().putDouble("zincrease", 0);
 		entity.getPersistentData().putDouble("xdecrease", 0);
 		entity.getPersistentData().putDouble("zdecrease", 0);
-		if (world.isClientSide()) {
-			if (entity instanceof AbstractClientPlayer player) {
-				var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("animeoddysey", "player_animation"));
-				if (animation != null && !animation.isActive()) {
-					animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("animeoddysey", "defaultend"))));
-				}
-			}
-		}
 	}
 }

@@ -134,6 +134,32 @@
           "x": 213,
           "y": 116
         }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_empty",
+          "text": {
+            "fixedValue": "§1§lNanami | Energy Based Kit"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 123,
+          "y": 116
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ss1sslnanami_energy_based_kit",
+          "text": {
+            "fixedValue": "§1§lNanami | Energy Based Kit"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 150,
+          "y": 116
+        }
       }
     ],
     "gridSettings": {
