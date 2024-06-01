@@ -124,7 +124,7 @@
       "name": "MainHUD",
       "type": "overlay",
       "sortid": 141,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "main_hud",
       "metadata": {
@@ -3814,7 +3814,7 @@
       "name": "MHASelection",
       "type": "gui",
       "sortid": 164,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "mha_selection",
       "metadata": {
@@ -6382,7 +6382,7 @@
       "name": "SukunaSetTick",
       "type": "procedure",
       "sortid": 262,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "sukuna_set_tick",
       "metadata": {
@@ -6761,7 +6761,7 @@
       "name": "FireArrowProjectileProjectileHitsBlock",
       "type": "procedure",
       "sortid": 278,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "fire_arrow_projectile_projectile_hits_block",
       "metadata": {
@@ -7468,6 +7468,18 @@
             "name": "CharacterTick",
             "children": [
               {
+                "name": "Sakura",
+                "children": []
+              },
+              {
+                "name": "Sasuke",
+                "children": []
+              },
+              {
+                "name": "Shibuya Sukuna",
+                "children": []
+              },
+              {
                 "name": "Killua",
                 "children": []
               },
@@ -7486,18 +7498,6 @@
               {
                 "name": "Mob",
                 "children": []
-              },
-              {
-                "name": "Sasuke",
-                "children": []
-              },
-              {
-                "name": "Sakura",
-                "children": []
-              },
-              {
-                "name": "Shibuya Sukuna",
-                "children": []
               }
             ]
           },
@@ -7515,6 +7515,10 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "Tags",
+        "children": []
       },
       {
         "name": "GUI",
@@ -7624,10 +7628,6 @@
             "children": []
           }
         ]
-      },
-      {
-        "name": "Tags",
-        "children": []
       }
     ]
   },
