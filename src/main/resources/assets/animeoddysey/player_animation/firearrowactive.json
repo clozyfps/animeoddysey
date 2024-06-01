@@ -1,0 +1,26 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"firearrowactive": {
+			"loop": true,
+			"bones": {
+				"right_arm": {
+					"rotation": {
+						"vector": [-85.12, -17.48, 0.79]
+					},
+					"position": {
+						"vector": [2, -2.07, -4.12]
+					}
+				},
+				"left_arm": {
+					"rotation": {
+						"vector": [-82.35509, 24.97821, 0.35987]
+					},
+					"position": {
+						"vector": [0.2, -1.6, 3.2]
+					}
+				}
+			}
+		}
+	}
+}

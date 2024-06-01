@@ -119,5 +119,37 @@
         "stream": false
       }
     ]
+  },
+  "sharingan": {
+    "sounds": [
+      {
+        "name": "animeoddysey:audio_-_sharingan_activate_not_mongekyo_-_creator_store",
+        "stream": false
+      }
+    ]
+  },
+  "handsign": {
+    "sounds": [
+      {
+        "name": "animeoddysey:handsigns",
+        "stream": false
+      }
+    ]
+  },
+  "chidori": {
+    "sounds": [
+      {
+        "name": "animeoddysey:chidorisound",
+        "stream": false
+      }
+    ]
+  },
+  "slice": {
+    "sounds": [
+      {
+        "name": "animeoddysey:audio_-_tf2_blade_slice_-_creator_marketplace",
+        "stream": false
+      }
+    ]
   }
 }

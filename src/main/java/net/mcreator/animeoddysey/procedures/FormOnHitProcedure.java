@@ -19,6 +19,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.player.AbstractClientPlayer;
 
 import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModMobEffects;
@@ -27,6 +28,12 @@ import net.mcreator.animeoddysey.entity.KnockbackProjectileEntity;
 import net.mcreator.animeoddysey.entity.KilluaZoldyckEntity;
 
 import javax.annotation.Nullable;
+
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
+import dev.kosmx.playerAnim.api.layered.ModifierLayer;
+import dev.kosmx.playerAnim.api.layered.KeyframeAnimationPlayer;
+import dev.kosmx.playerAnim.api.layered.IAnimation;
 
 @Mod.EventBusSubscriber
 public class FormOnHitProcedure {
@@ -53,6 +60,14 @@ public class FormOnHitProcedure {
 					}
 					dodge = Mth.nextInt(RandomSource.create(), 1, 2);
 					if (dodge == 1) {
+						if (world.isClientSide()) {
+							if (entity instanceof AbstractClientPlayer player) {
+								var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("animeoddysey", "player_animation"));
+								if (animation != null) {
+									animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("animeoddysey", "dodge1"))));
+								}
+							}
+						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
 								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 2);
@@ -61,6 +76,14 @@ public class FormOnHitProcedure {
 							}
 						}
 					} else if (dodge == 2) {
+						if (world.isClientSide()) {
+							if (entity instanceof AbstractClientPlayer player) {
+								var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("animeoddysey", "player_animation"));
+								if (animation != null) {
+									animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("animeoddysey", "dodge2"))));
+								}
+							}
+						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
 								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 2);
@@ -72,7 +95,7 @@ public class FormOnHitProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt6 && _livEnt6.hasEffect(AnimeoddyseyModMobEffects.SMOKESCREEN.get())) {
+		if (entity instanceof LivingEntity _livEnt8 && _livEnt8.hasEffect(AnimeoddyseyModMobEffects.SMOKESCREEN.get())) {
 			if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.DIG_SLOWDOWN, 15, 0, false, false));
 			if (event != null && event.isCancelable()) {
@@ -86,7 +109,7 @@ public class FormOnHitProcedure {
 				}
 			}
 		}
-		if (sourceentity instanceof LivingEntity _livEnt9 && _livEnt9.hasEffect(AnimeoddyseyModMobEffects.GEARSHIFT_OVERDRIVE.get())) {
+		if (sourceentity instanceof LivingEntity _livEnt11 && _livEnt11.hasEffect(AnimeoddyseyModMobEffects.GEARSHIFT_OVERDRIVE.get())) {
 			{
 				Entity _shootFrom = entity;
 				Level projectileLevel = _shootFrom.level();

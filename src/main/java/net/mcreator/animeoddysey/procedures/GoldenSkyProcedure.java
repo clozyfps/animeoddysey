@@ -13,6 +13,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.animeoddysey.init.AnimeoddyseyModMobEffects;
+import net.mcreator.animeoddysey.entity.FireArrowMobEntity;
 
 import javax.annotation.Nullable;
 
@@ -44,6 +45,15 @@ public class GoldenSkyProcedure {
 			if (viewport instanceof ViewportEvent.RenderFog _renderFog) {
 				_renderFog.setNearPlaneDistance(1);
 				_renderFog.setFarPlaneDistance(35);
+			}
+			if (viewport instanceof ViewportEvent.RenderFog _renderFog) {
+				_renderFog.setFogShape(FogShape.SPHERE);
+			}
+		}
+		if (entity instanceof FireArrowMobEntity) {
+			if (viewport instanceof ViewportEvent.RenderFog _renderFog) {
+				_renderFog.setNearPlaneDistance(1);
+				_renderFog.setFarPlaneDistance(100);
 			}
 			if (viewport instanceof ViewportEvent.RenderFog _renderFog) {
 				_renderFog.setFogShape(FogShape.SPHERE);

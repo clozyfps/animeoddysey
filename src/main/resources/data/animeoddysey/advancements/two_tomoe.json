@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "animeoddysey:test"
+    },
+    "title": {
+      "translate": "advancements.two_tomoe.title"
+    },
+    "description": {
+      "translate": "advancements.two_tomoe.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "two_tomoe": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 5
+  },
+  "parent": "animeoddysey:pts_sasuke"
+}

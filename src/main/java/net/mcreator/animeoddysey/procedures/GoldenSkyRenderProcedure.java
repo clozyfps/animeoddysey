@@ -12,6 +12,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.animeoddysey.init.AnimeoddyseyModMobEffects;
+import net.mcreator.animeoddysey.entity.FireArrowMobEntity;
 
 import javax.annotation.Nullable;
 
@@ -38,6 +39,13 @@ public class GoldenSkyRenderProcedure {
 			if (viewport instanceof ViewportEvent.ComputeFogColor _computeFogColor) {
 				_computeFogColor.setRed(255 / 255.0F);
 				_computeFogColor.setGreen(215 / 255.0F);
+				_computeFogColor.setBlue(0 / 255.0F);
+			}
+		}
+		if (entity instanceof FireArrowMobEntity) {
+			if (viewport instanceof ViewportEvent.ComputeFogColor _computeFogColor) {
+				_computeFogColor.setRed(255 / 255.0F);
+				_computeFogColor.setGreen(69 / 255.0F);
 				_computeFogColor.setBlue(0 / 255.0F);
 			}
 		}

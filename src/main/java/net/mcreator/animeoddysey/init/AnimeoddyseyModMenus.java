@@ -11,6 +11,7 @@ import net.minecraftforge.common.extensions.IForgeMenuType;
 
 import net.minecraft.world.inventory.MenuType;
 
+import net.mcreator.animeoddysey.world.inventory.NarutoSelectionMenu;
 import net.mcreator.animeoddysey.world.inventory.MobPsychoSelectionMenu;
 import net.mcreator.animeoddysey.world.inventory.MainMenuMenu;
 import net.mcreator.animeoddysey.world.inventory.MHASelectionMenu;
@@ -29,4 +30,5 @@ public class AnimeoddyseyModMenus {
 	public static final RegistryObject<MenuType<MainMenuMenu>> MAIN_MENU = REGISTRY.register("main_menu", () -> IForgeMenuType.create(MainMenuMenu::new));
 	public static final RegistryObject<MenuType<MHASelectionMenu>> MHA_SELECTION = REGISTRY.register("mha_selection", () -> IForgeMenuType.create(MHASelectionMenu::new));
 	public static final RegistryObject<MenuType<JJBASelectionMenu>> JJBA_SELECTION = REGISTRY.register("jjba_selection", () -> IForgeMenuType.create(JJBASelectionMenu::new));
+	public static final RegistryObject<MenuType<NarutoSelectionMenu>> NARUTO_SELECTION = REGISTRY.register("naruto_selection", () -> IForgeMenuType.create(NarutoSelectionMenu::new));
 }

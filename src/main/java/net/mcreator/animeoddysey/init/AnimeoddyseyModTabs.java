@@ -20,5 +20,6 @@ public class AnimeoddyseyModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.animeoddysey.anime_oddysey_mobs")).icon(() -> new ItemStack(AnimeoddyseyModItems.CHARACTER_SELECTOR.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(AnimeoddyseyModItems.KILLUA_ZOLDYCK_SPAWN_EGG.get());
 				tabData.accept(AnimeoddyseyModItems.SHIGEO_KAGEYAMA_SPAWN_EGG.get());
+				tabData.accept(AnimeoddyseyModItems.PRE_TIME_SKIP_SASUKE_SPAWN_EGG.get());
 			}).withSearchBar().build());
 }

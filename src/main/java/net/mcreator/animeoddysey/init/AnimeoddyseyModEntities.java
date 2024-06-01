@@ -19,13 +19,19 @@ import net.minecraft.world.entity.Entity;
 import net.mcreator.animeoddysey.entity.ShigeoKageyamaEntity;
 import net.mcreator.animeoddysey.entity.PsychicSlashEntity;
 import net.mcreator.animeoddysey.entity.PsychicBlastEntity;
+import net.mcreator.animeoddysey.entity.PreTimeSkipSasukeEntity;
 import net.mcreator.animeoddysey.entity.NanamiHitEntity;
 import net.mcreator.animeoddysey.entity.LapseBlueEnityEntity;
 import net.mcreator.animeoddysey.entity.KnockbackProjectileEntity;
 import net.mcreator.animeoddysey.entity.KilluaZoldyckEntity;
 import net.mcreator.animeoddysey.entity.HollowPurpleWeakEntity;
+import net.mcreator.animeoddysey.entity.FireballJutsuProjectileEntity;
+import net.mcreator.animeoddysey.entity.FireArrowProjectileEntity;
+import net.mcreator.animeoddysey.entity.FireArrowMobEntity;
+import net.mcreator.animeoddysey.entity.DismantleProjectileEntity;
 import net.mcreator.animeoddysey.entity.DetroitSmashEntity;
 import net.mcreator.animeoddysey.entity.DelawareSmashEntity;
+import net.mcreator.animeoddysey.entity.CleaveProjectileEntity;
 import net.mcreator.animeoddysey.entity.BlackWhipPinpointFocusEntity;
 import net.mcreator.animeoddysey.entity.BlackWhipEntity;
 import net.mcreator.animeoddysey.entity.AfterImageEntity;
@@ -69,6 +75,21 @@ public class AnimeoddyseyModEntities {
 			EntityType.Builder.<NanamiHitEntity>of(NanamiHitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NanamiHitEntity::new)
 
 					.sized(0.3f, 0.3f));
+	public static final RegistryObject<EntityType<FireballJutsuProjectileEntity>> FIREBALL_JUTSU_PROJECTILE = register("projectile_fireball_jutsu_projectile",
+			EntityType.Builder.<FireballJutsuProjectileEntity>of(FireballJutsuProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(FireballJutsuProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<PreTimeSkipSasukeEntity>> PRE_TIME_SKIP_SASUKE = register("pre_time_skip_sasuke",
+			EntityType.Builder.<PreTimeSkipSasukeEntity>of(PreTimeSkipSasukeEntity::new, MobCategory.AMBIENT).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PreTimeSkipSasukeEntity::new)
+
+					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<DismantleProjectileEntity>> DISMANTLE_PROJECTILE = register("projectile_dismantle_projectile", EntityType.Builder.<DismantleProjectileEntity>of(DismantleProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(DismantleProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<CleaveProjectileEntity>> CLEAVE_PROJECTILE = register("projectile_cleave_projectile", EntityType.Builder.<CleaveProjectileEntity>of(CleaveProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(CleaveProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<FireArrowMobEntity>> FIRE_ARROW_MOB = register("fire_arrow_mob", EntityType.Builder.<FireArrowMobEntity>of(FireArrowMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FireArrowMobEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<FireArrowProjectileEntity>> FIRE_ARROW_PROJECTILE = register("projectile_fire_arrow_projectile", EntityType.Builder.<FireArrowProjectileEntity>of(FireArrowProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(FireArrowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -82,6 +103,8 @@ public class AnimeoddyseyModEntities {
 			ShigeoKageyamaEntity.init();
 			LapseBlueEnityEntity.init();
 			NanamiHitEntity.init();
+			PreTimeSkipSasukeEntity.init();
+			FireArrowMobEntity.init();
 		});
 	}
 
@@ -92,5 +115,7 @@ public class AnimeoddyseyModEntities {
 		event.put(SHIGEO_KAGEYAMA.get(), ShigeoKageyamaEntity.createAttributes().build());
 		event.put(LAPSE_BLUE_ENITY.get(), LapseBlueEnityEntity.createAttributes().build());
 		event.put(NANAMI_HIT.get(), NanamiHitEntity.createAttributes().build());
+		event.put(PRE_TIME_SKIP_SASUKE.get(), PreTimeSkipSasukeEntity.createAttributes().build());
+		event.put(FIRE_ARROW_MOB.get(), FireArrowMobEntity.createAttributes().build());
 	}
 }

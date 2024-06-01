@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "animeoddysey:test"
+    },
+    "title": {
+      "translate": "advancements.cursed_seal_of_heaven.title"
+    },
+    "description": {
+      "translate": "advancements.cursed_seal_of_heaven.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "cursed_seal_of_heaven": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "animeoddysey:pts_sasuke"
+}

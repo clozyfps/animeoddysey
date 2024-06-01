@@ -30,4 +30,8 @@ public class AnimeoddyseyModSounds {
 	public static final RegistryObject<SoundEvent> DELAWARESMASH = REGISTRY.register("delawaresmash", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "delawaresmash")));
 	public static final RegistryObject<SoundEvent> RAGE = REGISTRY.register("rage", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "rage")));
 	public static final RegistryObject<SoundEvent> BLACKFLASHSHORT = REGISTRY.register("blackflashshort", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "blackflashshort")));
+	public static final RegistryObject<SoundEvent> SHARINGAN = REGISTRY.register("sharingan", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "sharingan")));
+	public static final RegistryObject<SoundEvent> HANDSIGN = REGISTRY.register("handsign", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "handsign")));
+	public static final RegistryObject<SoundEvent> CHIDORI = REGISTRY.register("chidori", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "chidori")));
+	public static final RegistryObject<SoundEvent> SLICE = REGISTRY.register("slice", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "slice")));
 }

@@ -1,8 +1,6 @@
 package net.mcreator.animeoddysey.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
-
-import javax.annotation.Nullable;
+import net.minecraft.world.entity.Entity;
 
 public class ReturnNanamiHitProcedure {
 	public static boolean execute(Entity entity) {

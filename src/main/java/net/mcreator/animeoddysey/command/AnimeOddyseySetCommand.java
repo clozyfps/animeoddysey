@@ -17,6 +17,7 @@ import net.minecraft.commands.Commands;
 
 import net.mcreator.animeoddysey.procedures.SetStrengthProcedure;
 import net.mcreator.animeoddysey.procedures.SetSPProcedure;
+import net.mcreator.animeoddysey.procedures.SetLevelProcedure;
 import net.mcreator.animeoddysey.procedures.SetEnergyProcedure;
 import net.mcreator.animeoddysey.procedures.SetDefenseProcedure;
 import net.mcreator.animeoddysey.procedures.SetAgilityProcedure;
@@ -98,6 +99,20 @@ public class AnimeOddyseySetCommand {
 						direction = entity.getDirection();
 
 					SetSPProcedure.execute(arguments);
+					return 0;
+				}))).then(Commands.literal("level").then(Commands.argument("amountstat", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					SetLevelProcedure.execute(arguments);
 					return 0;
 				}))))).then(Commands.literal("prestigecharacter").then(Commands.argument("name", EntityArgument.player()).then(Commands.literal("AwakenedYuji").executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();

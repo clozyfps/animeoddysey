@@ -84,6 +84,21 @@
           "x": 123,
           "y": 113
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_mha",
+          "text": "Naruto",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OpenNaruto"
+          },
+          "width": 40,
+          "height": 20,
+          "x": 168,
+          "y": 114
+        }
       }
     ],
     "gridSettings": {

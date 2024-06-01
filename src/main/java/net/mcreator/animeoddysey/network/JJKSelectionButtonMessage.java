@@ -13,6 +13,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.animeoddysey.world.inventory.JJKSelectionMenu;
 import net.mcreator.animeoddysey.procedures.TeenGojoPressedProcedure;
+import net.mcreator.animeoddysey.procedures.SukunaPressedProcedure;
 import net.mcreator.animeoddysey.procedures.NanamiPressedProcedure;
 import net.mcreator.animeoddysey.AnimeoddyseyMod;
 
@@ -70,6 +71,10 @@ public class JJKSelectionButtonMessage {
 		if (buttonID == 2) {
 
 			NanamiPressedProcedure.execute(world, entity);
+		}
+		if (buttonID == 3) {
+
+			SukunaPressedProcedure.execute(world, entity);
 		}
 	}
 

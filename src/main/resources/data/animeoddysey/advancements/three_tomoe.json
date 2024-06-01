@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "animeoddysey:test"
+    },
+    "title": {
+      "translate": "advancements.three_tomoe.title"
+    },
+    "description": {
+      "translate": "advancements.three_tomoe.descr"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "three_tomoe": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "animeoddysey:two_tomoe"
+}

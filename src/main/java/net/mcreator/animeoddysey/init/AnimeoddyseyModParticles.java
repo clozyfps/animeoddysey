@@ -14,6 +14,10 @@ import net.mcreator.animeoddysey.client.particle.StarPurpleParticle;
 import net.mcreator.animeoddysey.client.particle.StarPurpleBigParticle;
 import net.mcreator.animeoddysey.client.particle.SmallCubeRedParticle;
 import net.mcreator.animeoddysey.client.particle.SmallCubePurpleParticle;
+import net.mcreator.animeoddysey.client.particle.Slice3Particle;
+import net.mcreator.animeoddysey.client.particle.Slice2Particle;
+import net.mcreator.animeoddysey.client.particle.Slice1Particle;
+import net.mcreator.animeoddysey.client.particle.SharinganAnimParticle;
 import net.mcreator.animeoddysey.client.particle.RedParticle;
 import net.mcreator.animeoddysey.client.particle.RedElectricityParticle;
 import net.mcreator.animeoddysey.client.particle.RedAnimParticle;
@@ -24,8 +28,10 @@ import net.mcreator.animeoddysey.client.particle.OneForAllSparksParticle;
 import net.mcreator.animeoddysey.client.particle.LapseBlueMaxParticle;
 import net.mcreator.animeoddysey.client.particle.LapseBlueMax2Particle;
 import net.mcreator.animeoddysey.client.particle.FullCrowlingParticle;
+import net.mcreator.animeoddysey.client.particle.FireArrowParticleParticle;
 import net.mcreator.animeoddysey.client.particle.FaJinBlitzParticle;
 import net.mcreator.animeoddysey.client.particle.ElectricityParticleParticle;
+import net.mcreator.animeoddysey.client.particle.ChidoriParticleParticle;
 import net.mcreator.animeoddysey.client.particle.BlueflashParticle;
 import net.mcreator.animeoddysey.client.particle.BlueAnimParticle;
 import net.mcreator.animeoddysey.client.particle.BlackFlashParticleParticle;
@@ -60,5 +66,11 @@ public class AnimeoddyseyModParticles {
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.RATIO_HIT.get(), RatioHitParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.BLACK_FLASH_PARTICLE.get(), BlackFlashParticleParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.BLACK_FLASH_BIG.get(), BlackFlashBigParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.SHARINGAN_ANIM.get(), SharinganAnimParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.CHIDORI_PARTICLE.get(), ChidoriParticleParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.SLICE_1.get(), Slice1Particle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.SLICE_2.get(), Slice2Particle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.SLICE_3.get(), Slice3Particle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.FIRE_ARROW_PARTICLE.get(), FireArrowParticleParticle::provider);
 	}
 }

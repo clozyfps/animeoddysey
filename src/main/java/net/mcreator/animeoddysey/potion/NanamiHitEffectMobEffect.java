@@ -1,6 +1,18 @@
 
 package net.mcreator.animeoddysey.potion;
 
+import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
+
+import net.minecraft.world.entity.ai.attributes.AttributeMap;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
+import net.minecraft.client.gui.GuiGraphics;
+
+import net.mcreator.animeoddysey.procedures.NanamiHitEffectEffectStartedappliedProcedure;
+
 public class NanamiHitEffectMobEffect extends MobEffect {
 	public NanamiHitEffectMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
@@ -13,7 +25,7 @@ public class NanamiHitEffectMobEffect extends MobEffect {
 
 	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
-		NanamiHitEffectEffectStartedappliedProcedure.execute();
+		NanamiHitEffectEffectStartedappliedProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override

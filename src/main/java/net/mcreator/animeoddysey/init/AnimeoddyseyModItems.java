@@ -21,4 +21,5 @@ public class AnimeoddyseyModItems {
 	public static final RegistryObject<Item> CHARACTER_SELECTOR = REGISTRY.register("character_selector", () -> new CharacterSelectorItem());
 	public static final RegistryObject<Item> KILLUA_ZOLDYCK_SPAWN_EGG = REGISTRY.register("killua_zoldyck_spawn_egg", () -> new ForgeSpawnEggItem(AnimeoddyseyModEntities.KILLUA_ZOLDYCK, -5393212, -11386021, new Item.Properties()));
 	public static final RegistryObject<Item> SHIGEO_KAGEYAMA_SPAWN_EGG = REGISTRY.register("shigeo_kageyama_spawn_egg", () -> new ForgeSpawnEggItem(AnimeoddyseyModEntities.SHIGEO_KAGEYAMA, -14803426, -864512, new Item.Properties()));
+	public static final RegistryObject<Item> PRE_TIME_SKIP_SASUKE_SPAWN_EGG = REGISTRY.register("pre_time_skip_sasuke_spawn_egg", () -> new ForgeSpawnEggItem(AnimeoddyseyModEntities.PRE_TIME_SKIP_SASUKE, -15856096, -1, new Item.Properties()));
 }
