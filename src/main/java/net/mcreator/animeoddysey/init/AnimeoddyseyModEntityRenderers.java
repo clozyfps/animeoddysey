@@ -44,5 +44,6 @@ public class AnimeoddyseyModEntityRenderers {
 		event.registerEntityRenderer(AnimeoddyseyModEntities.CLEAVE_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.FIRE_ARROW_MOB.get(), FireArrowMobRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.FIRE_ARROW_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(AnimeoddyseyModEntities.DISMANTLE_PROJECTILE_HU.get(), ThrownItemRenderer::new);
 	}
 }

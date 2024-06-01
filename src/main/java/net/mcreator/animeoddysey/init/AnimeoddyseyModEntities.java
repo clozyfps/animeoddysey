@@ -29,6 +29,7 @@ import net.mcreator.animeoddysey.entity.FireballJutsuProjectileEntity;
 import net.mcreator.animeoddysey.entity.FireArrowProjectileEntity;
 import net.mcreator.animeoddysey.entity.FireArrowMobEntity;
 import net.mcreator.animeoddysey.entity.ElThorEntity;
+import net.mcreator.animeoddysey.entity.DismantleProjectileHUEntity;
 import net.mcreator.animeoddysey.entity.DismantleProjectileEntity;
 import net.mcreator.animeoddysey.entity.DetroitSmashEntity;
 import net.mcreator.animeoddysey.entity.DelawareSmashEntity;
@@ -90,9 +91,12 @@ public class AnimeoddyseyModEntities {
 	public static final RegistryObject<EntityType<CleaveProjectileEntity>> CLEAVE_PROJECTILE = register("projectile_cleave_projectile", EntityType.Builder.<CleaveProjectileEntity>of(CleaveProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(CleaveProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<FireArrowMobEntity>> FIRE_ARROW_MOB = register("fire_arrow_mob", EntityType.Builder.<FireArrowMobEntity>of(FireArrowMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FireArrowMobEntity::new).fireImmune().sized(0.6f, 1.8f));
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FireArrowMobEntity::new).fireImmune().sized(0.1f, 0.1f));
 	public static final RegistryObject<EntityType<FireArrowProjectileEntity>> FIRE_ARROW_PROJECTILE = register("projectile_fire_arrow_projectile", EntityType.Builder.<FireArrowProjectileEntity>of(FireArrowProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(FireArrowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<DismantleProjectileHUEntity>> DISMANTLE_PROJECTILE_HU = register("projectile_dismantle_projectile_hu",
+			EntityType.Builder.<DismantleProjectileHUEntity>of(DismantleProjectileHUEntity::new, MobCategory.MISC).setCustomClientFactory(DismantleProjectileHUEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

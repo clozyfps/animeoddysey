@@ -23,6 +23,7 @@ public class MHASelectionScreen extends AbstractContainerScreen<MHASelectionMenu
 	private final int x, y, z;
 	private final Player entity;
 	Button button_deku;
+	Button button_neito;
 
 	public MHASelectionScreen(MHASelectionMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -91,5 +92,13 @@ public class MHASelectionScreen extends AbstractContainerScreen<MHASelectionMenu
 		}).bounds(this.leftPos + 9, this.topPos + 12, 46, 20).build();
 		guistate.put("button:button_deku", button_deku);
 		this.addRenderableWidget(button_deku);
+		button_neito = Button.builder(Component.translatable("gui.animeoddysey.mha_selection.button_neito"), e -> {
+			if (true) {
+				AnimeoddyseyMod.PACKET_HANDLER.sendToServer(new MHASelectionButtonMessage(1, x, y, z));
+				MHASelectionButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}).bounds(this.leftPos + 60, this.topPos + 12, 51, 20).build();
+		guistate.put("button:button_neito", button_neito);
+		this.addRenderableWidget(button_neito);
 	}
 }

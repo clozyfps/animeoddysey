@@ -12,6 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.animeoddysey.world.inventory.CharacterSelectMainMenu;
+import net.mcreator.animeoddysey.procedures.OpenNarutoProcedure;
 import net.mcreator.animeoddysey.procedures.OpenMHAProcedure;
 import net.mcreator.animeoddysey.procedures.OpenJJBAProcedure;
 import net.mcreator.animeoddysey.procedures.OpenHxHProcedure;
@@ -85,6 +86,10 @@ public class CharacterSelectMainButtonMessage {
 		if (buttonID == 4) {
 
 			OpenJJBAProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 6) {
+
+			OpenNarutoProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

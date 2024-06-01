@@ -42,6 +42,7 @@ import net.mcreator.animeoddysey.potion.ExplodingMobEffect;
 import net.mcreator.animeoddysey.potion.EnMobEffect;
 import net.mcreator.animeoddysey.potion.ElThorPotionMobEffect;
 import net.mcreator.animeoddysey.potion.DisableChargingMobEffect;
+import net.mcreator.animeoddysey.potion.CopyMobEffect;
 import net.mcreator.animeoddysey.potion.CooldownMobEffect;
 import net.mcreator.animeoddysey.potion.ChidoriActiveMobEffect;
 import net.mcreator.animeoddysey.potion.BlackOutwardsMobEffect;
@@ -86,4 +87,5 @@ public class AnimeoddyseyModMobEffects {
 	public static final RegistryObject<MobEffect> MYSTICAL_PALM_ACTIVE = REGISTRY.register("mystical_palm_active", () -> new MysticalPalmActiveMobEffect());
 	public static final RegistryObject<MobEffect> EXPLOSIVE_OUTWARDS = REGISTRY.register("explosive_outwards", () -> new ExplosiveOutwardsMobEffect());
 	public static final RegistryObject<MobEffect> PRE_FIRE_ARROW = REGISTRY.register("pre_fire_arrow", () -> new PreFireArrowMobEffect());
+	public static final RegistryObject<MobEffect> COPY = REGISTRY.register("copy", () -> new CopyMobEffect());
 }

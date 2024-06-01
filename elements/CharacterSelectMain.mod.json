@@ -96,6 +96,21 @@
           "x": 168,
           "y": 113
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_na",
+          "text": "NA",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OpenNaruto"
+          },
+          "width": 39,
+          "height": 20,
+          "x": 214,
+          "y": 113
+        }
       }
     ],
     "gridSettings": {

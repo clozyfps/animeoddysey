@@ -45,4 +45,8 @@ public class AnimeoddyseyModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> SLICE_2 = REGISTRY.register("slice_2", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> SLICE_3 = REGISTRY.register("slice_3", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> FIRE_ARROW_PARTICLE = REGISTRY.register("fire_arrow_particle", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> SLICE_1_SMALL = REGISTRY.register("slice_1_small", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> SLICE_2_SMALL = REGISTRY.register("slice_2_small", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> SLICE_3_SMALL = REGISTRY.register("slice_3_small", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> FUGA_PARICLE = REGISTRY.register("fuga_paricle", () -> new SimpleParticleType(true));
 }

@@ -103,6 +103,8 @@ public class AnimeoddyseyModVariables {
 			clone.HitNanamiPlayer = original.HitNanamiPlayer;
 			clone.CurseMarkLevel = original.CurseMarkLevel;
 			clone.Tomoe = original.Tomoe;
+			clone.StoredCharacter = original.StoredCharacter;
+			clone.PreviousCharacterStored = original.PreviousCharacterStored;
 			if (!event.isWasDeath()) {
 				clone.Percentage = original.Percentage;
 				clone.HelmetSlotSave = original.HelmetSlotSave;
@@ -184,6 +186,8 @@ public class AnimeoddyseyModVariables {
 		public boolean HitNanamiPlayer = false;
 		public double CurseMarkLevel = 0;
 		public double Tomoe = 1.0;
+		public String StoredCharacter = "";
+		public String PreviousCharacterStored = "";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -232,6 +236,8 @@ public class AnimeoddyseyModVariables {
 			nbt.putBoolean("HitNanamiPlayer", HitNanamiPlayer);
 			nbt.putDouble("CurseMarkLevel", CurseMarkLevel);
 			nbt.putDouble("Tomoe", Tomoe);
+			nbt.putString("StoredCharacter", StoredCharacter);
+			nbt.putString("PreviousCharacterStored", PreviousCharacterStored);
 			return nbt;
 		}
 
@@ -277,6 +283,8 @@ public class AnimeoddyseyModVariables {
 			HitNanamiPlayer = nbt.getBoolean("HitNanamiPlayer");
 			CurseMarkLevel = nbt.getDouble("CurseMarkLevel");
 			Tomoe = nbt.getDouble("Tomoe");
+			StoredCharacter = nbt.getString("StoredCharacter");
+			PreviousCharacterStored = nbt.getString("PreviousCharacterStored");
 		}
 	}
 
@@ -341,6 +349,8 @@ public class AnimeoddyseyModVariables {
 					variables.HitNanamiPlayer = message.data.HitNanamiPlayer;
 					variables.CurseMarkLevel = message.data.CurseMarkLevel;
 					variables.Tomoe = message.data.Tomoe;
+					variables.StoredCharacter = message.data.StoredCharacter;
+					variables.PreviousCharacterStored = message.data.PreviousCharacterStored;
 				}
 			});
 			context.setPacketHandled(true);

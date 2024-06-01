@@ -99,7 +99,7 @@ public class PreTimeSkipSasukeEntity extends Monster {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		PreTimeSkipSasukeOnEntityTickUpdateProcedure.execute(this.level(), this);
+		PreTimeSkipSasukeOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	public static void init() {
