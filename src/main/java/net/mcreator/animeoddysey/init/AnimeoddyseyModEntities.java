@@ -24,6 +24,7 @@ import net.mcreator.animeoddysey.entity.LapseBlueEnityEntity;
 import net.mcreator.animeoddysey.entity.KnockbackProjectileEntity;
 import net.mcreator.animeoddysey.entity.KilluaZoldyckEntity;
 import net.mcreator.animeoddysey.entity.HollowPurpleWeakEntity;
+import net.mcreator.animeoddysey.entity.ElThorEntity;
 import net.mcreator.animeoddysey.entity.DetroitSmashEntity;
 import net.mcreator.animeoddysey.entity.DelawareSmashEntity;
 import net.mcreator.animeoddysey.entity.BlackWhipPinpointFocusEntity;
@@ -69,6 +70,8 @@ public class AnimeoddyseyModEntities {
 			EntityType.Builder.<NanamiHitEntity>of(NanamiHitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NanamiHitEntity::new)
 
 					.sized(0.3f, 0.3f));
+	public static final RegistryObject<EntityType<ElThorEntity>> EL_THOR = register("el_thor",
+			EntityType.Builder.<ElThorEntity>of(ElThorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ElThorEntity::new).fireImmune().sized(0.6f, 8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -82,6 +85,7 @@ public class AnimeoddyseyModEntities {
 			ShigeoKageyamaEntity.init();
 			LapseBlueEnityEntity.init();
 			NanamiHitEntity.init();
+			ElThorEntity.init();
 		});
 	}
 
@@ -92,5 +96,6 @@ public class AnimeoddyseyModEntities {
 		event.put(SHIGEO_KAGEYAMA.get(), ShigeoKageyamaEntity.createAttributes().build());
 		event.put(LAPSE_BLUE_ENITY.get(), LapseBlueEnityEntity.createAttributes().build());
 		event.put(NANAMI_HIT.get(), NanamiHitEntity.createAttributes().build());
+		event.put(EL_THOR.get(), ElThorEntity.createAttributes().build());
 	}
 }

@@ -26,6 +26,7 @@ import net.mcreator.animeoddysey.client.particle.LapseBlueMax2Particle;
 import net.mcreator.animeoddysey.client.particle.FullCrowlingParticle;
 import net.mcreator.animeoddysey.client.particle.FaJinBlitzParticle;
 import net.mcreator.animeoddysey.client.particle.ElectricityParticleParticle;
+import net.mcreator.animeoddysey.client.particle.ElThorElectrisityParticle;
 import net.mcreator.animeoddysey.client.particle.BlueflashParticle;
 import net.mcreator.animeoddysey.client.particle.BlueAnimParticle;
 import net.mcreator.animeoddysey.client.particle.BlackFlashParticleParticle;
@@ -60,5 +61,6 @@ public class AnimeoddyseyModParticles {
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.RATIO_HIT.get(), RatioHitParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.BLACK_FLASH_PARTICLE.get(), BlackFlashParticleParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.BLACK_FLASH_BIG.get(), BlackFlashBigParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.EL_THOR_ELECTRISITY.get(), ElThorElectrisityParticle::provider);
 	}
 }

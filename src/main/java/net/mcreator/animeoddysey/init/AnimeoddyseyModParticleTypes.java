@@ -38,4 +38,5 @@ public class AnimeoddyseyModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> RATIO_HIT = REGISTRY.register("ratio_hit", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> BLACK_FLASH_PARTICLE = REGISTRY.register("black_flash_particle", () -> new SimpleParticleType(true));
 	public static final RegistryObject<SimpleParticleType> BLACK_FLASH_BIG = REGISTRY.register("black_flash_big", () -> new SimpleParticleType(true));
+	public static final RegistryObject<SimpleParticleType> EL_THOR_ELECTRISITY = REGISTRY.register("el_thor_electrisity", () -> new SimpleParticleType(false));
 }

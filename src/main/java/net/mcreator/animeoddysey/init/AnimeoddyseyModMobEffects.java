@@ -37,6 +37,7 @@ import net.mcreator.animeoddysey.potion.FaJinActiveMobEffect;
 import net.mcreator.animeoddysey.potion.ExplosionOfEmotionsMobEffect;
 import net.mcreator.animeoddysey.potion.ExplodingMobEffect;
 import net.mcreator.animeoddysey.potion.EnMobEffect;
+import net.mcreator.animeoddysey.potion.ElThorPotionMobEffect;
 import net.mcreator.animeoddysey.potion.CooldownMobEffect;
 import net.mcreator.animeoddysey.potion.BlackOutwardsMobEffect;
 import net.mcreator.animeoddysey.potion.AuraControlMobEffect;
@@ -74,4 +75,5 @@ public class AnimeoddyseyModMobEffects {
 	public static final RegistryObject<MobEffect> OUTWARDS_POOF = REGISTRY.register("outwards_poof", () -> new OutwardsPoofMobEffect());
 	public static final RegistryObject<MobEffect> PSYCHIC_ENERGY_OUTWARDS_EFFECT = REGISTRY.register("psychic_energy_outwards_effect", () -> new PsychicEnergyOutwardsEffectMobEffect());
 	public static final RegistryObject<MobEffect> NANAMI_HIT_EFFECT = REGISTRY.register("nanami_hit_effect", () -> new NanamiHitEffectMobEffect());
+	public static final RegistryObject<MobEffect> EL_THOR_POTION = REGISTRY.register("el_thor_potion", () -> new ElThorPotionMobEffect());
 }

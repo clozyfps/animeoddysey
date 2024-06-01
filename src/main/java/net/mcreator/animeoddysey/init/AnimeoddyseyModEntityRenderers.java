@@ -15,6 +15,7 @@ import net.mcreator.animeoddysey.client.renderer.ShigeoKageyamaRenderer;
 import net.mcreator.animeoddysey.client.renderer.NanamiHitRenderer;
 import net.mcreator.animeoddysey.client.renderer.LapseBlueEnityRenderer;
 import net.mcreator.animeoddysey.client.renderer.KilluaZoldyckRenderer;
+import net.mcreator.animeoddysey.client.renderer.ElThorRenderer;
 import net.mcreator.animeoddysey.client.renderer.AfterImageRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -34,5 +35,6 @@ public class AnimeoddyseyModEntityRenderers {
 		event.registerEntityRenderer(AnimeoddyseyModEntities.SHIGEO_KAGEYAMA.get(), ShigeoKageyamaRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.LAPSE_BLUE_ENITY.get(), LapseBlueEnityRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.NANAMI_HIT.get(), NanamiHitRenderer::new);
+		event.registerEntityRenderer(AnimeoddyseyModEntities.EL_THOR.get(), ElThorRenderer::new);
 	}
 }
