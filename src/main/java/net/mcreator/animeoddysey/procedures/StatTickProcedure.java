@@ -10,6 +10,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.GameType;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerPlayer;
@@ -19,6 +20,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
+import net.mcreator.animeoddysey.init.AnimeoddyseyModMobEffects;
 
 import javax.annotation.Nullable;
 
@@ -104,6 +106,19 @@ public class StatTickProcedure {
 		}
 		if ((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).SpeedStat >= 30) {
 			entity.setMaxUpStep(1);
+		}
+		if ((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Energy < (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new AnimeoddyseyModVariables.PlayerVariables())).EnergyMax) {
+			if (!(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(AnimeoddyseyModMobEffects.DISABLE_CHARGING.get()))) {
+				{
+					double _setval = (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Energy + 0.5
+							+ (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).EnergyMax / 1000;
+					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Energy = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
 		}
 	}
 }

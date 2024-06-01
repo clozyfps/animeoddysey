@@ -143,8 +143,8 @@ public class KilluaZoldyckEntity extends Monster {
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 220);
 		builder = builder.add(Attributes.ARMOR, 0.1);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 14);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 15);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 50);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 2);
 		return builder;
 	}

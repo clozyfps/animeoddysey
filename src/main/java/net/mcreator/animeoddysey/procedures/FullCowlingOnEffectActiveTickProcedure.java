@@ -25,7 +25,7 @@ public class FullCowlingOnEffectActiveTickProcedure {
 		if (entity == null)
 			return;
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.ONE_FOR_ALL_SPARKS.get()), x, y, z, 3, 0.1, 1.5, 0.1, 0);
+			_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.ONE_FOR_ALL_SPARKS.get()), x, y, z, 3, 0.1, 1.2, 0.1, 0);
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 5, (int) (0 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 16),
 					false, false));
@@ -47,8 +47,8 @@ public class FullCowlingOnEffectActiveTickProcedure {
 		}
 		if ((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage == 100) {
 			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, (y + 2), z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-						"particle minecraft:dust 0.44 0.91 0.95 1 ^0 ^0 ^0 0.1 0.1 0.1 0 3");
+				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+						"particle minecraft:dust 0.44 0.91 0.95 1 ^0 ^0 ^0 0.1 1 0.1 0 3");
 		}
 		if ((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage > (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new AnimeoddyseyModVariables.PlayerVariables())).Level) {

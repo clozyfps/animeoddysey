@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:KilluaZoldyck"
+      },
+      {
+        "value": "CUSTOM:PreTimeSkipSasuke"
+      },
+      {
+        "value": "CUSTOM:ShigeoKageyama"
+      }
+    ],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "good_mob",
+    "namespace": "mod"
+  }
+}

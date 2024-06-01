@@ -93,6 +93,47 @@
           "x": 123,
           "y": 116
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_sukuna",
+          "text": "Sukuna",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "SukunaPressed"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 186,
+          "y": 116
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ss4sslsukuna_strongest_in_history",
+          "text": {
+            "fixedValue": "§4§lSukuna \"Strongest In History\" | Energy Based Kit"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 186,
+          "y": 116
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ss4sslsukuna_strongest_in_history1",
+          "text": {
+            "fixedValue": "§4§lSukuna \"Strongest In History\" | Energy Based Kit"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 213,
+          "y": 116
+        }
       }
     ],
     "gridSettings": {

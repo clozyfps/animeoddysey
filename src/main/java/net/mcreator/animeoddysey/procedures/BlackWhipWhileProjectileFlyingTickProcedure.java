@@ -22,7 +22,7 @@ public class BlackWhipWhileProjectileFlyingTickProcedure {
 			_level.sendParticles(ParticleTypes.SQUID_INK, x, y, z, 2, 0.01, 0.01, 0.01, 0);
 		if (world instanceof ServerLevel _level)
 			_level.sendParticles(ParticleTypes.GLOW_SQUID_INK, x, y, z, 2, 0.01, 0.01, 0.01, 0);
-		entity.setDeltaMovement(new Vec3(((immediatesourceentity.getX() - entity.getX()) / 5), ((immediatesourceentity.getY() - entity.getY()) / 5), ((immediatesourceentity.getZ() - entity.getZ()) / 5)));
+		entity.setDeltaMovement(new Vec3(((x - entity.getX()) / 5), ((y - entity.getY()) / 5), ((z - entity.getZ()) / 5)));
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
 				_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1);

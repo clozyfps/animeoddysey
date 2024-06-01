@@ -26,6 +26,7 @@ public class JJKSelectionScreen extends AbstractContainerScreen<JJKSelectionMenu
 	Button button_gojo_teen;
 	Button button_itadori;
 	Button button_nanami;
+	Button button_sukuna;
 
 	public JJKSelectionScreen(JJKSelectionMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -51,6 +52,10 @@ public class JJKSelectionScreen extends AbstractContainerScreen<JJKSelectionMenu
 			guiGraphics.renderTooltip(font, Component.literal(TeenGojoSelectionValueProcedure.execute()), mouseX, mouseY);
 		if (mouseX > leftPos + 65 && mouseX < leftPos + 89 && mouseY > topPos + 5 && mouseY < topPos + 29)
 			guiGraphics.renderTooltip(font, Component.literal(TeenGojoSelectionValueProcedure.execute()), mouseX, mouseY);
+		if (mouseX > leftPos + 74 && mouseX < leftPos + 98 && mouseY > topPos + 32 && mouseY < topPos + 56)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.animeoddysey.jjk_selection.tooltip_ss4sslsukuna_strongest_in_history"), mouseX, mouseY);
+		if (mouseX > leftPos + 101 && mouseX < leftPos + 125 && mouseY > topPos + 32 && mouseY < topPos + 56)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.animeoddysey.jjk_selection.tooltip_ss4sslsukuna_strongest_in_history1"), mouseX, mouseY);
 	}
 
 	@Override
@@ -108,5 +113,13 @@ public class JJKSelectionScreen extends AbstractContainerScreen<JJKSelectionMenu
 		}).bounds(this.leftPos + 11, this.topPos + 32, 56, 20).build();
 		guistate.put("button:button_nanami", button_nanami);
 		this.addRenderableWidget(button_nanami);
+		button_sukuna = Button.builder(Component.translatable("gui.animeoddysey.jjk_selection.button_sukuna"), e -> {
+			if (true) {
+				AnimeoddyseyMod.PACKET_HANDLER.sendToServer(new JJKSelectionButtonMessage(3, x, y, z));
+				JJKSelectionButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}).bounds(this.leftPos + 74, this.topPos + 32, 56, 20).build();
+		guistate.put("button:button_sukuna", button_sukuna);
+		this.addRenderableWidget(button_sukuna);
 	}
 }

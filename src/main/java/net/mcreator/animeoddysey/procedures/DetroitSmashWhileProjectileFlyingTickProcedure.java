@@ -115,8 +115,8 @@ public class DetroitSmashWhileProjectileFlyingTickProcedure {
 				if (!immediatesourceentity.level().isClientSide())
 					immediatesourceentity.discard();
 			});
-			int horizontalRadiusSphere = (int) (3 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 15) - 1;
-			int verticalRadiusSphere = (int) (3 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 15) - 1;
+			int horizontalRadiusSphere = (int) (2 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 50) - 1;
+			int verticalRadiusSphere = (int) (2 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 50) - 1;
 			int yIterationsSphere = verticalRadiusSphere;
 			for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
 				for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
