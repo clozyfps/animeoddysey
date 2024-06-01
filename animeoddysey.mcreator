@@ -5722,7 +5722,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/CharacterTick/Sasuke"
     },
     {
       "name": "EnhancedStrike",
@@ -5745,7 +5746,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/CharacterTick/Sakura"
     },
     {
       "name": "DismantleProjectileWhileProjectileFlyingTick",
@@ -5999,7 +6001,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/CharacterTick/Sasuke"
     },
     {
       "name": "CursedSealOfHeaven",
@@ -6026,7 +6029,8 @@
         "files": [
           "src/main/resources/data/animeoddysey/advancements/pts_sasuke.json"
         ]
-      }
+      },
+      "path": "~/Procedures/CharacterTick/Sasuke"
     },
     {
       "name": "PreFireArrow",
@@ -6462,7 +6466,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/CharacterTick/Sasuke"
     },
     {
       "name": "Slice2",
@@ -6831,7 +6836,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/CharacterTick/Sakura"
     },
     {
       "name": "FireArrowProjectileWhileProjectileFlyingTick",
@@ -6969,7 +6975,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/CharacterTick/Sasuke"
     },
     {
       "name": "DismantleProjectile",
@@ -7019,7 +7026,7 @@
           }
         ]
       },
-      "path": "~/Procedures"
+      "path": "~/Procedures/CharacterTick/Sasuke"
     },
     {
       "name": "FireArrowParticle",
@@ -7845,9 +7852,9 @@
       "advancements.teen_gojo.descr": "Choose Teen Gojo",
       "gui.animeoddysey.jjk_selection.tooltip_empty": "§1§lNanami | Energy Based Kit",
       "effect.animeoddysey.fatigue": "Fatigue",
-      "effect.animeoddysey.el_thor_potion": "El Thor",
-      "gui.animeoddysey.character_select_main.button_hxh": "HxH",
       "effect.animeoddysey.slam": "Slam",
+      "gui.animeoddysey.character_select_main.button_hxh": "HxH",
+      "effect.animeoddysey.el_thor_potion": "El Thor",
       "entity.animeoddysey.shigeo_kageyama": "Shigeo Kageyama",
       "effect.animeoddysey.psychic_energy_outwards_effect": "Psychic Energy Outwards",
       "item.animeoddysey.pre_time_skip_sasuke_spawn_egg": "Pre Time Skip Sasuke Spawn Egg",
@@ -8004,6 +8011,14 @@
               },
               {
                 "name": "Neito",
+                "children": []
+              },
+              {
+                "name": "Sasuke",
+                "children": []
+              },
+              {
+                "name": "Sakura",
                 "children": []
               }
             ]
