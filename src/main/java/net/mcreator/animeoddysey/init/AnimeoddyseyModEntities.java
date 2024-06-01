@@ -28,8 +28,6 @@ import net.mcreator.animeoddysey.entity.HollowPurpleWeakEntity;
 import net.mcreator.animeoddysey.entity.FireballJutsuProjectileEntity;
 import net.mcreator.animeoddysey.entity.FireArrowProjectileEntity;
 import net.mcreator.animeoddysey.entity.FireArrowMobEntity;
-import net.mcreator.animeoddysey.entity.ElThorEntity;
-import net.mcreator.animeoddysey.entity.DismantleProjectileHUEntity;
 import net.mcreator.animeoddysey.entity.DismantleProjectileEntity;
 import net.mcreator.animeoddysey.entity.DetroitSmashEntity;
 import net.mcreator.animeoddysey.entity.DelawareSmashEntity;
@@ -77,8 +75,6 @@ public class AnimeoddyseyModEntities {
 			EntityType.Builder.<NanamiHitEntity>of(NanamiHitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NanamiHitEntity::new)
 
 					.sized(0.4f, 0.4f));
-	public static final RegistryObject<EntityType<ElThorEntity>> EL_THOR = register("el_thor",
-			EntityType.Builder.<ElThorEntity>of(ElThorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ElThorEntity::new).fireImmune().sized(0.6f, 8f));
 	public static final RegistryObject<EntityType<FireballJutsuProjectileEntity>> FIREBALL_JUTSU_PROJECTILE = register("projectile_fireball_jutsu_projectile",
 			EntityType.Builder.<FireballJutsuProjectileEntity>of(FireballJutsuProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(FireballJutsuProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
@@ -94,9 +90,6 @@ public class AnimeoddyseyModEntities {
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(FireArrowMobEntity::new).fireImmune().sized(0.1f, 0.1f));
 	public static final RegistryObject<EntityType<FireArrowProjectileEntity>> FIRE_ARROW_PROJECTILE = register("projectile_fire_arrow_projectile", EntityType.Builder.<FireArrowProjectileEntity>of(FireArrowProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(FireArrowProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<DismantleProjectileHUEntity>> DISMANTLE_PROJECTILE_HU = register("projectile_dismantle_projectile_hu",
-			EntityType.Builder.<DismantleProjectileHUEntity>of(DismantleProjectileHUEntity::new, MobCategory.MISC).setCustomClientFactory(DismantleProjectileHUEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -110,7 +103,6 @@ public class AnimeoddyseyModEntities {
 			ShigeoKageyamaEntity.init();
 			LapseBlueEnityEntity.init();
 			NanamiHitEntity.init();
-			ElThorEntity.init();
 			PreTimeSkipSasukeEntity.init();
 			FireArrowMobEntity.init();
 		});
@@ -123,7 +115,6 @@ public class AnimeoddyseyModEntities {
 		event.put(SHIGEO_KAGEYAMA.get(), ShigeoKageyamaEntity.createAttributes().build());
 		event.put(LAPSE_BLUE_ENITY.get(), LapseBlueEnityEntity.createAttributes().build());
 		event.put(NANAMI_HIT.get(), NanamiHitEntity.createAttributes().build());
-		event.put(EL_THOR.get(), ElThorEntity.createAttributes().build());
 		event.put(PRE_TIME_SKIP_SASUKE.get(), PreTimeSkipSasukeEntity.createAttributes().build());
 		event.put(FIRE_ARROW_MOB.get(), FireArrowMobEntity.createAttributes().build());
 	}

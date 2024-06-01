@@ -17,7 +17,6 @@ import net.mcreator.animeoddysey.client.renderer.NanamiHitRenderer;
 import net.mcreator.animeoddysey.client.renderer.LapseBlueEnityRenderer;
 import net.mcreator.animeoddysey.client.renderer.KilluaZoldyckRenderer;
 import net.mcreator.animeoddysey.client.renderer.FireArrowMobRenderer;
-import net.mcreator.animeoddysey.client.renderer.ElThorRenderer;
 import net.mcreator.animeoddysey.client.renderer.AfterImageRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -37,13 +36,11 @@ public class AnimeoddyseyModEntityRenderers {
 		event.registerEntityRenderer(AnimeoddyseyModEntities.SHIGEO_KAGEYAMA.get(), ShigeoKageyamaRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.LAPSE_BLUE_ENITY.get(), LapseBlueEnityRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.NANAMI_HIT.get(), NanamiHitRenderer::new);
-		event.registerEntityRenderer(AnimeoddyseyModEntities.EL_THOR.get(), ElThorRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.FIREBALL_JUTSU_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.PRE_TIME_SKIP_SASUKE.get(), PreTimeSkipSasukeRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.DISMANTLE_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.CLEAVE_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.FIRE_ARROW_MOB.get(), FireArrowMobRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.FIRE_ARROW_PROJECTILE.get(), ThrownItemRenderer::new);
-		event.registerEntityRenderer(AnimeoddyseyModEntities.DISMANTLE_PROJECTILE_HU.get(), ThrownItemRenderer::new);
 	}
 }

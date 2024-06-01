@@ -40,9 +40,7 @@ import net.mcreator.animeoddysey.potion.ExplosiveOutwardsMobEffect;
 import net.mcreator.animeoddysey.potion.ExplosionOfEmotionsMobEffect;
 import net.mcreator.animeoddysey.potion.ExplodingMobEffect;
 import net.mcreator.animeoddysey.potion.EnMobEffect;
-import net.mcreator.animeoddysey.potion.ElThorPotionMobEffect;
 import net.mcreator.animeoddysey.potion.DisableChargingMobEffect;
-import net.mcreator.animeoddysey.potion.CopyMobEffect;
 import net.mcreator.animeoddysey.potion.CooldownMobEffect;
 import net.mcreator.animeoddysey.potion.ChidoriActiveMobEffect;
 import net.mcreator.animeoddysey.potion.BlackOutwardsMobEffect;
@@ -81,11 +79,9 @@ public class AnimeoddyseyModMobEffects {
 	public static final RegistryObject<MobEffect> OUTWARDS_POOF = REGISTRY.register("outwards_poof", () -> new OutwardsPoofMobEffect());
 	public static final RegistryObject<MobEffect> PSYCHIC_ENERGY_OUTWARDS_EFFECT = REGISTRY.register("psychic_energy_outwards_effect", () -> new PsychicEnergyOutwardsEffectMobEffect());
 	public static final RegistryObject<MobEffect> NANAMI_HIT_EFFECT = REGISTRY.register("nanami_hit_effect", () -> new NanamiHitEffectMobEffect());
-	public static final RegistryObject<MobEffect> EL_THOR_POTION = REGISTRY.register("el_thor_potion", () -> new ElThorPotionMobEffect());
 	public static final RegistryObject<MobEffect> CHIDORI_ACTIVE = REGISTRY.register("chidori_active", () -> new ChidoriActiveMobEffect());
 	public static final RegistryObject<MobEffect> DISABLE_CHARGING = REGISTRY.register("disable_charging", () -> new DisableChargingMobEffect());
 	public static final RegistryObject<MobEffect> MYSTICAL_PALM_ACTIVE = REGISTRY.register("mystical_palm_active", () -> new MysticalPalmActiveMobEffect());
 	public static final RegistryObject<MobEffect> EXPLOSIVE_OUTWARDS = REGISTRY.register("explosive_outwards", () -> new ExplosiveOutwardsMobEffect());
 	public static final RegistryObject<MobEffect> PRE_FIRE_ARROW = REGISTRY.register("pre_fire_arrow", () -> new PreFireArrowMobEffect());
-	public static final RegistryObject<MobEffect> COPY = REGISTRY.register("copy", () -> new CopyMobEffect());
 }

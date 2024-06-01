@@ -11,7 +11,6 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.gui.screens.MenuScreens;
 
-import net.mcreator.animeoddysey.client.gui.OnePieceSelectionScreen;
 import net.mcreator.animeoddysey.client.gui.NarutoSelectionScreen;
 import net.mcreator.animeoddysey.client.gui.MobPsychoSelectionScreen;
 import net.mcreator.animeoddysey.client.gui.MainMenuScreen;
@@ -33,7 +32,6 @@ public class AnimeoddyseyModScreens {
 			MenuScreens.register(AnimeoddyseyModMenus.MAIN_MENU.get(), MainMenuScreen::new);
 			MenuScreens.register(AnimeoddyseyModMenus.MHA_SELECTION.get(), MHASelectionScreen::new);
 			MenuScreens.register(AnimeoddyseyModMenus.JJBA_SELECTION.get(), JJBASelectionScreen::new);
-			MenuScreens.register(AnimeoddyseyModMenus.ONE_PIECE_SELECTION.get(), OnePieceSelectionScreen::new);
 			MenuScreens.register(AnimeoddyseyModMenus.NARUTO_SELECTION.get(), NarutoSelectionScreen::new);
 		});
 	}

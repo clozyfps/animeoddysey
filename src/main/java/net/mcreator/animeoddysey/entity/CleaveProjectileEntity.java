@@ -65,7 +65,7 @@ public class CleaveProjectileEntity extends AbstractArrow implements ItemSupplie
 	@Override
 	public void tick() {
 		super.tick();
-		CleaveProjectileWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner());
+		CleaveProjectileWhileProjectileFlyingTickProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this.getOwner(), this);
 		if (this.inGround)
 			this.discard();
 	}
