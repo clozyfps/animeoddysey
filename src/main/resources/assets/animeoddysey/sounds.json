@@ -159,5 +159,14 @@
         "stream": false
       }
     ]
+  },
+  "electrticblast": {
+    "subtitle": "subtitles.electrticblast",
+    "sounds": [
+      {
+        "name": "animeoddysey:electric_blast",
+        "stream": false
+      }
+    ]
   }
 }

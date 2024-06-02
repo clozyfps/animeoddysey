@@ -1,8 +1,27 @@
 package net.mcreator.animeoddysey.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.phys.AABB;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.DamageTypes;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 
-import javax.annotation.Nullable;
+import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
+import net.mcreator.animeoddysey.init.AnimeoddyseyModParticleTypes;
+import net.mcreator.animeoddysey.init.AnimeoddyseyModMobEffects;
+
+import java.util.List;
+import java.util.Comparator;
 
 public class FireArrowProjectileProjectileHitsLivingEntityProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity immediatesourceentity, Entity sourceentity) {
@@ -35,7 +54,7 @@ public class FireArrowProjectileProjectileHitsLivingEntityProcedure {
 			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 					"/particle minecraft:ash ~ ~ ~ 10 10 10 1 3700 force");
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.DELETED_MOD_ELEMENT.get()), x, y, z, 1, 0, 0, 0, 0);
+			_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.FUGA_PARICLE.get()), x, y, z, 1, 0, 0, 0, 0);
 		{
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();

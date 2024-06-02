@@ -25,6 +25,7 @@ import net.mcreator.animeoddysey.potion.OutwardsPoofMobEffect;
 import net.mcreator.animeoddysey.potion.OutwardsMobEffect;
 import net.mcreator.animeoddysey.potion.NanamiHitEffectMobEffect;
 import net.mcreator.animeoddysey.potion.MysticalPalmActiveMobEffect;
+import net.mcreator.animeoddysey.potion.LighitingPalmMobEffect;
 import net.mcreator.animeoddysey.potion.LapseBluePoitonMobEffect;
 import net.mcreator.animeoddysey.potion.LapseBlueMaximumMobEffect;
 import net.mcreator.animeoddysey.potion.ImpactFrameMobEffect;
@@ -88,4 +89,5 @@ public class AnimeoddyseyModMobEffects {
 	public static final RegistryObject<MobEffect> EXPLOSIVE_OUTWARDS = REGISTRY.register("explosive_outwards", () -> new ExplosiveOutwardsMobEffect());
 	public static final RegistryObject<MobEffect> PRE_FIRE_ARROW = REGISTRY.register("pre_fire_arrow", () -> new PreFireArrowMobEffect());
 	public static final RegistryObject<MobEffect> COPY = REGISTRY.register("copy", () -> new CopyMobEffect());
+	public static final RegistryObject<MobEffect> LIGHITING_PALM = REGISTRY.register("lighiting_palm", () -> new LighitingPalmMobEffect());
 }

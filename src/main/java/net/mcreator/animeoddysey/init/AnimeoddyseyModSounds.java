@@ -35,4 +35,5 @@ public class AnimeoddyseyModSounds {
 	public static final RegistryObject<SoundEvent> SLICE = REGISTRY.register("slice", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "slice")));
 	public static final RegistryObject<SoundEvent> HANDSIGN = REGISTRY.register("handsign", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "handsign")));
 	public static final RegistryObject<SoundEvent> UNLEASHOFA = REGISTRY.register("unleashofa", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "unleashofa")));
+	public static final RegistryObject<SoundEvent> ELECTRTICBLAST = REGISTRY.register("electrticblast", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("animeoddysey", "electrticblast")));
 }

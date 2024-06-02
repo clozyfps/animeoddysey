@@ -58,18 +58,20 @@ public class HitNanamiAttackedProcedure {
 					sourceentity.getPersistentData().putBoolean("NanamiHited", true);
 					if (sourceentity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.IFRAME.get(), 4, 1, false, false));
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:bloody")), SoundSource.NEUTRAL, (float) 0.7, (float) 1.6);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:bloody")), SoundSource.NEUTRAL, (float) 0.7, (float) 1.6, false);
+					if (!world.isClientSide()) {
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:bloody")), SoundSource.NEUTRAL, (float) 0.7, (float) 1.6);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:bloody")), SoundSource.NEUTRAL, (float) 0.7, (float) 1.6, false);
+							}
 						}
-					}
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:explosivepunch")), SoundSource.NEUTRAL, (float) 0.7, (float) 1.4);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:explosivepunch")), SoundSource.NEUTRAL, (float) 0.7, (float) 1.4, false);
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:explosivepunch")), SoundSource.NEUTRAL, (float) 0.7, (float) 1.4);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:explosivepunch")), SoundSource.NEUTRAL, (float) 0.7, (float) 1.4, false);
+							}
 						}
 					}
 					if (world instanceof ServerLevel _level)

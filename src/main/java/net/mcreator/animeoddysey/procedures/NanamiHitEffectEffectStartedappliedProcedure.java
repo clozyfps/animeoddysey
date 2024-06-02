@@ -53,11 +53,13 @@ public class NanamiHitEffectEffectStartedappliedProcedure {
 									new CommandSourceStack(CommandSource.NULL, new Vec3((entityiterator.getX()), (entityiterator.getY()), (entityiterator.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
 											.withSuppressedOutput(),
 									"particle animeoddysey:black_flash_big ~ ~0.6 ~ 0 0 0 0 1");
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:blackflashshort")), SoundSource.PLAYERS, 2, (float) 0.9);
-							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:blackflashshort")), SoundSource.PLAYERS, 2, (float) 0.9, false);
+						if (!world.isClientSide()) {
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:blackflashshort")), SoundSource.PLAYERS, 2, (float) 0.9);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:blackflashshort")), SoundSource.PLAYERS, 2, (float) 0.9, false);
+								}
 							}
 						}
 						entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC), entity),

@@ -34,6 +34,7 @@ import net.mcreator.animeoddysey.client.particle.FullCrowlingParticle;
 import net.mcreator.animeoddysey.client.particle.FugaParicleParticle;
 import net.mcreator.animeoddysey.client.particle.FireArrowParticleParticle;
 import net.mcreator.animeoddysey.client.particle.FaJinBlitzParticle;
+import net.mcreator.animeoddysey.client.particle.ElectrisityParticleSmallParticle;
 import net.mcreator.animeoddysey.client.particle.ElectricityParticleParticle;
 import net.mcreator.animeoddysey.client.particle.ElThorElectrisityParticle;
 import net.mcreator.animeoddysey.client.particle.ChidoriParticleParticle;
@@ -82,5 +83,6 @@ public class AnimeoddyseyModParticles {
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.SLICE_2_SMALL.get(), Slice2SmallParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.SLICE_3_SMALL.get(), Slice3SmallParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.FUGA_PARICLE.get(), FugaParicleParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.ELECTRISITY_PARTICLE_SMALL.get(), ElectrisityParticleSmallParticle::provider);
 	}
 }

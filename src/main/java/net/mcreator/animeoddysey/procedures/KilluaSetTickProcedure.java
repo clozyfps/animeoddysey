@@ -194,7 +194,8 @@ public class KilluaSetTickProcedure {
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Lightning Palm")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 140, 0, false, false));
-				LightningPalmProcedure.execute(world, x, y, z, entity);
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.LIGHITING_PALM.get(), 1200, 0, false, false));
 				{
 					String _setval = "";
 					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -218,7 +219,7 @@ public class KilluaSetTickProcedure {
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Godspeed: Whirlwind")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 20, 0, false, false));
-				if (!(entity instanceof LivingEntity _livEnt6 && _livEnt6.hasEffect(AnimeoddyseyModMobEffects.GODSPEED.get()))) {
+				if (!(entity instanceof LivingEntity _livEnt7 && _livEnt7.hasEffect(AnimeoddyseyModMobEffects.GODSPEED.get()))) {
 					if ((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Energy > 0) {
 						{
 							String _setval = "Whirlwind";
@@ -230,7 +231,7 @@ public class KilluaSetTickProcedure {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.GODSPEED.get(), 99999, 0, false, false));
 					}
-				} else if (entity instanceof LivingEntity _livEnt8 && _livEnt8.hasEffect(AnimeoddyseyModMobEffects.GODSPEED.get())) {
+				} else if (entity instanceof LivingEntity _livEnt9 && _livEnt9.hasEffect(AnimeoddyseyModMobEffects.GODSPEED.get())) {
 					if (entity instanceof LivingEntity _entity)
 						_entity.removeEffect(AnimeoddyseyModMobEffects.GODSPEED.get());
 				}
@@ -245,7 +246,7 @@ public class KilluaSetTickProcedure {
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Godspeed: Speed Of Lightning")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 20, 0, false, false));
-				if (!(entity instanceof LivingEntity _livEnt11 && _livEnt11.hasEffect(AnimeoddyseyModMobEffects.GODSPEED.get()))) {
+				if (!(entity instanceof LivingEntity _livEnt12 && _livEnt12.hasEffect(AnimeoddyseyModMobEffects.GODSPEED.get()))) {
 					if ((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Energy > 0) {
 						{
 							String _setval = "Speed";
@@ -257,7 +258,7 @@ public class KilluaSetTickProcedure {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.GODSPEED.get(), 99999, 0, false, false));
 					}
-				} else if (entity instanceof LivingEntity _livEnt13 && _livEnt13.hasEffect(AnimeoddyseyModMobEffects.GODSPEED.get())) {
+				} else if (entity instanceof LivingEntity _livEnt14 && _livEnt14.hasEffect(AnimeoddyseyModMobEffects.GODSPEED.get())) {
 					if (entity instanceof LivingEntity _entity)
 						_entity.removeEffect(AnimeoddyseyModMobEffects.GODSPEED.get());
 				}

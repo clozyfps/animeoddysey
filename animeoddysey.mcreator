@@ -5750,7 +5750,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/CharacterTick/Sukuna"
     },
     {
       "name": "SasukePassive",
@@ -6301,7 +6302,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Procedures/CharacterTick/Sukuna"
     },
     {
       "name": "PreTimeSkipSasukeOnInitialEntitySpawn",
@@ -6940,7 +6942,7 @@
           }
         ]
       },
-      "path": "~/Procedures/CircleGeneration"
+      "path": "~/Procedures/CharacterTick/Sukuna"
     },
     {
       "name": "FireArrowCircle3",
@@ -6976,7 +6978,7 @@
           }
         ]
       },
-      "path": "~/Procedures/CircleGeneration"
+      "path": "~/Procedures/CharacterTick/Sukuna"
     },
     {
       "name": "FireArrowCircle6",
@@ -7012,7 +7014,7 @@
           }
         ]
       },
-      "path": "~/Procedures/CircleGeneration"
+      "path": "~/Procedures/CharacterTick/Sukuna"
     },
     {
       "name": "FireArrowCircle5",
@@ -7048,7 +7050,7 @@
           }
         ]
       },
-      "path": "~/Procedures/CircleGeneration"
+      "path": "~/Procedures/CharacterTick/Sukuna"
     },
     {
       "name": "FireArrowCircle8",
@@ -7084,7 +7086,7 @@
           }
         ]
       },
-      "path": "~/Procedures/CircleGeneration"
+      "path": "~/Procedures/CharacterTick/Sukuna"
     },
     {
       "name": "FireArrowCircle7",
@@ -7120,7 +7122,7 @@
           }
         ]
       },
-      "path": "~/Procedures/CircleGeneration"
+      "path": "~/Procedures/CharacterTick/Sukuna"
     },
     {
       "name": "FireArrowCircle9",
@@ -7156,7 +7158,7 @@
           }
         ]
       },
-      "path": "~/Procedures/CircleGeneration"
+      "path": "~/Procedures/CharacterTick/Sukuna"
     },
     {
       "name": "FireCircle4",
@@ -7192,7 +7194,7 @@
           }
         ]
       },
-      "path": "~/Procedures/CircleGeneration"
+      "path": "~/Procedures/CharacterTick/Sukuna"
     },
     {
       "name": "FireArrowCircle2",
@@ -7228,7 +7230,7 @@
           }
         ]
       },
-      "path": "~/Procedures/CircleGeneration"
+      "path": "~/Procedures/CharacterTick/Sukuna"
     },
     {
       "name": "FireArrowProjectileProjectileHitsLivingEntity",
@@ -7781,6 +7783,111 @@
         ]
       },
       "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "ElectrisityParticleSmall",
+      "type": "particle",
+      "sortid": 309,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "electrisity_particle_small",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/ElectrisityParticleSmallParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/electrisity_particle_small.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "LighitingPalm",
+      "type": "potioneffect",
+      "sortid": 310,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lighiting_palm",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/LighitingPalmMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "LighitingPalmOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 311,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lighiting_palm_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/LighitingPalmOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "LightingPalmHit",
+      "type": "procedure",
+      "sortid": 312,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lighting_palm_hit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/LightingPalmHitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Killua"
     }
   ],
   "variable_elements": [
@@ -8197,6 +8304,14 @@
       ],
       "category": "neutral",
       "subtitle": ""
+    },
+    {
+      "name": "electrticblast",
+      "files": [
+        "electric_blast"
+      ],
+      "category": "player",
+      "subtitle": "Electric Blast"
     }
   ],
   "language_map": {
@@ -8209,6 +8324,7 @@
       "gamerule.constantBlackFlashes.description": "Hit a Black Flash every punch.",
       "gui.animeoddysey.naruto_selection.tooltip_ssassldeku_successor_strength1": "d§lSakura \"Medical Ninja\" | Strength Based Kit",
       "gui.animeoddysey.mob_psycho_selection.button_mob": "Mob",
+      "effect.animeoddysey.lighiting_palm": "Lighting Palm",
       "death.attack.eraser": "%1$s was erased from existence",
       "death.attack.internal": "%1$s got their heart taken.",
       "gui.animeoddysey.character_select_main.button_na": "NA",
@@ -8325,6 +8441,7 @@
       "effect.animeoddysey.outwards_reversal_red": "Outwards Reversal Red",
       "gui.animeoddysey.character_select_main.button_op": "OP",
       "subtitles.electricity": "",
+      "subtitles.electrticblast": "Electric Blast",
       "item.animeoddysey.killua_zoldyck_spawn_egg": "Killua Zoldyck Spawn Egg",
       "entity.animeoddysey.killua_zoldyck": "Killua Zoldyck",
       "gui.animeoddysey.main_menu.button_ssl": "§l+",
