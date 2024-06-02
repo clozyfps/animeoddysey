@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "particle",
   "definition": {
-    "texture": "chidori.png",
+    "texture": "godspeed.png",
     "animate": true,
     "frameDuration": 1,
     "width": 0.2,

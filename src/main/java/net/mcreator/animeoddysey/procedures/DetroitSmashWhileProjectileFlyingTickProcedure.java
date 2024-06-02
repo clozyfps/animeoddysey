@@ -137,7 +137,7 @@ public class DetroitSmashWhileProjectileFlyingTickProcedure {
 			}
 			immediatesourceentity.setNoGravity(true);
 		}
-		if ((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage >= 20) {
+		if ((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage >= 10) {
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.AIR_PULSE.get()), x, y, z, 1, 0.1, 2, 0.1, 0);
 		}

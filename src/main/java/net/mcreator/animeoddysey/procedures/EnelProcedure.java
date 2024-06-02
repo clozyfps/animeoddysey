@@ -1,16 +1,6 @@
 package net.mcreator.animeoddysey.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
-
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
-
-import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
-import net.mcreator.animeoddysey.init.AnimeoddyseyModMobEffects;
 
 import javax.annotation.Nullable;
 
@@ -142,7 +132,7 @@ public class EnelProcedure {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 200, 0, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.EL_THOR_POTION.get(), 55, 1, false, false));
+					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.DELETED_MOD_ELEMENT.get(), 55, 1, false, false));
 				{
 					String _setval = "";
 					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

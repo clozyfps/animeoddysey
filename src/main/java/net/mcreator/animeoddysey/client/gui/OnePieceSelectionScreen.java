@@ -1,27 +1,13 @@
 package net.mcreator.animeoddysey.client.gui;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
-import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.Button;
-import net.minecraft.client.gui.GuiGraphics;
-
-import net.mcreator.animeoddysey.world.inventory.OnePieceSelectionMenu;
-import net.mcreator.animeoddysey.network.OnePieceSelectionButtonMessage;
-import net.mcreator.animeoddysey.AnimeoddyseyMod;
-
-import java.util.HashMap;
-
-import com.mojang.blaze3d.systems.RenderSystem;
-
 public class OnePieceSelectionScreen extends AbstractContainerScreen<OnePieceSelectionMenu> {
+
 	private final static HashMap<String, Object> guistate = OnePieceSelectionMenu.guistate;
+
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+
 	Button button_gojo_teen;
 
 	public OnePieceSelectionScreen(OnePieceSelectionMenu container, Inventory inventory, Component text) {
@@ -40,8 +26,11 @@ public class OnePieceSelectionScreen extends AbstractContainerScreen<OnePieceSel
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
+
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
+
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+
 	}
 
 	@Override
@@ -49,7 +38,9 @@ public class OnePieceSelectionScreen extends AbstractContainerScreen<OnePieceSel
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
+
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -59,6 +50,7 @@ public class OnePieceSelectionScreen extends AbstractContainerScreen<OnePieceSel
 			this.minecraft.player.closeContainer();
 			return true;
 		}
+
 		return super.keyPressed(key, b, c);
 	}
 
@@ -79,13 +71,17 @@ public class OnePieceSelectionScreen extends AbstractContainerScreen<OnePieceSel
 	@Override
 	public void init() {
 		super.init();
+
 		button_gojo_teen = Button.builder(Component.translatable("gui.animeoddysey.one_piece_selection.button_gojo_teen"), e -> {
 			if (true) {
 				AnimeoddyseyMod.PACKET_HANDLER.sendToServer(new OnePieceSelectionButtonMessage(0, x, y, z));
 				OnePieceSelectionButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 9, this.topPos + 12, 36, 20).build();
+
 		guistate.put("button:button_gojo_teen", button_gojo_teen);
 		this.addRenderableWidget(button_gojo_teen);
+
 	}
+
 }

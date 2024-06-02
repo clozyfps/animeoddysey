@@ -12,12 +12,10 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
 import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
-import net.mcreator.animeoddysey.init.AnimeoddyseyModParticleTypes;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModMobEffects;
 
 public class FullCowlingOnEffectActiveTickProcedure {
@@ -25,7 +23,15 @@ public class FullCowlingOnEffectActiveTickProcedure {
 		if (entity == null)
 			return;
 		if (world instanceof ServerLevel _level)
-			_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.ONE_FOR_ALL_SPARKS.get()), x, y, z, 3, 0.1, 1.2, 0.1, 0);
+			_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
+					"/particle animeoddysey:one_for_all_sparks ~ ~1 ~ 0.1 0.4 0.1 0 2");
+		{
+			Entity _ent = entity;
+			if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+				_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+						_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "/particle animeoddysey:one_for_all_sparks ~ ~1 ~ 0.1 0.4 0.1 0 2");
+			}
+		}
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 5, (int) (0 + (entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).OFAPercentage / 16),
 					false, false));

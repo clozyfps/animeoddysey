@@ -5475,221 +5475,6 @@
       "path": "~/Procedures/CharacterTick/Nanami"
     },
     {
-      "name": "ElThorElectrisity",
-      "type": "particle",
-      "sortid": 231,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "el_thor_electrisity",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/ElThorElectrisityParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/el_thor_electrisity.json"
-        ]
-      },
-      "path": "~/Particles"
-    },
-    {
-      "name": "Enel",
-      "type": "procedure",
-      "sortid": 228,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "enel",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/EnelProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Procedures/CharacterTick/Enel"
-    },
-    {
-      "name": "EnelPressed",
-      "type": "procedure",
-      "sortid": 226,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "enel_pressed",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/EnelPressedProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
-      "name": "ElThorPotion",
-      "type": "potioneffect",
-      "sortid": 232,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "el_thor_potion",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/potion/ElThorPotionMobEffect.java"
-        ]
-      },
-      "path": "~/Potions"
-    },
-    {
-      "name": "ElThorPotionEffectExpires",
-      "type": "procedure",
-      "sortid": 234,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "el_thor_potion_effect_expires",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/ElThorPotionEffectExpiresProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Potions/Procedures"
-    },
-    {
-      "name": "OnePieceSelection",
-      "type": "gui",
-      "sortid": 225,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "one_piece_selection",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/network/OnePieceSelectionButtonMessage.java",
-          "src/main/java/net/mcreator/animeoddysey/client/gui/OnePieceSelectionScreen.java",
-          "src/main/java/net/mcreator/animeoddysey/world/inventory/OnePieceSelectionMenu.java"
-        ]
-      },
-      "path": "~/GUI"
-    },
-    {
-      "name": "ElThor",
-      "type": "livingentity",
-      "sortid": 229,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "el_thor",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/entity/ElThorEntity.java",
-          "src/main/java/net/mcreator/animeoddysey/client/renderer/ElThorRenderer.java"
-        ]
-      },
-      "path": "~/Mobs/Misc"
-    },
-    {
-      "name": "ElThorOnInitialEntitySpawn",
-      "type": "procedure",
-      "sortid": 230,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "el_thor_on_initial_entity_spawn",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/ElThorOnInitialEntitySpawnProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Mobs/Procedures"
-    },
-    {
-      "name": "ElThorPotionOnEffectActiveTick",
-      "type": "procedure",
-      "sortid": 233,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "el_thor_potion_on_effect_active_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/ElThorPotionOnEffectActiveTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Potions/Procedures"
-    },
-    {
-      "name": "OpenOnePiece",
-      "type": "procedure",
-      "sortid": 227,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_one_piece",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/OpenOnePieceProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/GUI/Procedures"
-    },
-    {
       "name": "SasukeSetTick",
       "type": "procedure",
       "sortid": 225,
@@ -5965,8 +5750,7 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Procedures/CharacterTick/Sukuna"
+      }
     },
     {
       "name": "SasukePassive",
@@ -6517,8 +6301,7 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/Procedures/CharacterTick/Sukuna"
+      }
     },
     {
       "name": "PreTimeSkipSasukeOnInitialEntitySpawn",
@@ -7124,74 +6907,339 @@
       "path": "~/Advancements"
     },
     {
-      "name": "Slice1Small",
-      "type": "particle",
-      "sortid": 284,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "slice_1_small",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/Slice1SmallParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/slice_1_small.json"
-        ]
-      },
-      "path": "~/Particles"
-    },
-    {
-      "name": "Slice2Small",
-      "type": "particle",
-      "sortid": 285,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "slice_2_small",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/Slice2SmallParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/slice_2_small.json"
-        ]
-      },
-      "path": "~/Particles"
-    },
-    {
-      "name": "Slice3Small",
-      "type": "particle",
-      "sortid": 286,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "slice_3_small",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/client/particle/Slice3SmallParticle.java",
-          "src/main/resources/assets/animeoddysey/particles/slice_3_small.json"
-        ]
-      },
-      "path": "~/Particles"
-    },
-    {
-      "name": "DismantleProjectileHU",
-      "type": "projectile",
-      "sortid": 288,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dismantle_projectile_hu",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/entity/DismantleProjectileHUEntity.java"
-        ]
-      },
-      "path": "~/Projectiles"
-    },
-    {
-      "name": "DismantleProjectileHUProjectileHitsLivingEntity",
+      "name": "FireArrowCircle10",
       "type": "procedure",
-      "sortid": 287,
+      "sortid": 307,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "dismantle_projectile_hu_projectile_hits_living_entity",
+      "registry_name": "fire_arrow_circle_10",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/DismantleProjectileHUProjectileHitsLivingEntityProcedure.java"
+          "src/main/java/net/mcreator/animeoddysey/procedures/FireArrowCircle10Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CircleGeneration"
+    },
+    {
+      "name": "FireArrowCircle3",
+      "type": "procedure",
+      "sortid": 300,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_circle_3",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/FireArrowCircle3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CircleGeneration"
+    },
+    {
+      "name": "FireArrowCircle6",
+      "type": "procedure",
+      "sortid": 303,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_circle_6",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/FireArrowCircle6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CircleGeneration"
+    },
+    {
+      "name": "FireArrowCircle5",
+      "type": "procedure",
+      "sortid": 302,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_circle_5",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/FireArrowCircle5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CircleGeneration"
+    },
+    {
+      "name": "FireArrowCircle8",
+      "type": "procedure",
+      "sortid": 305,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_circle_8",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/FireArrowCircle8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CircleGeneration"
+    },
+    {
+      "name": "FireArrowCircle7",
+      "type": "procedure",
+      "sortid": 304,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_circle_7",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/FireArrowCircle7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CircleGeneration"
+    },
+    {
+      "name": "FireArrowCircle9",
+      "type": "procedure",
+      "sortid": 306,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_circle_9",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/FireArrowCircle9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CircleGeneration"
+    },
+    {
+      "name": "FireCircle4",
+      "type": "procedure",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_circle_4",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/FireCircle4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CircleGeneration"
+    },
+    {
+      "name": "FireArrowCircle2",
+      "type": "procedure",
+      "sortid": 299,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_circle_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/FireArrowCircle2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Procedures/CircleGeneration"
+    },
+    {
+      "name": "FireArrowProjectileProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 308,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_arrow_projectile_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/FireArrowProjectileProjectileHitsLivingEntityProcedure.java"
         ],
         "dependencies": [
           {
@@ -7203,12 +7251,65 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
         ]
       },
       "path": "~/Projectiles/Procedures"
+    },
+    {
+      "name": "StoredCharacterDisplay",
+      "type": "procedure",
+      "sortid": 298,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stored_character_display",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/StoredCharacterDisplayProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Overlays/Procedures"
+    },
+    {
+      "name": "OnePieceSelection",
+      "type": "gui",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "one_piece_selection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/network/OnePieceSelectionButtonMessage.java",
+          "src/main/java/net/mcreator/animeoddysey/client/gui/OnePieceSelectionScreen.java",
+          "src/main/java/net/mcreator/animeoddysey/world/inventory/OnePieceSelectionMenu.java"
+        ]
+      },
+      "path": "~/GUI"
     },
     {
       "name": "DismantleProjectileHUWhileProjectileFlyingTick",
@@ -7262,6 +7363,162 @@
       "path": "~/Particles"
     },
     {
+      "name": "Enel",
+      "type": "procedure",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enel",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/EnelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Enel"
+    },
+    {
+      "name": "DismantleProjectileHUProjectileHitsLivingEntity",
+      "type": "procedure",
+      "sortid": 287,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dismantle_projectile_hu_projectile_hits_living_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/DismantleProjectileHUProjectileHitsLivingEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Projectiles/Procedures"
+    },
+    {
+      "name": "Slice2Small",
+      "type": "particle",
+      "sortid": 285,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slice_2_small",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/Slice2SmallParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/slice_2_small.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "CopyEffectStartedapplied",
+      "type": "procedure",
+      "sortid": 296,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copy_effect_startedapplied",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/CopyEffectStartedappliedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
+    },
+    {
+      "name": "NeitoSetTick",
+      "type": "procedure",
+      "sortid": 293,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "neito_set_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/NeitoSetTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Procedures/CharacterTick/Neito"
+    },
+    {
+      "name": "DismantleProjectileHU",
+      "type": "projectile",
+      "sortid": 288,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dismantle_projectile_hu",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/entity/DismantleProjectileHUEntity.java"
+        ]
+      },
+      "path": "~/Projectiles"
+    },
+    {
+      "name": "ElThorElectrisity",
+      "type": "particle",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "el_thor_electrisity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/ElThorElectrisityParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/el_thor_electrisity.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "EnelPressed",
+      "type": "procedure",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "enel_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/EnelPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/GUI/Procedures"
+    },
+    {
       "name": "Fuga3DParicle",
       "type": "particlemodel",
       "sortid": 291,
@@ -7272,6 +7529,41 @@
         "files": []
       },
       "path": "~/Particles/3D"
+    },
+    {
+      "name": "ElThor",
+      "type": "livingentity",
+      "sortid": 229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "el_thor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/entity/ElThorEntity.java",
+          "src/main/java/net/mcreator/animeoddysey/client/renderer/ElThorRenderer.java"
+        ]
+      },
+      "path": "~/Mobs/Misc"
+    },
+    {
+      "name": "CopyEffectExpires",
+      "type": "procedure",
+      "sortid": 297,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copy_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/CopyEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Potions/Procedures"
     },
     {
       "name": "NeitoPressed",
@@ -7298,24 +7590,84 @@
       "path": "~/GUI/Procedures"
     },
     {
-      "name": "NeitoSetTick",
-      "type": "procedure",
-      "sortid": 293,
+      "name": "Slice3Small",
+      "type": "particle",
+      "sortid": 286,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "neito_set_tick",
+      "registry_name": "slice_3_small",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/NeitoSetTickProcedure.java"
+          "src/main/java/net/mcreator/animeoddysey/client/particle/Slice3SmallParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/slice_3_small.json"
+        ]
+      },
+      "path": "~/Particles"
+    },
+    {
+      "name": "OpenOnePiece",
+      "type": "procedure",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_one_piece",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/OpenOnePieceProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
-      "path": "~/Procedures/CharacterTick/Neito"
+      "path": "~/GUI/Procedures"
+    },
+    {
+      "name": "ElThorPotion",
+      "type": "potioneffect",
+      "sortid": 232,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "el_thor_potion",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/potion/ElThorPotionMobEffect.java"
+        ]
+      },
+      "path": "~/Potions"
+    },
+    {
+      "name": "ElThorPotionEffectExpires",
+      "type": "procedure",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "el_thor_potion_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/ElThorPotionEffectExpiresProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Potions/Procedures"
     },
     {
       "name": "Copy",
@@ -7330,6 +7682,57 @@
         ]
       },
       "path": "~/Potions"
+    },
+    {
+      "name": "ElThorOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "el_thor_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/ElThorOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mobs/Procedures"
+    },
+    {
+      "name": "Slice1Small",
+      "type": "particle",
+      "sortid": 284,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slice_1_small",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/client/particle/Slice1SmallParticle.java",
+          "src/main/resources/assets/animeoddysey/particles/slice_1_small.json"
+        ]
+      },
+      "path": "~/Particles"
     },
     {
       "name": "MobAttckedForCopy",
@@ -7356,65 +7759,28 @@
       "path": "~/Procedures/CharacterTick/Neito"
     },
     {
-      "name": "CopyEffectStartedapplied",
+      "name": "ElThorPotionOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 296,
+      "sortid": 233,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "copy_effect_startedapplied",
+      "registry_name": "el_thor_potion_on_effect_active_tick",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/CopyEffectStartedappliedProcedure.java"
+          "src/main/java/net/mcreator/animeoddysey/procedures/ElThorPotionOnEffectActiveTickProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
       "path": "~/Potions/Procedures"
-    },
-    {
-      "name": "CopyEffectExpires",
-      "type": "procedure",
-      "sortid": 297,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "copy_effect_expires",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/CopyEffectExpiresProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Potions/Procedures"
-    },
-    {
-      "name": "StoredCharacterDisplay",
-      "type": "procedure",
-      "sortid": 298,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stored_character_display",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/net/mcreator/animeoddysey/procedures/StoredCharacterDisplayProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Overlays/Procedures"
     }
   ],
   "variable_elements": [
@@ -7820,6 +8186,14 @@
       "name": "handsign",
       "files": [
         "handsigns"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "unleashofa",
+      "files": [
+        "audio-one-for-all-unleash-creator-store_kxjxwk5q"
       ],
       "category": "neutral",
       "subtitle": ""
