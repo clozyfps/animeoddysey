@@ -114,6 +114,14 @@ public class NeitoSetTickProcedure {
 					}
 				}
 			}
+		} else if (!((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Character).equals("Yuta")) {
+			{
+				String _setval = "";
+				entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.StoredCharacter = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }
