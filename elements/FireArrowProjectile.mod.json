@@ -19,7 +19,7 @@
       "name": "FireArrowProjectileProjectileHitsBlock"
     },
     "onHitsEntity": {
-      "name": "FireArrowProjectileProjectileHitsBlock"
+      "name": "FireArrowProjectileProjectileHitsLivingEntity"
     },
     "onFlyingTick": {
       "name": "FireArrowProjectileWhileProjectileFlyingTick"

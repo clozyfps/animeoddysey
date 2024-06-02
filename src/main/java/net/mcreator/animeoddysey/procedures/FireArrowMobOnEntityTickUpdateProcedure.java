@@ -28,16 +28,22 @@ public class FireArrowMobOnEntityTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		double xRadius = 0;
+		double zRadius = 0;
+		double degree = 0;
+		double x_pos = 0;
+		double y_pos = 0;
+		double z_pos = 0;
 		entity.getPersistentData().putDouble("rex", (Mth.nextInt(RandomSource.create(), -50, 50)));
 		entity.getPersistentData().putDouble("rey", (Mth.nextInt(RandomSource.create(), 1, 20)));
 		entity.getPersistentData().putDouble("rez", (Mth.nextInt(RandomSource.create(), -50, 50)));
 		if (entity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) {
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.EXPLOSION_EMITTER, x, y, z, 80, 10, 2, 10, 0);
+				_level.sendParticles(ParticleTypes.EXPLOSION_EMITTER, x, y, z, 80, 8, 2, 8, 0);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.SMOKE, x, y, z, 10, 10, 2, 10, 0.2);
+				_level.sendParticles(ParticleTypes.SMOKE, x, y, z, 10, 8, 2, 8, 0.2);
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles(ParticleTypes.FLAME, x, y, z, 150, 10, 2, 10, 0);
+				_level.sendParticles(ParticleTypes.FLAME, x, y, z, 150, 8, 2, 8, 0);
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 2);
@@ -67,7 +73,35 @@ public class FireArrowMobOnEntityTickUpdateProcedure {
 				}
 			}
 		}
-		if (world instanceof Level _level && !_level.isClientSide())
-			_level.explode(null, (entity.getPersistentData().getDouble("rex")), (entity.getPersistentData().getDouble("rey")), (entity.getPersistentData().getDouble("rez")), 8, Level.ExplosionInteraction.BLOCK);
+		degree = Math.toRadians(entity.getYRot());
+		xRadius = 5;
+		zRadius = 5;
+		for (int index0 = 0; index0 < 36; index0++) {
+			x_pos = x + Math.cos(degree) * xRadius;
+			y_pos = y + 2;
+			z_pos = z + Math.sin(degree) * zRadius;
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.FLAME, x_pos, y_pos, z_pos, 5, 0.1, 0.1, 0.1, 0);
+			degree = degree + Math.toRadians(5);
+		}
+		xRadius = -5;
+		zRadius = -5;
+		for (int index1 = 0; index1 < 36; index1++) {
+			x_pos = x + Math.cos(degree) * xRadius;
+			y_pos = y + 2;
+			z_pos = z + Math.sin(degree) * zRadius;
+			if (world instanceof ServerLevel _level)
+				_level.sendParticles(ParticleTypes.FLAME, x_pos, y_pos, z_pos, 5, 0.1, 0.1, 0.1, 0);
+			degree = degree + Math.toRadians(5);
+		}
+		FireArrowCircle2Procedure.execute(world, x, y, z, entity);
+		FireArrowCircle3Procedure.execute(world, x, y, z, entity);
+		FireCircle4Procedure.execute(world, x, y, z, entity);
+		FireArrowCircle5Procedure.execute(world, x, y, z, entity);
+		FireArrowCircle6Procedure.execute(world, x, y, z, entity);
+		FireArrowCircle7Procedure.execute(world, x, y, z, entity);
+		FireArrowCircle8Procedure.execute(world, x, y, z, entity);
+		FireArrowCircle9Procedure.execute(world, x, y, z, entity);
+		FireArrowCircle10Procedure.execute(world, x, y, z, entity);
 	}
 }

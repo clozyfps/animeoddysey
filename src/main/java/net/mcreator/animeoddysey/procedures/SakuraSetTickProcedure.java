@@ -130,6 +130,13 @@ public class SakuraSetTickProcedure {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 30, 0, false, false));
 				EnhancedStrikeProcedure.execute(world, entity);
+				{
+					String _setval = "";
+					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.ActiveMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Mystical Palm")) {
 				if ((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Level >= 10) {
@@ -149,6 +156,13 @@ public class SakuraSetTickProcedure {
 						_player.displayClientMessage(Component.literal(("\u00A7lMust be level 10+ | Current Level: "
 								+ new java.text.DecimalFormat("#").format((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).Level))), false);
 				}
+				{
+					String _setval = "";
+					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.ActiveMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 			if (((entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new AnimeoddyseyModVariables.PlayerVariables())).ActiveMove).equals("Cherry Blossom Impact")) {
 				if (entity instanceof LivingEntity _entity)
@@ -157,6 +171,13 @@ public class SakuraSetTickProcedure {
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.COOLDOWN.get(), 100, 0, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.EXPLOSIVE_OUTWARDS.get(), 20, 0, false, false));
+				{
+					String _setval = "";
+					entity.getCapability(AnimeoddyseyModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.ActiveMove = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		}
 	}

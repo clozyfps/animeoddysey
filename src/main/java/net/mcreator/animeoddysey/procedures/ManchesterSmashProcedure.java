@@ -41,34 +41,48 @@ public class ManchesterSmashProcedure {
 			}
 		}
 		entity.fallDistance = 0;
-		AnimeoddyseyMod.queueServerWork(5, () -> {
-			entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x()), (entity.getDeltaMovement().y() - 15), (entity.getDeltaMovement().z())));
+		if (world instanceof Level _level) {
+			if (!_level.isClientSide()) {
+				_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:ofacharge")), SoundSource.NEUTRAL, 1, 1);
+			} else {
+				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:ofacharge")), SoundSource.NEUTRAL, 1, 1, false);
+			}
+		}
+		AnimeoddyseyMod.queueServerWork(15, () -> {
+			entity.setDeltaMovement(new Vec3((3 * entity.getLookAngle().x), (entity.getDeltaMovement().y() - 4), (3 * entity.getLookAngle().z)));
 			entity.fallDistance = 0;
 			AnimeoddyseyMod.queueServerWork(2, () -> {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(AnimeoddyseyModMobEffects.IFRAME.get(), 3, 0, false, false));
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dragon_fireball.explode")), SoundSource.NEUTRAL, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dragon_fireball.explode")), SoundSource.NEUTRAL, 1, 1, false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1, false);
 					}
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:ofacharge")), SoundSource.NEUTRAL, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:ofacharge")), SoundSource.NEUTRAL, 1, 1, false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1, false);
+					}
+				}
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.explode")), SoundSource.NEUTRAL, 1, 1, false);
 					}
 				}
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, x, y, z, 5, 2, 0.1, 2, 0.3);
+					_level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, x, y, z, 5, 1, 0.1, 1, 0.3);
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.POOF, x, y, z, 1, 2, 0.1, 2, 0.2);
+					_level.sendParticles(ParticleTypes.POOF, x, y, z, 1, 1, 0.1, 1, 0.2);
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 15, 2, 0.1, 2, 0);
+					_level.sendParticles(ParticleTypes.EXPLOSION, x, y, z, 15, 1, 0.1, 1, 0);
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.ONE_FOR_ALL_SPARKS.get()), x, y, z, 15, 2, 0.1, 2, 0);
+					_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.ONE_FOR_ALL_SPARKS.get()), x, y, z, 15, 1, 0.1, 1, 0);
 				{
 					final Vec3 _center = new Vec3(x, y, z);
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(7 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();

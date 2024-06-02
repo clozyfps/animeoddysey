@@ -20,6 +20,7 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.animeoddysey.procedures.FireArrowProjectileWhileProjectileFlyingTickProcedure;
+import net.mcreator.animeoddysey.procedures.FireArrowProjectileProjectileHitsLivingEntityProcedure;
 import net.mcreator.animeoddysey.procedures.FireArrowProjectileProjectileHitsBlockProcedure;
 import net.mcreator.animeoddysey.init.AnimeoddyseyModEntities;
 
@@ -68,7 +69,7 @@ public class FireArrowProjectileEntity extends AbstractArrow implements ItemSupp
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		FireArrowProjectileProjectileHitsBlockProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity(), this);
+		FireArrowProjectileProjectileHitsLivingEntityProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity(), this, this.getOwner());
 	}
 
 	@Override

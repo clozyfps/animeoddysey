@@ -3,7 +3,6 @@ package net.mcreator.animeoddysey.procedures;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -15,13 +14,12 @@ import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
 
 import net.mcreator.animeoddysey.network.AnimeoddyseyModVariables;
+import net.mcreator.animeoddysey.init.AnimeoddyseyModParticleTypes;
 
 import java.util.List;
 import java.util.Comparator;
@@ -33,6 +31,7 @@ public class DismantleProjectileHUProjectileHitsLivingEntityProcedure {
 		double slicex = 0;
 		double slicey = 0;
 		double slicez = 0;
+		double randomslice = 0;
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
 				_level.playSound(null, BlockPos.containing(immediatesourceentity.getX(), immediatesourceentity.getY(), immediatesourceentity.getZ()), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("animeoddysey:slice")),
@@ -42,24 +41,16 @@ public class DismantleProjectileHUProjectileHitsLivingEntityProcedure {
 						(float) 1.1, false);
 			}
 		}
-		if (Mth.nextInt(RandomSource.create(), 1, 3) == 1) {
+		entity.getPersistentData().putDouble("randomslice", (Mth.nextInt(RandomSource.create(), 1, 3)));
+		if (entity.getPersistentData().getDouble("randomslice") == 1) {
 			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(
-						new CommandSourceStack(CommandSource.NULL, new Vec3((immediatesourceentity.getX()), (immediatesourceentity.getY()), (immediatesourceentity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
-								.withSuppressedOutput(),
-						"particle animeoddysey:slice_1 ~ ~1.2 ~");
-		} else if (Mth.nextInt(RandomSource.create(), 1, 2) == 2) {
+				_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.SLICE_1.get()), (entity.getX()), (entity.getY() + 1), (entity.getZ()), 1, 0.1, 1.5, 0.1, 0);
+		} else if (entity.getPersistentData().getDouble("randomslice") == 2) {
 			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(
-						new CommandSourceStack(CommandSource.NULL, new Vec3((immediatesourceentity.getX()), (immediatesourceentity.getY()), (immediatesourceentity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
-								.withSuppressedOutput(),
-						"particle animeoddysey:slice_2 ~ ~1.2 ~");
-		} else {
+				_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.SLICE_2.get()), (entity.getX()), (entity.getY() + 1), (entity.getZ()), 1, 0.1, 1.5, 0.1, 0);
+		} else if (entity.getPersistentData().getDouble("randomslice") == 3) {
 			if (world instanceof ServerLevel _level)
-				_level.getServer().getCommands().performPrefixedCommand(
-						new CommandSourceStack(CommandSource.NULL, new Vec3((immediatesourceentity.getX()), (immediatesourceentity.getY()), (immediatesourceentity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
-								.withSuppressedOutput(),
-						"particle animeoddysey:slice_3 ~ ~1.2 ~");
+				_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.SLICE_3.get()), (entity.getX()), (entity.getY() + 1), (entity.getZ()), 1, 0.1, 1.5, 0.1, 0);
 		}
 		{
 			final Vec3 _center = new Vec3((immediatesourceentity.getX()), (immediatesourceentity.getY()), (immediatesourceentity.getZ()));

@@ -18,9 +18,6 @@
     "onHitsBlock": {
       "name": "DismantleProjectileHUProjectileHitsLivingEntity"
     },
-    "onHitsPlayer": {
-      "name": "DismantleProjectileHUProjectileHitsLivingEntity"
-    },
     "onHitsEntity": {
       "name": "DismantleProjectileHUProjectileHitsLivingEntity"
     },
