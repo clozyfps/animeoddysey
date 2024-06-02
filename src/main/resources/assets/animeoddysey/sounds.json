@@ -151,5 +151,13 @@
         "stream": false
       }
     ]
+  },
+  "unleashofa": {
+    "sounds": [
+      {
+        "name": "animeoddysey:audio-one-for-all-unleash-creator-store_kxjxwk5q",
+        "stream": false
+      }
+    ]
   }
 }

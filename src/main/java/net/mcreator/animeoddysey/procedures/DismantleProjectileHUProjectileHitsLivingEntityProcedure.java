@@ -44,13 +44,13 @@ public class DismantleProjectileHUProjectileHitsLivingEntityProcedure {
 		entity.getPersistentData().putDouble("randomslice", (Mth.nextInt(RandomSource.create(), 1, 3)));
 		if (entity.getPersistentData().getDouble("randomslice") == 1) {
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.SLICE_1.get()), (entity.getX()), (entity.getY() + 1), (entity.getZ()), 1, 0.1, 1.5, 0.1, 0);
+				_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.SLICE_1.get()), (entity.getX()), (entity.getY() + 2), (entity.getZ()), 1, 0.1, 1.5, 0.1, 0);
 		} else if (entity.getPersistentData().getDouble("randomslice") == 2) {
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.SLICE_2.get()), (entity.getX()), (entity.getY() + 1), (entity.getZ()), 1, 0.1, 1.5, 0.1, 0);
+				_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.SLICE_2.get()), (entity.getX()), (entity.getY() + 2), (entity.getZ()), 1, 0.1, 1.5, 0.1, 0);
 		} else if (entity.getPersistentData().getDouble("randomslice") == 3) {
 			if (world instanceof ServerLevel _level)
-				_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.SLICE_3.get()), (entity.getX()), (entity.getY() + 1), (entity.getZ()), 1, 0.1, 1.5, 0.1, 0);
+				_level.sendParticles((SimpleParticleType) (AnimeoddyseyModParticleTypes.SLICE_3.get()), (entity.getX()), (entity.getY() + 2), (entity.getZ()), 1, 0.1, 1.5, 0.1, 0);
 		}
 		{
 			final Vec3 _center = new Vec3((immediatesourceentity.getX()), (immediatesourceentity.getY()), (immediatesourceentity.getZ()));
