@@ -7888,6 +7888,37 @@
         ]
       },
       "path": "~/Procedures/CharacterTick/Killua"
+    },
+    {
+      "name": "Fuga3DParicleValue",
+      "type": "procedure",
+      "sortid": 313,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fuga_3_d_paricle_value",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/animeoddysey/procedures/Fuga3DParicleValueProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Particles/3D"
+    },
+    {
+      "name": "WhiteParticles",
+      "type": "particle",
+      "sortid": 314,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_particles",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/animeoddysey/particles/white_particles.json",
+          "src/main/java/net/mcreator/animeoddysey/client/particle/WhiteParticlesParticle.java"
+        ]
+      },
+      "path": "~/Particles"
     }
   ],
   "variable_elements": [
@@ -8651,9 +8682,7 @@
     "requiredMods": [],
     "dependencies": [],
     "dependants": [],
-    "mcreatorDependencies": [
-      "playeranimator"
-    ],
+    "mcreatorDependencies": [],
     "currentGenerator": "forge-1.20.1",
     "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.animeoddysey",

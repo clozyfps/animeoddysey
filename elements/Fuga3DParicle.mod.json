@@ -6,10 +6,11 @@
     "model": "Modelfugamodel",
     "rendertype": "Glowing",
     "modelScale": {
-      "fixedValue": 15.0
+      "fixedValue": 10.0
     },
     "modelRotationX": {
-      "fixedValue": 0.0
+      "fixedValue": 0.0,
+      "name": "Fuga3DParicleValue"
     },
     "modelRotationY": {
       "fixedValue": 0.0

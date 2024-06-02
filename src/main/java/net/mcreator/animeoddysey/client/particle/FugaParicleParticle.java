@@ -23,6 +23,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.Minecraft;
 
+import net.mcreator.animeoddysey.procedures.Fuga3DParicleValueProcedure;
 import net.mcreator.animeoddysey.client.model.Modelfugamodel;
 
 import com.mojang.math.Axis;
@@ -53,8 +54,8 @@ public class FugaParicleParticle extends TextureSheetParticle {
 						MinecraftForge.EVENT_BUS.register(this);
 					}
 
-					private float scale = (float) 15;
-					private int rotX = (int) 0;
+					private float scale = (float) 10;
+					private int rotX = (int) Fuga3DParicleValueProcedure.execute();
 					private int rotY = (int) 0;
 					private int rotZ = (int) 0;
 
@@ -112,7 +113,7 @@ public class FugaParicleParticle extends TextureSheetParticle {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(3f, 30f);
-		this.lifetime = 50;
+		this.lifetime = 26;
 		this.gravity = 0f;
 		this.hasPhysics = true;
 		this.xd = vx * 1;

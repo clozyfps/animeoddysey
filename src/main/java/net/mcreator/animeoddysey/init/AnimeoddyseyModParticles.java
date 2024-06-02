@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.animeoddysey.client.particle.WhiteParticlesParticle;
 import net.mcreator.animeoddysey.client.particle.StoneParticlePreParticle;
 import net.mcreator.animeoddysey.client.particle.StarPurpleParticle;
 import net.mcreator.animeoddysey.client.particle.StarPurpleBigParticle;
@@ -84,5 +85,6 @@ public class AnimeoddyseyModParticles {
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.SLICE_3_SMALL.get(), Slice3SmallParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.FUGA_PARICLE.get(), FugaParicleParticle::provider);
 		event.registerSpriteSet(AnimeoddyseyModParticleTypes.ELECTRISITY_PARTICLE_SMALL.get(), ElectrisityParticleSmallParticle::provider);
+		event.registerSpriteSet(AnimeoddyseyModParticleTypes.WHITE_PARTICLES.get(), WhiteParticlesParticle::provider);
 	}
 }

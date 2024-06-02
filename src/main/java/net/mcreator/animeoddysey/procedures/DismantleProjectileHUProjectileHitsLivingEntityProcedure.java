@@ -47,19 +47,19 @@ public class DismantleProjectileHUProjectileHitsLivingEntityProcedure {
 				_level.getServer().getCommands().performPrefixedCommand(
 						new CommandSourceStack(CommandSource.NULL, new Vec3((immediatesourceentity.getX()), (immediatesourceentity.getY()), (immediatesourceentity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
 								.withSuppressedOutput(),
-						"particle animeoddysey:slice_1 ~ ~1.2 ~");
+						"particle animeoddysey:slice_1 ~ ~1.2 ~ 0 0 0 0 1 force");
 		} else if (Mth.nextInt(RandomSource.create(), 1, 2) == 2) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(
 						new CommandSourceStack(CommandSource.NULL, new Vec3((immediatesourceentity.getX()), (immediatesourceentity.getY()), (immediatesourceentity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
 								.withSuppressedOutput(),
-						"particle animeoddysey:slice_2 ~ ~1.2 ~");
+						"particle animeoddysey:slice_2 ~ ~1.2 ~ 0 0 0 0 1 force");
 		} else {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(
 						new CommandSourceStack(CommandSource.NULL, new Vec3((immediatesourceentity.getX()), (immediatesourceentity.getY()), (immediatesourceentity.getZ())), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null)
 								.withSuppressedOutput(),
-						"particle animeoddysey:slice_3 ~ ~1.2 ~");
+						"particle animeoddysey:slice_3 ~ ~1.2 ~ 0 0 0 0 1 force");
 		}
 		{
 			final Vec3 _center = new Vec3((immediatesourceentity.getX()), (immediatesourceentity.getY()), (immediatesourceentity.getZ()));
