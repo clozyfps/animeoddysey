@@ -3,7 +3,6 @@ package net.mcreator.animeoddysey.potion;
 
 import net.minecraftforge.client.extensions.common.IClientMobEffectExtensions;
 
-import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -11,28 +10,21 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.client.gui.screens.inventory.EffectRenderingInventoryScreen;
 import net.minecraft.client.gui.GuiGraphics;
 
-import net.mcreator.animeoddysey.procedures.ElThorPotionOnEffectActiveTickProcedure;
-import net.mcreator.animeoddysey.procedures.ElThorPotionEffectExpiresProcedure;
+import net.mcreator.animeoddysey.procedures.RaigoOnEffectActiveTickProcedure;
 
-public class ElThorPotionMobEffect extends MobEffect {
-	public ElThorPotionMobEffect() {
+public class RaigoMobEffect extends MobEffect {
+	public RaigoMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -1);
 	}
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.animeoddysey.el_thor_potion";
+		return "effect.animeoddysey.raigo";
 	}
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		ElThorPotionOnEffectActiveTickProcedure.execute();
-	}
-
-	@Override
-	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
-		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		ElThorPotionEffectExpiresProcedure.execute();
+		RaigoOnEffectActiveTickProcedure.execute();
 	}
 
 	@Override

@@ -13,6 +13,7 @@ import net.mcreator.animeoddysey.client.model.Modelstone;
 import net.mcreator.animeoddysey.client.model.Modelsmallcube;
 import net.mcreator.animeoddysey.client.model.Modelfugamodel;
 import net.mcreator.animeoddysey.client.model.Modelfirearrowexplosion;
+import net.mcreator.animeoddysey.client.model.ModelRaigo;
 import net.mcreator.animeoddysey.client.model.ModelHitNanami;
 import net.mcreator.animeoddysey.client.model.ModelElThor;
 
@@ -21,6 +22,7 @@ public class AnimeoddyseyModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(Modelfirearrowexplosion.LAYER_LOCATION, Modelfirearrowexplosion::createBodyLayer);
+		event.registerLayerDefinition(ModelRaigo.LAYER_LOCATION, ModelRaigo::createBodyLayer);
 		event.registerLayerDefinition(Modelsmallcube.LAYER_LOCATION, Modelsmallcube::createBodyLayer);
 		event.registerLayerDefinition(ModelElThor.LAYER_LOCATION, ModelElThor::createBodyLayer);
 		event.registerLayerDefinition(Modelfugamodel.LAYER_LOCATION, Modelfugamodel::createBodyLayer);

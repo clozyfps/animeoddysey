@@ -18,6 +18,7 @@ import net.mcreator.animeoddysey.potion.SnakeAwakensMobEffect;
 import net.mcreator.animeoddysey.potion.SmokescreenMobEffect;
 import net.mcreator.animeoddysey.potion.SlamMobEffect;
 import net.mcreator.animeoddysey.potion.ReversedCursedTechniqueMobEffect;
+import net.mcreator.animeoddysey.potion.RaigoMobEffect;
 import net.mcreator.animeoddysey.potion.PsychicEnergyOutwardsEffectMobEffect;
 import net.mcreator.animeoddysey.potion.PreFireArrowMobEffect;
 import net.mcreator.animeoddysey.potion.OutwardsReversalRedMobEffect;
@@ -90,4 +91,5 @@ public class AnimeoddyseyModMobEffects {
 	public static final RegistryObject<MobEffect> PRE_FIRE_ARROW = REGISTRY.register("pre_fire_arrow", () -> new PreFireArrowMobEffect());
 	public static final RegistryObject<MobEffect> COPY = REGISTRY.register("copy", () -> new CopyMobEffect());
 	public static final RegistryObject<MobEffect> LIGHITING_PALM = REGISTRY.register("lighiting_palm", () -> new LighitingPalmMobEffect());
+	public static final RegistryObject<MobEffect> RAIGO = REGISTRY.register("raigo", () -> new RaigoMobEffect());
 }

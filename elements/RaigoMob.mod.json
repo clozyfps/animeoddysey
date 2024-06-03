@@ -2,10 +2,10 @@
   "_fv": 57,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Nanami Hit",
+    "mobName": "Raigo Mob",
     "mobLabel": "",
-    "mobModelName": "ModelHitNanami",
-    "mobModelTexture": "a2ie_layer_2.png",
+    "mobModelName": "ModelRaigo",
+    "mobModelTexture": "raigo.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -16,14 +16,20 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 3.0
     },
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "modelLayers": [],
-    "modelWidth": 0.6,
-    "modelHeight": 0.6,
+    "modelLayers": [
+      {
+        "model": "ModelRaigo",
+        "texture": "raigo.png",
+        "glow": true
+      }
+    ],
+    "modelWidth": 2.0,
+    "modelHeight": 2.0,
     "modelShadowSize": 0.0,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": false,
@@ -62,21 +68,21 @@
     "mobBehaviourType": "Creature",
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 3,
-    "attackKnockback": 0.0,
-    "knockbackResistance": 0.0,
+    "attackKnockback": 999.0,
+    "knockbackResistance": 999.0,
     "movementSpeed": 0.3,
     "stepHeight": 0.6,
-    "armorBaseValue": 0.0,
+    "armorBaseValue": 99.0,
     "trackingRange": 64,
     "followRange": 16,
-    "health": 2,
+    "health": 10,
     "xpAmount": 0,
     "waterMob": false,
     "breatheUnderwater": {
       "fixedValue": false
     },
     "pushedByFluids": {
-      "fixedValue": true
+      "fixedValue": false
     },
     "flyingMob": true,
     "guiBoundTo": "<NONE>",
@@ -86,19 +92,19 @@
     "ridable": false,
     "canControlForward": false,
     "canControlStrafe": false,
-    "immuneToFire": false,
-    "immuneToArrows": false,
-    "immuneToFallDamage": false,
-    "immuneToCactus": false,
-    "immuneToDrowning": false,
-    "immuneToLightning": false,
-    "immuneToPotions": false,
-    "immuneToPlayer": false,
-    "immuneToExplosion": false,
-    "immuneToTrident": false,
-    "immuneToAnvil": false,
-    "immuneToWither": false,
-    "immuneToDragonBreath": false,
+    "immuneToFire": true,
+    "immuneToArrows": true,
+    "immuneToFallDamage": true,
+    "immuneToCactus": true,
+    "immuneToDrowning": true,
+    "immuneToLightning": true,
+    "immuneToPotions": true,
+    "immuneToPlayer": true,
+    "immuneToExplosion": true,
+    "immuneToTrident": true,
+    "immuneToAnvil": true,
+    "immuneToWither": true,
+    "immuneToDragonBreath": true,
     "mobDrop": {
       "value": ""
     },
@@ -116,10 +122,7 @@
     },
     "entityDataEntries": [],
     "onMobTickUpdate": {
-      "name": "NanamiHitOnEntityTickUpdate"
-    },
-    "onInitialSpawn": {
-      "name": "NanamiHitOnInitialEntitySpawn"
+      "name": "RaigoMobOnEntityTickUpdate"
     },
     "hasAI": false,
     "aiBase": "(none)",

@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import net.mcreator.animeoddysey.client.renderer.ShigeoKageyamaRenderer;
+import net.mcreator.animeoddysey.client.renderer.RaigoMobRenderer;
 import net.mcreator.animeoddysey.client.renderer.PreTimeSkipSasukeRenderer;
 import net.mcreator.animeoddysey.client.renderer.NanamiHitRenderer;
 import net.mcreator.animeoddysey.client.renderer.LapseBlueEnityRenderer;
@@ -45,5 +46,6 @@ public class AnimeoddyseyModEntityRenderers {
 		event.registerEntityRenderer(AnimeoddyseyModEntities.FIRE_ARROW_MOB.get(), FireArrowMobRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.FIRE_ARROW_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(AnimeoddyseyModEntities.DISMANTLE_PROJECTILE_HU.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(AnimeoddyseyModEntities.RAIGO_MOB.get(), RaigoMobRenderer::new);
 	}
 }

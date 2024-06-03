@@ -126,6 +126,10 @@ public class CharacterSelectMainScreen extends AbstractContainerScreen<Character
 		guistate.put("button:button_jjba", button_jjba);
 		this.addRenderableWidget(button_jjba);
 		button_op = Button.builder(Component.translatable("gui.animeoddysey.character_select_main.button_op"), e -> {
+			if (true) {
+				AnimeoddyseyMod.PACKET_HANDLER.sendToServer(new CharacterSelectMainButtonMessage(5, x, y, z));
+				CharacterSelectMainButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
 		}).bounds(this.leftPos + 56, this.topPos + 30, 40, 20).build();
 		guistate.put("button:button_op", button_op);
 		this.addRenderableWidget(button_op);

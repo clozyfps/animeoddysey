@@ -54,7 +54,7 @@ public class ThunderboltProcedure {
 			entity.fallDistance = 0;
 			entity.setDeltaMovement(new Vec3((entity.getDeltaMovement().x()), (entity.getDeltaMovement().y() + 2), (entity.getDeltaMovement().z())));
 		}
-		AnimeoddyseyMod.queueServerWork(5, () -> {
+		AnimeoddyseyMod.queueServerWork(12, () -> {
 			entity.fallDistance = 0;
 			if (world instanceof ServerLevel _level) {
 				LightningBolt entityToSpawn = EntityType.LIGHTNING_BOLT.create(_level);
@@ -92,6 +92,12 @@ public class ThunderboltProcedure {
 					}
 				}
 			}
+			AnimeoddyseyMod.queueServerWork(3, () -> {
+				entity.fallDistance = 0;
+				AnimeoddyseyMod.queueServerWork(3, () -> {
+					entity.fallDistance = 0;
+				});
+			});
 		});
 	}
 }

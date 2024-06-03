@@ -17,6 +17,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.animeoddysey.entity.ShigeoKageyamaEntity;
+import net.mcreator.animeoddysey.entity.RaigoMobEntity;
 import net.mcreator.animeoddysey.entity.PsychicSlashEntity;
 import net.mcreator.animeoddysey.entity.PsychicBlastEntity;
 import net.mcreator.animeoddysey.entity.PreTimeSkipSasukeEntity;
@@ -76,7 +77,7 @@ public class AnimeoddyseyModEntities {
 	public static final RegistryObject<EntityType<NanamiHitEntity>> NANAMI_HIT = register("nanami_hit",
 			EntityType.Builder.<NanamiHitEntity>of(NanamiHitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(NanamiHitEntity::new)
 
-					.sized(0.4f, 0.4f));
+					.sized(0.6f, 0.6f));
 	public static final RegistryObject<EntityType<ElThorEntity>> EL_THOR = register("el_thor",
 			EntityType.Builder.<ElThorEntity>of(ElThorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(ElThorEntity::new).fireImmune().sized(0.6f, 8f));
 	public static final RegistryObject<EntityType<FireballJutsuProjectileEntity>> FIREBALL_JUTSU_PROJECTILE = register("projectile_fireball_jutsu_projectile",
@@ -97,6 +98,8 @@ public class AnimeoddyseyModEntities {
 	public static final RegistryObject<EntityType<DismantleProjectileHUEntity>> DISMANTLE_PROJECTILE_HU = register("projectile_dismantle_projectile_hu",
 			EntityType.Builder.<DismantleProjectileHUEntity>of(DismantleProjectileHUEntity::new, MobCategory.MISC).setCustomClientFactory(DismantleProjectileHUEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<RaigoMobEntity>> RAIGO_MOB = register("raigo_mob",
+			EntityType.Builder.<RaigoMobEntity>of(RaigoMobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(RaigoMobEntity::new).fireImmune().sized(2f, 2f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -113,6 +116,7 @@ public class AnimeoddyseyModEntities {
 			ElThorEntity.init();
 			PreTimeSkipSasukeEntity.init();
 			FireArrowMobEntity.init();
+			RaigoMobEntity.init();
 		});
 	}
 
@@ -126,5 +130,6 @@ public class AnimeoddyseyModEntities {
 		event.put(EL_THOR.get(), ElThorEntity.createAttributes().build());
 		event.put(PRE_TIME_SKIP_SASUKE.get(), PreTimeSkipSasukeEntity.createAttributes().build());
 		event.put(FIRE_ARROW_MOB.get(), FireArrowMobEntity.createAttributes().build());
+		event.put(RAIGO_MOB.get(), RaigoMobEntity.createAttributes().build());
 	}
 }

@@ -1,6 +1,6 @@
 package net.mcreator.animeoddysey.procedures;
 
-public class ElThorPotionOnEffectActiveTickProcedure {
+public class RaigoOnEffectActiveTickProcedure {
 	public static void execute() {
 	}
 }
