@@ -20,6 +20,12 @@ authors="jayso, MCreator"
 
 
 [[dependencies.animeoddysey]]
+    modId="use_compiled_mods"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.animeoddysey]]
     modId="geckolib"
     mandatory=false
     versionRange="[0,)"
